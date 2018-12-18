@@ -11,7 +11,7 @@ class Aside extends Component {
   render() {
     return(
       <aside>
-        {/* <Controls /> */}
+        <Controls />
         {/* <AsideBody /> */}
       </aside>
     );
