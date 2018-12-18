@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import './CardArea.css';
 
 class CardArea extends Component {
   constructor() {
@@ -10,7 +11,7 @@ class CardArea extends Component {
 
   render() {
     return(
-
+      <div className="card-area"></div>
     )
   }
 }

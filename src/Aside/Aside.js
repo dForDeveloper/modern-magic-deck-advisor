@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import Controls from '../Controls/Controls.js';
+import './Aside.css';
 
 class Aside extends Component {
   constructor() {
@@ -10,7 +12,7 @@ class Aside extends Component {
 
   render() {
     return(
-      <aside>
+      <aside className="aside">
         <Controls />
         {/* <AsideBody /> */}
       </aside>
