@@ -5,7 +5,7 @@ class Controls extends Component {
     super(props);
     this.state = {
       cardName: ''
-    }
+    };
   }
 
   updateCardName = (event) => {

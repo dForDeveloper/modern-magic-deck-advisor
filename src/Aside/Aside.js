@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Controls from '../Controls/Controls.js';
+import AsideBody from '../AsideBody/AsideBody.js';
 import './Aside.css';
 
 class Aside extends Component {
@@ -18,10 +19,10 @@ class Aside extends Component {
   }
 
   render() {
-    return(
+    return (
       <aside className="aside">
         <Controls addCardToList={this.addCardToList}/>
-        {/* <AsideBody /> */}
+        <AsideBody cardNames={this.state.cardNames} />
       </aside>
     );
   }
