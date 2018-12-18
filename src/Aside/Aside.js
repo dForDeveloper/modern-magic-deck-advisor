@@ -6,14 +6,21 @@ class Aside extends Component {
   constructor() {
     super();
     this.state = {
-
+      cardNames: []
     };
+  }
+
+  addCardToList = (cardName) => {
+    const newState = {
+      cardNames: this.state.cardNames.concat([cardName])
+    };
+    this.setState(newState);
   }
 
   render() {
     return(
       <aside className="aside">
-        <Controls />
+        <Controls addCardToList={this.addCardToList}/>
         {/* <AsideBody /> */}
       </aside>
     );
