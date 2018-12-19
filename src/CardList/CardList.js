@@ -15,9 +15,11 @@ class CardList extends Component {
       <div>
         <ul>
           {
-            this.props.cardNames.map(cardName => {
-              return (<CardListItem cardName={cardName}/>)
-            })
+            this.props.cardNames.map((cardName, index) => {
+              return (<CardListItem cardName={cardName}
+                                    cardIndex={index}
+                                    removeListItem={this.props.removeListItem} />)
+            }, this)
           }
         </ul>
         <button>Compare Builds</button>
