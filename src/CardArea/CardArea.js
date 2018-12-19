@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import './CardArea.css';
+import Card from '../Card/Card.js'
 import Header from '../Header/Header.js'
+
 
 class CardArea extends Component {
   constructor() {
@@ -13,6 +15,7 @@ class CardArea extends Component {
   render() {
     return(
       <div className="card-area">
+        <Card/>
         <Header />
       </div>
     )
