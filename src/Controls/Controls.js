@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {cards} from '../mtg.js'
 
 class Controls extends Component {
   constructor(props) {
@@ -14,14 +15,31 @@ class Controls extends Component {
 
   addCardToList = (event) => {
     event.preventDefault();
-    this.props.addCardToList(this.state.cardName)
+    if (this.validateCardName()) {
+      this.props.addCardToList(this.state.cardName)
+    } else {
+      this.props.throwInvalidCardNameError();
+    }
   }
 
-  render() {
+  validateCardName = () => {
+    return cards.find(card => {
+      return card.cardName.toLowerCase() === this.state.cardName.toLowerCase();
+    });
+  }
+
+  render(props) {
+    let errorMessage = '';
+    if (this.props.isInvalidCardName) {
+      errorMessage = "The card name you entered is not in the database"
+    } else if (this.props.hasDuplicates) {
+      errorMessage = "This card is already in your list"
+    }
     return(
       <form>
         <input type="text" onChange={this.updateCardName} className="controls--input"></input>
         <button onClick={this.addCardToList} className="controls--button">Click to add card</button>
+        <p>{errorMessage}</p>
       </form>
     )
   }
