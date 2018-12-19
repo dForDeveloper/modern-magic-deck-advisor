@@ -37,10 +37,10 @@ class CardListItem extends Component {
     return(
       <li onClick={this.updateListItem} id={this.props.cardIndex} className="cardlist--item">
         {this.props.cardName}
-        <i class="fas fa-minus"></i>
+        <i className="fas fa-minus"></i>
         <span>{this.state.cardCount}</span>
-        <i class="fas fa-plus"></i>
-        <i class="far fa-trash-alt"></i>
+        <i className="fas fa-plus"></i>
+        <i className="far fa-trash-alt"></i>
       </li>                  
     )          
   }

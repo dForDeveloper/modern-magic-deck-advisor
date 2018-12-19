@@ -9,6 +9,7 @@ class App extends Component {
     super();
     this.state = {
       cards: [],
+      currentCard: {},
       decks: []
     };
   }
@@ -16,19 +17,25 @@ class App extends Component {
   componentDidMount() {
     fetch('https://whateverly-datasets.herokuapp.com/api/v1/cards')
       .then(cards => cards.json())
-      .then(parsedCards => this.setState({ cards: parsedCards }))
+      .then(parsedCards => this.setState({ cards: parsedCards.cards }))
       .catch(err => console.log('cards error', err))
     fetch('https://whateverly-datasets.herokuapp.com/api/v1/decks')
       .then(decks => decks.json())
-      .then(parsedDecks => this.setState({ decks: parsedDecks }))
+      .then(parsedDecks => this.setState({ decks: parsedDecks.decks }))
       .catch(err => console.log('decks error', err))
   }
 
+  retrieveCardName = (cardName) => {
+    let currentCard = this.state.cards.find((card) => {
+      return card.cardName === cardName;
+    })
+    this.setState({ currentCard })
+  }
   render() {
     return (
       <div className="app">
-        <Aside />
-        <CardArea />
+        <Aside retrieveCardName={this.retrieveCardName} />
+        <CardArea currentCard={this.state.currentCard}/>
       </div>
     )
   }

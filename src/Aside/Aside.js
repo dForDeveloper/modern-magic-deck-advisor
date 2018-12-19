@@ -24,6 +24,7 @@ class Aside extends Component {
         hasDuplicates: false,
         isInvalidCardName: false
       };
+      this.props.retrieveCardName(matchingCard.cardName)
       this.setState(newState);
     } else {
       this.setState({ hasDuplicates: true });

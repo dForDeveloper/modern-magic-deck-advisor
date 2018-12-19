@@ -19,6 +19,7 @@ class CardList extends Component {
             this.props.cardNames.map((cardName, index) => {
               return (<CardListItem cardName={cardName}
                                     cardIndex={index}
+                                    key={cardName}
                                     removeListItem={this.props.removeListItem} />)
             }, this)
           }

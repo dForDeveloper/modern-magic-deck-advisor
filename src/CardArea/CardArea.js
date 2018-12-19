@@ -5,18 +5,18 @@ import Header from '../Header/Header.js'
 
 
 class CardArea extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
 
     }
   }
 
-  render() {
+  render(props) {
     return(
       <div className="card-area">
-        <Header />
-        <Card/>
+        <Header/>
+        <Card currentCard={this.props.currentCard}/>
       </div>
     )
   }
