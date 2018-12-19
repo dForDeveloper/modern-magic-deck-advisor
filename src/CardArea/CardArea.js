@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import './CardArea.css';
+import Header from '../Header/Header.js'
 
 class CardArea extends Component {
   constructor() {
@@ -11,7 +12,9 @@ class CardArea extends Component {
 
   render() {
     return(
-      <div className="card-area"></div>
+      <div className="card-area">
+        <Header />
+      </div>
     )
   }
 }
