@@ -15,9 +15,9 @@ class CardListItem extends Component {
     if (event.target.classList.contains('fa-trash-alt')) {
       this.props.removeListItem(parseInt(event.target.closest('li').id))
     } else if (event.target.classList.contains('fa-plus')) {
-      this.increaseCardCount()
+      this.increaseCardCount();
     } else if (event.target.classList.contains('fa-minus')) {
-      this.decreaseCardCount()
+      this.decreaseCardCount();
     }
   }
 

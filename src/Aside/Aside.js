@@ -9,23 +9,28 @@ class Aside extends Component {
     super();
     this.state = {
       cardNames: [],
+      userCards: [],
       hasDuplicates: false,
       isInvalidCardName: false
     };
   }
 
   addCardToList = (cardName) => {
-    const matchingCard = cards.find(card => {
-      return card.cardName.toLowerCase() === cardName.toLowerCase();
-    });
-    if (!this.state.cardNames.includes(matchingCard.cardName)) {
+    if (!this.state.cardNames.includes(cardName)) {
+      const newCard = {
+        cardName: cardName,
+        cardCount: 1
+      }
+      const userCards = this.state.userCards.concat([newCard]);
+      const cardNames = userCards.map(userCard => userCard.cardName);
       const newState = {
-        cardNames: this.state.cardNames.concat([matchingCard.cardName]),
+        cardNames: cardNames,
         hasDuplicates: false,
-        isInvalidCardName: false
+        isInvalidCardName: false,
+        userCards: userCards
       };
       this.setState(newState);
-      this.props.retrieveCardNames(this.state.cardNames.concat([matchingCard.cardName]));
+      this.props.retrieveCardNames(cardNames);
     } else {
       this.setState({ hasDuplicates: true });
     }
@@ -50,6 +55,7 @@ class Aside extends Component {
                   isInvalidCardName={this.state.isInvalidCardName}
                   hasDuplicates={this.state.hasDuplicates}/>
         <AsideBody cardNames={this.state.cardNames} 
+        // card names is objects, need array of strings
                     removeListItem={this.removeListItem}/>
       </aside>
     );

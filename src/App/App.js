@@ -31,6 +31,11 @@ class App extends Component {
     })
     this.setState({ userCardList })
   }
+
+  // updateCardCount = (cardCount) => {
+    
+  // }
+
   render() {
     return (
       <div className="app">

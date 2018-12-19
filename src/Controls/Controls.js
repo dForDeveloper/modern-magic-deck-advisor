@@ -15,8 +15,9 @@ class Controls extends Component {
 
   addCardToList = (event) => {
     event.preventDefault();
-    if (this.validateCardName()) {
-      this.props.addCardToList(this.state.cardName)
+    const matchedCard = this.validateCardName();
+    if (matchedCard) {
+      this.props.addCardToList(matchedCard.cardName)
     } else {
       this.props.throwInvalidCardNameError();
     }

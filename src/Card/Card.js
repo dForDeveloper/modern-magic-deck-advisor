@@ -14,7 +14,7 @@ class Card extends Component {
         <article className='card--container'>
           <img className="card--image"
                 src={this.props.userCard.imageSource}
-                alt=""/>
+                alt={this.props.userCard.cardName} />
           <div className='counter--container'>
             <h1 className='card--counter'>1x</h1>   
           </div>
