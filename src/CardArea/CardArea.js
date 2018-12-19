@@ -15,8 +15,8 @@ class CardArea extends Component {
   render() {
     return(
       <div className="card-area">
-        <Card/>
         <Header />
+        <Card/>
       </div>
     )
   }
