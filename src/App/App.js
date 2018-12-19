@@ -9,8 +9,8 @@ class App extends Component {
     super();
     this.state = {
       cards: [],
-      currentCard: {},
-      decks: []
+      decks: [],
+      userCardList: []
     };
   }
   
@@ -25,17 +25,17 @@ class App extends Component {
       .catch(err => console.log('decks error', err))
   }
 
-  retrieveCardName = (cardName) => {
-    let currentCard = this.state.cards.find((card) => {
-      return card.cardName === cardName;
+  retrieveCardNames = (cardNames) => {
+    let userCardList = this.state.cards.filter((card) => {
+      return cardNames.includes(card.cardName);
     })
-    this.setState({ currentCard })
+    this.setState({ userCardList })
   }
   render() {
     return (
       <div className="app">
-        <Aside retrieveCardName={this.retrieveCardName} />
-        <CardArea currentCard={this.state.currentCard}/>
+        <Aside retrieveCardNames={this.retrieveCardNames} />
+        <CardArea userCardList={this.state.userCardList}/>
       </div>
     )
   }

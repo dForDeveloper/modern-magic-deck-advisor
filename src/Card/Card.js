@@ -13,7 +13,7 @@ class Card extends Component {
     return(
         <article className='card--container'>
           <img className="card--image"
-                src={this.props.currentCard.imageSource}
+                src={this.props.userCard.imageSource}
                 alt=""/>
           <div className='counter--container'>
             <h1 className='card--counter'>1x</h1>   

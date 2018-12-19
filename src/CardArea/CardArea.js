@@ -16,7 +16,11 @@ class CardArea extends Component {
     return(
       <div className="card-area">
         <Header/>
-        <Card currentCard={this.props.currentCard}/>
+        {
+          this.props.userCardList.map(userCard => {
+            return <Card userCard={userCard}/>
+          })
+        }
       </div>
     )
   }
