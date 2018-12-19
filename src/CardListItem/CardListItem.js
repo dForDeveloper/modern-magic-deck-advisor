@@ -35,11 +35,11 @@ class CardListItem extends Component {
 
   render(props) {
     return(
-      <li onClick={this.updateListItem} id={this.props.cardIndex}>
+      <li onClick={this.updateListItem} id={this.props.cardIndex} className="cardlist--item">
         {this.props.cardName}
-        <i class="fas fa-plus"></i>
-        <span>{this.state.cardCount}</span>
         <i class="fas fa-minus"></i>
+        <span>{this.state.cardCount}</span>
+        <i class="fas fa-plus"></i>
         <i class="far fa-trash-alt"></i>
       </li>                  
     )          

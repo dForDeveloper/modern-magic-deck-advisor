@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import CardListItem from '../CardListItem/CardListItem.js';
+import './CardList.css'
 
 class CardList extends Component {
   constructor() {
@@ -13,7 +14,7 @@ class CardList extends Component {
   render(props) {
     return (
       <div>
-        <ul>
+        <ul className="cardlist--ul">
           {
             this.props.cardNames.map((cardName, index) => {
               return (<CardListItem cardName={cardName}
