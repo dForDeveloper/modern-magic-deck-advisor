@@ -46,8 +46,8 @@ class Aside extends Component {
     this.setState({ isInvalidCardName: true });
   }
   
-  updateCardCount = (array) => {
-    this.setState({userCards: array})
+  setCardCount = (newUserCards) => {
+    this.setState({ userCards: newUserCards })
   }
 
   render() {
@@ -59,7 +59,7 @@ class Aside extends Component {
                   hasDuplicates={this.state.hasDuplicates}/>
         <AsideBody cardNames={this.state.cardNames} 
                    removeListItem={this.removeListItem}
-                   updateCardCount={this.updateCardCount}
+                   setCardCount={this.setCardCount}
                    userCards={this.state.userCards} />
       </aside>
     );

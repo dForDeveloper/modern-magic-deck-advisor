@@ -3,8 +3,8 @@ import CardListItem from '../CardListItem/CardListItem.js';
 import './CardList.css'
 
 class CardList extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.state = {
 
     }
@@ -21,7 +21,7 @@ class CardList extends Component {
                                     cardIndex={index}
                                     key={cardName}
                                     removeListItem={this.props.removeListItem}
-                                    updateCardCount={this.props.updateCardCount} 
+                                    setCardCount={this.props.setCardCount} 
                                     userCards={this.props.userCards}/>)
             }, this)
           }

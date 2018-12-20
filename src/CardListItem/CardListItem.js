@@ -26,15 +26,13 @@ class CardListItem extends Component {
           return { count: state.count + 1 };
         },
         () => {
-          const userCardsArr = this.props.userCards.map(card => {
+          const newUserCards = this.props.userCards.map(card => {
             if (this.props.cardName === card.cardName) {
               card.cardCount = this.state.count;
-              return card;
-            } else {
-              return card;
             }
+            return card;
           });
-          return this.props.updateCardCount(userCardsArr);
+          return this.props.setCardCount(newUserCards);
         }
       );
     }
@@ -45,7 +43,7 @@ class CardListItem extends Component {
       this.setState(state => {
         return { cardCount: state.cardCount - 1 };
       });
-      this.props.updateCardCount(this.props.cardName, this.state.cardCount - 1);
+      this.props.setCardCount(this.props.cardName, this.state.cardCount - 1);
     }
   };
 
