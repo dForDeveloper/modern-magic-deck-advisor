@@ -11,18 +11,6 @@ exports[`AsideBody should match the snapshot 1`] = `
     }
     removeListItem={[MockFunction]}
     setCardCount={[MockFunction]}
-    userCards={
-      Array [
-        Object {
-          "cardCount": 1,
-          "cardName": "blood moon",
-        },
-        Object {
-          "cardCount": 1,
-          "cardName": "breeding pool",
-        },
-      ]
-    }
   />
 </div>
 `;
