@@ -17,7 +17,7 @@ class CardArea extends Component {
       <div className="card-area">
         <Header/>
         {
-          this.props.userCardList.map(userCard => {
+          this.props.userCardsData.map(userCard => {
             return <Card userCard={userCard}/>
           })
         }

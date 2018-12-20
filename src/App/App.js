@@ -10,7 +10,7 @@ class App extends Component {
     this.state = {
       cards: [],
       decks: [],
-      userCardList: []
+      userCardsData: []
     };
   }
   
@@ -25,11 +25,24 @@ class App extends Component {
       .catch(err => console.log('decks error', err))
   }
 
+  initializeCardCount = (userCardsData) => {
+    userCardsData.forEach(card => {
+      if (card.cardCount === undefined) {
+        card.cardCount = 1
+      }
+    })
+    this.setState({ userCardsData })
+  }
+  
   retrieveCardNames = (cardNames) => {
-    let userCardList = this.state.cards.filter((card) => {
+    let userCardsData = this.state.cards.filter((card) => {
       return cardNames.includes(card.cardName);
     })
-    this.setState({ userCardList })
+    this.initializeCardCount(userCardsData);
+  }
+
+  setCardCount = (newUserCardsData) => {
+    this.setState({ userCardsData: newUserCardsData })
   }
 
   updateImageCardCount = (cardCount) => {
@@ -39,8 +52,10 @@ class App extends Component {
   render() {
     return (
       <div className="app">
-        <Aside retrieveCardNames={this.retrieveCardNames} />
-        <CardArea userCardList={this.state.userCardList}/>
+        <Aside retrieveCardNames={this.retrieveCardNames}
+                setCardCount={this.setCardCount}
+                userCardsData={this.state.userCardsData} />
+        <CardArea userCardsData={this.state.userCardsData}/>
       </div>
     )
   }

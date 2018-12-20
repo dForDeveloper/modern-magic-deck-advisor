@@ -5,8 +5,8 @@ import {cards} from '../mtg.js'
 import './Aside.css';
 
 class Aside extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       cardNames: [],
       userCards: [],
@@ -46,11 +46,9 @@ class Aside extends Component {
     this.setState({ isInvalidCardName: true });
   }
   
-  setCardCount = (newUserCards) => {
-    this.setState({ userCards: newUserCards })
-  }
+ 
 
-  render() {
+  render(props) {
     return (
       <aside className="aside">
         <Controls addCardToList={this.addCardToList}
@@ -59,8 +57,8 @@ class Aside extends Component {
                   hasDuplicates={this.state.hasDuplicates}/>
         <AsideBody cardNames={this.state.cardNames} 
                    removeListItem={this.removeListItem}
-                   setCardCount={this.setCardCount}
-                   userCards={this.state.userCards} />
+                   setCardCount={this.props.setCardCount}
+                   userCardsData={this.props.userCardsData} />
       </aside>
     );
   }

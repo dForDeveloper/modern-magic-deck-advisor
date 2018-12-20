@@ -26,13 +26,13 @@ class CardListItem extends Component {
           return { count: state.count + 1 };
         },
         () => {
-          const newUserCards = this.props.userCards.map(card => {
+          const newUserCardsData = this.props.userCardsData.map(card => {
             if (this.props.cardName === card.cardName) {
               card.cardCount = this.state.count;
             }
             return card;
           });
-          return this.props.setCardCount(newUserCards);
+          return this.props.setCardCount(newUserCardsData);
         }
       );
     }

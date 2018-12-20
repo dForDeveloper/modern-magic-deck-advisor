@@ -17,12 +17,13 @@ class CardList extends Component {
         <ul className="cardlist--ul">
           {
             this.props.cardNames.map((cardName, index) => {
-              return (<CardListItem cardName={cardName}
-                                    cardIndex={index}
-                                    key={cardName}
-                                    removeListItem={this.props.removeListItem}
-                                    setCardCount={this.props.setCardCount} 
-                                    userCards={this.props.userCards}/>)
+              return (<CardListItem 
+                cardName={cardName}
+                cardIndex={index}
+                key={cardName}
+                removeListItem={this.props.removeListItem}
+                setCardCount={this.props.setCardCount} 
+                userCardsData={this.props.userCardsData}/>)
             }, this)
           }
         </ul>
