@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from '../logo.svg';
 import './App.css';
 import Aside from '../Aside/Aside.js';
 import CardArea from '../CardArea/CardArea.js';
@@ -26,7 +25,6 @@ class App extends Component {
   }
 
   initializeCardCount = (userCardsData) => {
-    console.log(userCardsData);
     userCardsData.forEach(card => {
       if (card.cardCount === undefined) {
         card.cardCount = 1
@@ -55,7 +53,8 @@ class App extends Component {
       <div className="app">
         <Aside retrieveCardNames={this.retrieveCardNames}
                 setCardCount={this.setCardCount}
-                userCardsData={this.state.userCardsData} />
+                userCardsData={this.state.userCardsData}
+                cards={this.state.cards} />
         <CardArea userCardsData={this.state.userCardsData}/>
       </div>
     )

@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import {cards} from '../mtg.js'
 
 class Controls extends Component {
   constructor(props) {
@@ -15,7 +14,6 @@ class Controls extends Component {
 
   addCardToList = (event) => {
     event.preventDefault();
-    // debugger;
     const matchedCard = this.validateCardName();
     if (matchedCard) {
       this.props.addCardToList(matchedCard.cardName)
@@ -25,7 +23,7 @@ class Controls extends Component {
   }
 
   validateCardName = () => {
-    return cards.find(card => {
+    return this.props.cards.find(card => {
       return card.cardName.toLowerCase() === this.state.cardName.toLowerCase();
     });
   }

@@ -4,7 +4,7 @@ import './Header.css'
 function Header() {
   return(
     <header className="header">
-      <img src="./magic_logo.png" className="magic-logo"></img>
+      <img alt="Magic The Gathering" src="./magic_logo.png" className="magic-logo"></img>
       <ul className="header--ul">
         <li>My Cards</li>
         <li>My Favorites</li>

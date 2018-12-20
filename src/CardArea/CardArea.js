@@ -18,7 +18,10 @@ class CardArea extends Component {
         <Header/>
         {
           this.props.userCardsData.map(userCard => {
-            return <Card userCard={userCard}/>
+            return <Card 
+                      userCard={userCard}
+                      key={userCard.cardName}
+            />
           })
         }
       </div>
