@@ -26,6 +26,7 @@ class App extends Component {
   }
 
   initializeCardCount = (userCardsData) => {
+    console.log(userCardsData);
     userCardsData.forEach(card => {
       if (card.cardCount === undefined) {
         card.cardCount = 1
