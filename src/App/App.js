@@ -32,9 +32,9 @@ class App extends Component {
     this.setState({ userCardList })
   }
 
-  // updateCardCount = (cardCount) => {
+  updateImageCardCount = (cardCount) => {
     
-  // }
+  }
 
   render() {
     return (
