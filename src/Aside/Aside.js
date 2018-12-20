@@ -46,23 +46,8 @@ class Aside extends Component {
     this.setState({ isInvalidCardName: true });
   }
   
-  updateCardCount = (cardName, cardCount) => {
-    console.log('cardCount', cardCount)
-    console.log('this.state.userCards before', this.state.userCards)
-    const arr = [...this.state.userCards]
-    const userCards2 = arr.map(card => {
-      if (card.cardName === cardName) {
-        card.cardCount = cardCount;
-        return card;
-      } else {
-        return card;
-      }
-    })
-    console.log('userCards', userCards2)
-    console.log('this.state.userCards after', this.state.userCards)
-
-    // console.log('newState', newState)
-    // this.setState({ userCards });
+  updateCardCount = (array) => {
+    this.setState({userCards: array})
   }
 
   render() {
@@ -74,7 +59,8 @@ class Aside extends Component {
                   hasDuplicates={this.state.hasDuplicates}/>
         <AsideBody cardNames={this.state.cardNames} 
                    removeListItem={this.removeListItem}
-                   updateCardCount={this.updateCardCount}/>
+                   updateCardCount={this.updateCardCount}
+                   userCards={this.state.userCards} />
       </aside>
     );
   }

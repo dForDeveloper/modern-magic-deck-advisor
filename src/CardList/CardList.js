@@ -21,7 +21,8 @@ class CardList extends Component {
                                     cardIndex={index}
                                     key={cardName}
                                     removeListItem={this.props.removeListItem}
-                                    updateCardCount={this.props.updateCardCount} />)
+                                    updateCardCount={this.props.updateCardCount} 
+                                    userCards={this.props.userCards}/>)
             }, this)
           }
         </ul>
