@@ -15,7 +15,9 @@ class CardListItem extends Component {
     if (event.target.classList.contains('fa-trash-alt')) {
       this.props.removeListItem(parseInt(event.target.closest('li').id))
     } else if (event.target.classList.contains('fa-plus')) {
+      // console.log('before', this.state.cardCount)
       this.increaseCardCount();
+      // console.log('after', this.state.cardCount)
     } else if (event.target.classList.contains('fa-minus')) {
       this.decreaseCardCount();
     }
@@ -23,13 +25,25 @@ class CardListItem extends Component {
 
   increaseCardCount = () => {
     if (this.state.cardCount < 4) {
-      this.setState({ cardCount: this.state.cardCount + 1 })
+      // const newCardCount = this.state.cardCount + 1;
+      this.setState(state => {
+        return { cardCount: state.cardCount + 1 }
+      }, () => {
+        this.props.updateCardCount(this.props.cardName, this.state.cardCount)
+      })
     }
   }
 
-  decreaseCardCount = () => {
+  // componentDidUpdate() {
+  //   this.props.updateCardCount(this.props.cardName, this.state.cardCount)
+  // }
+
+  decreaseCardCount = (cardName) => {
     if (this.state.cardCount > 1) {
-      this.setState({ cardCount: this.state.cardCount - 1 })
+      this.setState((state) => {
+        return { cardCount: state.cardCount - 1 }
+      });
+      this.props.updateCardCount(this.props.cardName, this.state.cardCount - 1 )
     }
   }
 

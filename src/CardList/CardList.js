@@ -20,7 +20,8 @@ class CardList extends Component {
               return (<CardListItem cardName={cardName}
                                     cardIndex={index}
                                     key={cardName}
-                                    removeListItem={this.props.removeListItem} />)
+                                    removeListItem={this.props.removeListItem}
+                                    updateCardCount={this.props.updateCardCount} />)
             }, this)
           }
         </ul>

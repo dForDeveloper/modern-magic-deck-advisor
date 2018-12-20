@@ -9,7 +9,8 @@ function AsideBody(props) {
   return (
     <div>
       <CardList cardNames={props.cardNames} 
-                removeListItem={props.removeListItem} />
+                removeListItem={props.removeListItem}
+                updateCardCount={props.updateCardCount} />
     </div>
   )
 }
