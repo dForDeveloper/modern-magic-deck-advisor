@@ -12,7 +12,6 @@ const userCardsData = [
 ];
 const removeListItemMock = jest.fn();
 const setCardCountMock = jest.fn();
-// const decreaseCardCount = jest.fn();
 
 describe("CardListItem", () => {
   let wrapper;
@@ -84,7 +83,8 @@ describe("CardListItem", () => {
     expect(wrapper.state("count")).toEqual(1);
   });
 
-  
-
-
+  it("should call setCardCount after CardListItem state is updated", () => {
+    wrapper.instance().updateUserCardsDataState();
+    expect(setCardCountMock).toBeCalled();
+  })
 });
