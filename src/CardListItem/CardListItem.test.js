@@ -27,6 +27,26 @@ describe('CardListItem', () => {
 
   it('should match the snapshot', () => {
     expect(wrapper).toMatchSnapshot();
-    
   });
+
+  it('should call removeListItem when the trash-can is clicked', () => {
+    wrapper.find('.cardlist--item').simulate('click', {
+      target: {
+        classList: {
+          contains: (className) => {
+            if (className === 'fa-trash-alt') {
+              return true;
+            } else {
+              return false;
+            }
+          }
+        },
+        closest: () => {
+          return {id: '0'}
+        }
+      }
+    })
+    expect(removeListItemMock).toBeCalled();
+  })
+
 })

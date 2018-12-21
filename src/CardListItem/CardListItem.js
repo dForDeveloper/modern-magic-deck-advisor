@@ -15,7 +15,6 @@ class CardListItem extends Component {
     } else if (event.target.classList.contains("fa-plus")) {
       this.increaseCardCount();
     } else if (event.target.classList.contains("fa-minus")) {
-      console.log('hellloooo')
       this.decreaseCardCount();
     }
   };
