@@ -31,6 +31,7 @@ class Aside extends Component {
     const [...newCardNames] = this.state.cardNames;
     newCardNames.splice(indexToRemove, 1)
     this.setState({ cardNames: newCardNames })
+    this.props.retrieveCardNames(newCardNames);
   }
 
   throwInvalidCardNameError = () => {
