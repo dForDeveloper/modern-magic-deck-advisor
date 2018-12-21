@@ -49,7 +49,8 @@ class Aside extends Component {
         <AsideBody cardNames={this.state.cardNames} 
                    removeListItem={this.removeListItem}
                    setCardCount={this.props.setCardCount}
-                   userCardsData={this.props.userCardsData} />
+                   userCardsData={this.props.userCardsData}
+                   compareBuilds={this.props.compareBuilds} />
       </aside>
     );
   }

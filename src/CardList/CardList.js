@@ -27,7 +27,7 @@ class CardList extends Component {
             }, this)
           }
         </ul>
-        <button>Compare Builds</button>
+        <button onClick={this.props.compareBuilds}>Compare Builds</button>
       </div>
     )
   }

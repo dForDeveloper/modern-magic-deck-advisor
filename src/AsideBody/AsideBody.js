@@ -11,7 +11,8 @@ function AsideBody(props) {
       <CardList cardNames={props.cardNames} 
                 removeListItem={props.removeListItem}
                 setCardCount={props.setCardCount}
-                userCardsData={props.userCardsData} />
+                userCardsData={props.userCardsData} 
+                compareBuilds={props.compareBuilds}/>
     </div>
   )
 }
