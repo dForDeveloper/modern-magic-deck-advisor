@@ -15,6 +15,7 @@ class CardListItem extends Component {
     } else if (event.target.classList.contains("fa-plus")) {
       this.increaseCardCount();
     } else if (event.target.classList.contains("fa-minus")) {
+      console.log('hellloooo')
       this.decreaseCardCount();
     }
   };
@@ -38,12 +39,22 @@ class CardListItem extends Component {
     }
   };
 
-  decreaseCardCount = cardName => {
-    if (this.state.cardCount > 1) {
-      this.setState(state => {
-        return { cardCount: state.cardCount - 1 };
-      });
-      this.props.setCardCount(this.props.cardName, this.state.cardCount - 1);
+  decreaseCardCount = props => {
+    if (this.state.count > 1) {
+      this.setState(
+        state => {
+          return { count: state.count - 1 };
+        },
+        () => {
+          const newUserCardsData = this.props.userCardsData.map(card => {
+            if (this.props.cardName === card.cardName) {
+              card.cardCount = this.state.count;
+            }
+            return card;
+          });
+          return this.props.setCardCount(newUserCardsData);
+        }
+      );
     }
   };
 
