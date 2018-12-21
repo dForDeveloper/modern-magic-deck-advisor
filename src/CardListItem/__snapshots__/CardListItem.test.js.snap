@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardListItem should match the snapshot 1`] = `
+<li
+  className="cardlist--item"
+  id={0}
+  onClick={[Function]}
+>
+  Blood Moon
+  <i
+    className="fas fa-minus"
+  />
+  <span>
+    1
+  </span>
+  <i
+    className="fas fa-plus"
+  />
+  <i
+    className="far fa-trash-alt"
+  />
+</li>
+`;
