@@ -49,4 +49,21 @@ describe('CardListItem', () => {
     expect(removeListItemMock).toBeCalled();
   })
 
+  it('should increment state count when plus sign is clicked', () => {
+    expect(wrapper.state('count')).toEqual(1);
+    wrapper.find('.cardlist--item').simulate('click', {
+      target: {
+        classList: {
+          contains: (className) => {
+            if (className === 'fa-plus') {
+              return true;
+            } else {
+              return false;
+            }
+          }
+        }
+      }
+    })
+    expect(wrapper.state('count')).toEqual(2);
+  })
 })
