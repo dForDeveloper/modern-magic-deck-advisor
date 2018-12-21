@@ -21,40 +21,26 @@ class CardListItem extends Component {
 
   increaseCardCount = props => {
     if (this.state.count < 4) {
-      this.setState(
-        state => {
-          return { count: state.count + 1 };
-        },
-        () => {
-          const newUserCardsData = this.props.userCardsData.map(card => {
-            if (this.props.cardName === card.cardName) {
-              card.cardCount = this.state.count;
-            }
-            return card;
-          });
-          return this.props.setCardCount(newUserCardsData);
-        }
-      );
+      this.setState(state => {return { count: state.count + 1 }},
+        () => this.updateUserCardsDataState(props));
     }
   };
 
   decreaseCardCount = props => {
     if (this.state.count > 1) {
-      this.setState(
-        state => {
-          return { count: state.count - 1 };
-        },
-        () => {
-          const newUserCardsData = this.props.userCardsData.map(card => {
-            if (this.props.cardName === card.cardName) {
-              card.cardCount = this.state.count;
-            }
-            return card;
-          });
-          return this.props.setCardCount(newUserCardsData);
-        }
-      );
+      this.setState(state => {return { count: state.count - 1 }},
+        () => this.updateUserCardsDataState(props));
     }
+  };
+
+  updateUserCardsDataState = () => {
+    const newUserCardsData = this.props.userCardsData.map(card => {
+      if (this.props.cardName === card.cardName) {
+        card.cardCount = this.state.count;
+      }
+      return card;
+    });
+    return this.props.setCardCount(newUserCardsData);
   };
 
   render(props) {
