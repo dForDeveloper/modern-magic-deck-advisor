@@ -22,6 +22,12 @@ function AsideBody(props) {
                   removeFaveListItem={props.removeFaveListItem}/>
       </div>
     )
+  } else if (props.asideView === "wishList"){
+    return (
+      <div>
+        <p>Wish List Goes HERE!</p>
+      </div>
+    )
   }
 }
 
