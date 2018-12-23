@@ -7,10 +7,12 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
+      asideView: "myCardList",
       cards: [],
       decks: [],
       userCardsData: [],
-      userDecks: []
+      userDecks: [],
+      userFaveDecks: [{ deckName: "Bant Spirits" }, { deckName: "Izzet Phoenix" }, { deckName: "Death's Shadow" }]
     };
   }
   
@@ -61,9 +63,18 @@ class App extends Component {
     this.setState({ userCardsData: newUserCardsData })
   }
 
+  setAsideView = (view) => {
+    this.setState( { asideView: view })
+  }
+
+  removeFaveListItem = () => {
+
+  }
+  
   updateImageCardCount = (cardCount) => {
     
   }
+  
 
   render() {
     return (
@@ -72,8 +83,12 @@ class App extends Component {
                 setCardCount={this.setCardCount}
                 userCardsData={this.state.userCardsData}
                 cards={this.state.cards}
-                compareBuilds={this.compareBuilds} />
-        <CardArea userCardsData={this.state.userCardsData}/>
+                compareBuilds={this.compareBuilds}
+                asideView={this.state.asideView}
+                userFaveDecks={this.state.userFaveDecks}
+                removeFaveListItem={this.removeFaveListItem} />
+        <CardArea userCardsData={this.state.userCardsData}
+                  setAsideView={this.setAsideView}/>
       </div>
     )
   }
