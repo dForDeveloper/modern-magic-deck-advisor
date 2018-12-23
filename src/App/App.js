@@ -67,10 +67,12 @@ class App extends Component {
     this.setState( { asideView: view })
   }
 
-  removeFaveListItem = () => {
-
+  removeFaveListItem = (indexToRemove) => {
+    const [...newFaveDecks] = this.state.userFaveDecks;
+    newFaveDecks.splice(indexToRemove, 1)
+    this.setState({ userFaveDecks: newFaveDecks })
   }
-  
+
   updateImageCardCount = (cardCount) => {
     
   }

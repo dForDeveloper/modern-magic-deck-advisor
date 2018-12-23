@@ -7,7 +7,8 @@ class FaveListItem extends Component {
   }
 
   removeFaveListItem = event => {
-    this.props.removeFaveListItem(event.tartet.closest("li").id)
+    event.preventDefault();
+    this.props.removeFaveListItem(event.target.closest("li").id)
   }
 
   render(props) {
