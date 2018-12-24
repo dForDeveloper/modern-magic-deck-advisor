@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FaveList should match the snapshot 1`] = `undefined`;
+
+exports[`FaveList should render the child list items correctly 1`] = `undefined`;

@@ -12,13 +12,22 @@ exports[`Header should match the snapshot 1`] = `
   <ul
     className="header--ul"
   >
-    <li>
+    <li
+      className="my-cards"
+      onClick={[Function]}
+    >
       My Cards
     </li>
-    <li>
+    <li
+      className="fave-decks"
+      onClick={[Function]}
+    >
       My Favorites
     </li>
-    <li>
+    <li
+      className="my-wish-list"
+      onClick={[Function]}
+    >
       My Wish List
     </li>
   </ul>
