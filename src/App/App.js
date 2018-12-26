@@ -18,8 +18,8 @@ class App extends Component {
   }
   
   compareBuilds = () => {
-    let [...newUserDecks] = this.state.userDecks;
-    let userDeckNames = newUserDecks.map(deck => deck.deckName);
+    const newUserDecks = [];
+    const userDeckNames = [];
     this.state.userCardsData.forEach(card => {
       this.state.decks.filter(deck => {
         return deck.cards.includes(card.cardName)
