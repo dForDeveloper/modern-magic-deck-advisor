@@ -1,16 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AsideBody should match the snapshot 1`] = `
-<div>
-  <CardList
-    cardNames={
-      Array [
-        "blood moon",
-        "breeding pool",
-      ]
-    }
-    removeListItem={[MockFunction]}
-    setCardCount={[MockFunction]}
-  />
-</div>
-`;
+exports[`AsideBody should match the snapshot 1`] = `""`;

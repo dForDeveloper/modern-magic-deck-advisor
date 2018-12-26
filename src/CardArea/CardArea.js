@@ -12,7 +12,8 @@ class CardArea extends Component {
   render(props) {
     return (
       <div className="card-area">
-        <Header />
+        <Header 
+          setAsideView={this.props.setAsideView}/>
         {this.props.userCardsData.map(userCard => {
           return <Card userCard={userCard} key={userCard.cardName} />;
         })}

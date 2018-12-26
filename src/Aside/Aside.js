@@ -46,11 +46,14 @@ class Aside extends Component {
                   isInvalidCardName={this.state.isInvalidCardName}
                   hasDuplicates={this.state.hasDuplicates}
                   cards={this.props.cards}/>
-        <AsideBody cardNames={this.state.cardNames} 
+        <AsideBody asideView={this.props.asideView}
+                   cardNames={this.state.cardNames} 
                    removeListItem={this.removeListItem}
                    setCardCount={this.props.setCardCount}
                    userCardsData={this.props.userCardsData}
-                   compareBuilds={this.props.compareBuilds} />
+                   compareBuilds={this.props.compareBuilds}
+                   userFaveDecks={this.props.userFaveDecks}
+                   removeFaveListItem={this.props.removeFaveListItem} />
       </aside>
     );
   }
