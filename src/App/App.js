@@ -7,7 +7,8 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      asideView: "myCardList",
+      asideView: 'myCardList',
+      cardAreaView: 'myCardList',
       cards: [],
       decks: [],
       userCardsData: [],
@@ -28,8 +29,34 @@ class App extends Component {
           userDeckNames.push(deck.deckName)
         }
       })
-    })
-    this.setState({ userDecks: newUserDecks });
+    });
+    this.setDeckPrices(newUserDecks);
+  }
+
+  setDeckPrices(userDecks) {
+    const newUserDecks = userDecks.map(deck => {
+      deck.price = 0;
+      Object.keys(deck.cardCounts).forEach(cardInDeck => {
+        const cardPrice = this.state.cards.find(card => {
+          return card.cardName === cardInDeck;
+        }).price;
+        const userCard = this.state.userCardsData.find(card => {
+          return card.cardName === cardInDeck
+        });
+        if (userCard) {
+          const priceMultiplier = Math.max(0, (deck.cardCounts[cardInDeck] - userCard.cardCount))
+          deck.price += cardPrice * priceMultiplier;
+        } else {
+          deck.price += cardPrice * deck.cardCounts[cardInDeck];
+        }
+      });
+      deck.price = deck.price.toFixed(2);
+      return deck;
+    });
+    this.setState({
+      userDecks: newUserDecks,
+      cardAreaView: 'compareDecks'
+    });
   }
 
   componentDidMount() {
@@ -73,24 +100,23 @@ class App extends Component {
     this.setState({ userFaveDecks: newFaveDecks })
   }
 
-  updateImageCardCount = (cardCount) => {
-    
-  }
-  
-
   render() {
     return (
       <div className="app">
-        <Aside retrieveCardNames={this.retrieveCardNames}
-                setCardCount={this.setCardCount}
-                userCardsData={this.state.userCardsData}
-                cards={this.state.cards}
-                compareBuilds={this.compareBuilds}
-                asideView={this.state.asideView}
-                userFaveDecks={this.state.userFaveDecks}
-                removeFaveListItem={this.removeFaveListItem} />
-        <CardArea userCardsData={this.state.userCardsData}
-                  setAsideView={this.setAsideView}/>
+        <Aside
+          retrieveCardNames={this.retrieveCardNames}
+          setCardCount={this.setCardCount}
+          userCardsData={this.state.userCardsData}
+          cards={this.state.cards}
+          compareBuilds={this.compareBuilds}
+          asideView={this.state.asideView}
+          userFaveDecks={this.state.userFaveDecks}
+          removeFaveListItem={this.removeFaveListItem} />
+        <CardArea
+          userCardsData={this.state.userCardsData}
+          setAsideView={this.setAsideView}
+          cardAreaView={this.state.cardAreaView}
+          userDecks = {this.state.userDecks} />
       </div>
     )
   }
