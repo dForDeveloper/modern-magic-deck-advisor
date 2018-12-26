@@ -7,11 +7,22 @@ class CardArea extends Component {
   constructor(props) {
     super(props);
     this.state = {};
+    this.clickedCard = null;
+  }
+
+  displayPopup = (event) => {
+    if (event.target.classList.contians('card--container')) {
+     console.log('hey')
+      // this.setState({
+      //   clickedCard: 
+      // })
+    }
   }
 
   render(props) {
     return (
-      <div className="card-area">
+      <div onClick={this.displayPopup}
+           className="card-area">
         <Header 
           setAsideView={this.props.setAsideView}/>
         {this.props.userCardsData.map(userCard => {
