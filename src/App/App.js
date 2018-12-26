@@ -116,7 +116,7 @@ class App extends Component {
           userCardsData={this.state.userCardsData}
           setAsideView={this.setAsideView}
           cardAreaView={this.state.cardAreaView}
-          userDecks = {this.state.userDecks} />
+          userDecks={this.state.userDecks} />
       </div>
     )
   }

@@ -16,9 +16,9 @@ class CardArea extends Component {
       (cardAreaView = this.props.userCardsData.map(userCard => {
         return <Card userCard={userCard} key={userCard.cardName} />
       }))
-    this.props.cardAreaView === 'myCardList' &&
-      (cardAreaView = this.props.userDecks.map(deck => {
-        return <Deck deckName={deck} />
+    this.props.cardAreaView === 'compareDecks' &&
+      (cardAreaView = this.props.userDecks.map(userDeck => {
+        return <Deck userDeck={userDeck} key={userDeck.deckName} />
       }))
 
     return (
