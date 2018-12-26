@@ -10,22 +10,35 @@ class CardArea extends Component {
     this.state = {};
   }
 
+  sortCardsByName(card1, card2) {
+    if (card1.cardName < card2.cardName) {
+      return -1;
+    } else {
+      return 1;
+    }
+  }
+
   render(props) {
-    let cardAreaView;
-    this.props.cardAreaView === 'myCardList' && 
-      (cardAreaView = this.props.userCardsData.map(userCard => {
+    let cardAreaView = [];
+    if (this.props.cardAreaView === 'myCardList') {
+      this.props.userCardsData.sort(this.sortCardsByName);
+      cardAreaView = this.props.userCardsData.map(userCard => {
         return <Card userCard={userCard} key={userCard.cardName} />
-      }))
-    this.props.cardAreaView === 'compareDecks' &&
-      (cardAreaView = this.props.userDecks.map(userDeck => {
+      });
+    } else if (this.props.cardAreaView === 'compareDecks') {
+      this.props.userDecks.sort((a, b) => a.price - b.price);
+      cardAreaView = this.props.userDecks.map(userDeck => {
         return <Deck userDeck={userDeck} key={userDeck.deckName} />
-      }))
+      });
+    }
 
     return (
       <div className="card-area">
         <Header 
           setAsideView={this.props.setAsideView}/>
-        {cardAreaView}
+        <section className="card-area--section">
+          {cardAreaView}
+        </section>
       </div>
     );
   }
