@@ -8,16 +8,16 @@ class FaveListItem extends Component {
 
   removeFaveListItem = event => {
     event.preventDefault();
+    console.log(event.target.closest('li').id)
     this.props.removeFaveListItem(event.target.closest("li").id)
   }
 
   render(props) {
     return(
-      <li>
+      <li id={this.props.deckIndex}>
         {this.props.deckName}
         <i 
           onClick={this.removeFaveListItem}
-          id={this.props.deckIndex}
           className="far fa-trash-alt" />
       </li>
     )

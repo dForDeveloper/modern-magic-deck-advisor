@@ -6,14 +6,16 @@ class Header extends Component {
     super(props);
   }
 
-  setAsideView = event => {
-    if (event.target.classList.contains("my-cards")) {
-      this.props.setAsideView("myCardList");
-    } else if (event.target.classList.contains("fave-decks")) {
-      this.props.setAsideView("faveDecks");
-    } else if (event.target.classList.contains("my-wish-list")) {
+  setAsideViewMyCards = () => {
+    this.props.setAsideView("myCardList");
+  }
+
+  setAsideViewFaveDecks = () => {
+    this.props.setAsideView("faveDecks");
+  }
+
+  setAsideViewWishList = () => {
       this.props.setAsideView("wishList")
-    }
   }
 
 
@@ -22,9 +24,9 @@ class Header extends Component {
       <header className="header">
         <img alt="Magic The Gathering" src="./magic_logo.png" className="magic-logo"></img>
         <ul className="header--ul">
-          <li onClick={this.setAsideView} className="my-cards">My Cards</li>
-          <li onClick={this.setAsideView} className="fave-decks">My Favorites</li>
-          <li onClick={this.setAsideView} className="my-wish-list">My Wish List</li>
+          <li onClick={this.setAsideViewMyCards} className="my-cards">My Cards</li>
+          <li onClick={this.setAsideViewFaveDecks} className="fave-decks">My Favorites</li>
+          <li onClick={this.setAsideViewWishList} className="my-wish-list">My Wish List</li>
         </ul>
       </header>
     )
