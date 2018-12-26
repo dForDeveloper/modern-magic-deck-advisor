@@ -17,7 +17,7 @@ class Deck extends Component {
           alt={this.props.userDeck.deckName}
         />
         <div className="price--container">
-          <h3 className="price--counter">${this.props.userDeck.price}</h3>
+          <h3 className="price--value">${this.props.userDeck.price}</h3>
         </div>
       </article>
     );
