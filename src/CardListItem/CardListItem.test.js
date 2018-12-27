@@ -33,57 +33,26 @@ describe("CardListItem", () => {
   });
 
   it("should call removeListItem when the trash-can is clicked", () => {
-    wrapper.find(".cardlist--item").simulate("click", {
-      target: {
-        classList: {
-          contains: className => {
-            if (className === "fa-trash-alt") {
-              return true;
-            }
-          }
-        },
-        closest: () => {
-          return { id: "0" };
-        }
-      }
+    wrapper.find(".fa-trash-alt").simulate("click", {
+      target: { closest: () => {return { id: "0" }} }
     });
     expect(removeListItemMock).toBeCalled();
-  });
-
-  it("should increment state count when plus sign is clicked", () => {
-    expect(wrapper.state("count")).toEqual(1);
-    wrapper.find(".cardlist--item").simulate("click", {
-      target: {
-        classList: {
-          contains: className => {
-            if (className === "fa-plus") {
-              return true;
-            }
-          }
-        }
-      }
-    });
-    expect(wrapper.state("count")).toEqual(2);
   });
 
   it("should decrement state count when minus sign is clicked", () => {
     wrapper.instance().increaseCardCount({userCardsData, cardName})
     expect(wrapper.state("count")).toEqual(2);
-    wrapper.find(".cardlist--item").simulate("click", {
-      target: {
-        classList: {
-          contains: className => {
-            if (className === "fa-minus") {
-              return true;
-            } 
-          }
-        }
-      }
-    });
+    wrapper.find(".fa-minus").simulate("click");
     expect(wrapper.state("count")).toEqual(1);
   });
 
-  it("should call setCardCount after CardListItem state is updated", () => {
+  it("should increment state count when plus sign is clicked", () => {
+    expect(wrapper.state("count")).toEqual(1);
+    wrapper.find(".fa-plus").simulate("click");
+    expect(wrapper.state("count")).toEqual(2);
+  });
+
+  it("should call setCardCount when updateUserCardsDataState is called", () => {
     wrapper.instance().updateUserCardsDataState();
     expect(setCardCountMock).toBeCalled();
   })

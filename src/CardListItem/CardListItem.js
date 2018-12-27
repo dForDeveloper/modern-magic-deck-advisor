@@ -11,14 +11,8 @@ class CardListItem extends Component {
     };
   }
 
-  updateListItem = event => {
-    if (event.target.classList.contains("fa-trash-alt")) {
-      this.props.removeListItem(parseInt(event.target.closest("li").id));
-    } else if (event.target.classList.contains("fa-plus")) {
-      this.increaseCardCount();
-    } else if (event.target.classList.contains("fa-minus")) {
-      this.decreaseCardCount();
-    }
+  removeListItem = event => {
+    this.props.removeListItem(parseInt(event.target.closest("li").id));
   };
 
   increaseCardCount = props => {
@@ -47,16 +41,12 @@ class CardListItem extends Component {
 
   render() {
     return (
-      <li
-        onClick={this.updateListItem}
-        id={this.props.cardIndex}
-        className="cardlist--item"
-      >
+      <li id={this.props.cardIndex} className="cardlist--item">
         {this.props.cardName}
-        <i className="fas fa-minus" />
+        <i className="fas fa-minus" onClick={this.decreaseCardCount}/>
         <span>{this.state.count}</span>
-        <i className="fas fa-plus" />
-        <i className="far fa-trash-alt" />
+        <i className="fas fa-plus" onClick={this.increaseCardCount}/>
+        <i className="far fa-trash-alt" onClick={this.removeListItem}/>
       </li>
     );
   }
