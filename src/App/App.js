@@ -6,14 +6,22 @@ import CardArea from '../CardArea/CardArea.js';
 class App extends Component {
   constructor() {
     super();
+    let storedUserCards = [];
+    let storedFaveDecks = [{ deckName: "Bant Spirits" }, { deckName: "Izzet Phoenix" }, { deckName: "Death's Shadow" }];
+    if (localStorage.getItem('userCardsData')) {
+      storedUserCards = JSON.parse(localStorage.getItem('userCardsData'));
+    }
+    if (localStorage.getItem('userFaveDecks')) {
+      storedFaveDecks = JSON.parse(localStorage.getItem('userFaveDecks'));
+    }
     this.state = {
       asideView: 'myCardList',
       cardAreaView: 'myCardList',
       cards: [],
       decks: [],
-      userCardsData: [],
+      userCardsData: storedUserCards,
       userDecks: [],
-      userFaveDecks: [{ deckName: "Bant Spirits" }, { deckName: "Izzet Phoenix" }, { deckName: "Death's Shadow" }]
+      userFaveDecks: storedFaveDecks
     };
   }
   
@@ -76,7 +84,8 @@ class App extends Component {
         card.cardCount = 1
       }
     })
-    this.setState({ userCardsData })
+    this.setState({ userCardsData },
+      localStorage.setItem('userCardsData', JSON.stringify(userCardsData)));
   }
   
   retrieveCardNames = (cardNames) => {
@@ -87,7 +96,8 @@ class App extends Component {
   }
 
   setCardCount = (newUserCardsData) => {
-    this.setState({ userCardsData: newUserCardsData })
+    this.setState({ userCardsData: newUserCardsData },
+      localStorage.setItem('userCardsData', JSON.stringify(newUserCardsData)));
   }
 
   setAsideView = (view) => {
@@ -97,7 +107,8 @@ class App extends Component {
   removeFaveListItem = (indexToRemove) => {
     const [...newFaveDecks] = this.state.userFaveDecks;
     newFaveDecks.splice(indexToRemove, 1)
-    this.setState({ userFaveDecks: newFaveDecks })
+    this.setState({ userFaveDecks: newFaveDecks },
+      localStorage.setItem('userFaveDecks', JSON.stringify(newFaveDecks)));
   }
 
   render() {

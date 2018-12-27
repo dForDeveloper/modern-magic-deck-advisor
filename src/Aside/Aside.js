@@ -6,8 +6,12 @@ import './Aside.css';
 class Aside extends Component {
   constructor(props) {
     super(props);
+    let storedCardNames = [];
+    if (localStorage.getItem('cardNames')) {
+      storedCardNames = JSON.parse(localStorage.getItem('cardNames'));
+    }
     this.state = {
-      cardNames: [],
+      cardNames: storedCardNames,
       hasDuplicates: false,
       isInvalidCardName: false
     };
@@ -16,6 +20,7 @@ class Aside extends Component {
   addCardToList = (cardName) => {
     if (!this.state.cardNames.includes(cardName)) {
       const cardNames = this.state.cardNames.concat([cardName]);
+      localStorage.setItem('cardNames', JSON.stringify(cardNames));
       this.setState({
         cardNames: cardNames,
         hasDuplicates: false,
