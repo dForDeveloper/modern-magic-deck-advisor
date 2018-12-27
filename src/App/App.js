@@ -78,21 +78,19 @@ class App extends Component {
       .catch(err => console.log('decks error', err))
   }
 
-  initializeCardCount = (userCardsData) => {
-    userCardsData.forEach(card => {
-      if (card.cardCount === undefined) {
-        card.cardCount = 1
-      }
-    })
-    this.setState({ userCardsData },
-      localStorage.setItem('userCardsData', JSON.stringify(userCardsData)));
+  addUserCard = (cardName) => {
+    const newCard = this.state.cards.find(card => {
+      return cardName === card.cardName;
+    });
+    newCard.cardCount = 1;
+    const newUserCardsData = this.state.userCardsData.concat([newCard]);
+    this.setCardCount(newUserCardsData);
   }
-  
-  retrieveCardNames = (cardNames) => {
-    let userCardsData = this.state.cards.filter((card) => {
-      return cardNames.includes(card.cardName);
-    })
-    this.initializeCardCount(userCardsData);
+
+  removeUserCard = (indexToRemove) => {
+    const [...newUserCardsData] = this.state.userCardsData;
+    newUserCardsData.splice(indexToRemove, 1)
+    this.setCardCount(newUserCardsData);
   }
 
   setCardCount = (newUserCardsData) => {
@@ -101,7 +99,7 @@ class App extends Component {
   }
 
   setAsideView = (view) => {
-    this.setState( { asideView: view })
+    this.setState({ asideView: view })
   }
 
   removeFaveListItem = (indexToRemove) => {
@@ -115,7 +113,8 @@ class App extends Component {
     return (
       <div className="app">
         <Aside
-          retrieveCardNames={this.retrieveCardNames}
+          addUserCard={this.addUserCard}
+          removeUserCard={this.removeUserCard}
           setCardCount={this.setCardCount}
           userCardsData={this.state.userCardsData}
           cards={this.state.cards}

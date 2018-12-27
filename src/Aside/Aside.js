@@ -7,8 +7,8 @@ class Aside extends Component {
   constructor(props) {
     super(props);
     let storedCardNames = [];
-    if (localStorage.getItem('cardNames')) {
-      storedCardNames = JSON.parse(localStorage.getItem('cardNames'));
+    if (props.userCardsData.length > 0) {
+      storedCardNames = props.userCardsData.map(card => card.cardName);
     }
     this.state = {
       cardNames: storedCardNames,
@@ -20,13 +20,12 @@ class Aside extends Component {
   addCardToList = (cardName) => {
     if (!this.state.cardNames.includes(cardName)) {
       const cardNames = this.state.cardNames.concat([cardName]);
-      localStorage.setItem('cardNames', JSON.stringify(cardNames));
       this.setState({
         cardNames: cardNames,
         hasDuplicates: false,
         isInvalidCardName: false,
       });
-      this.props.retrieveCardNames(cardNames);
+      this.props.addUserCard(cardName);
     } else {
       this.setState({ hasDuplicates: true });
     }
@@ -36,14 +35,14 @@ class Aside extends Component {
     const [...newCardNames] = this.state.cardNames;
     newCardNames.splice(indexToRemove, 1)
     this.setState({ cardNames: newCardNames })
-    this.props.retrieveCardNames(newCardNames);
+    this.props.removeUserCard(indexToRemove);
   }
 
   throwInvalidCardNameError = () => {
     this.setState({ isInvalidCardName: true });
   }
   
-  render(props) {
+  render() {
     return (
       <aside className="aside">
         <Controls addCardToList={this.addCardToList}

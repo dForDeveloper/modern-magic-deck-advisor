@@ -5,7 +5,9 @@ class CardListItem extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      count: 1
+      count: props.userCardsData.find(card => {
+        return card.cardName === props.cardName;
+      }).cardCount
     };
   }
 
@@ -43,7 +45,7 @@ class CardListItem extends Component {
     return this.props.setCardCount(newUserCardsData);
   };
 
-  render(props) {
+  render() {
     return (
       <li
         onClick={this.updateListItem}
