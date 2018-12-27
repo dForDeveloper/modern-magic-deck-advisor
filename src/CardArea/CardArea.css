@@ -2,3 +2,8 @@
   background-color: lightgray;
   height: 100vh;
 }
+
+.card-area--section {
+  display: flex;
+  flex-wrap: wrap;
+}

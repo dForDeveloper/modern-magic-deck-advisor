@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardArea should match the snapshot 1`] = `
+<div
+  className="card-area"
+>
+  <Header
+    setAsideView={[MockFunction]}
+  />
+  <section
+    className="card-area--section"
+  >
+    <Card
+      key="Arid Mesa"
+      userCard={
+        Object {
+          "cardName": "Arid Mesa",
+        }
+      }
+    />
+    <Card
+      key="Blood Moon"
+      userCard={
+        Object {
+          "cardName": "Blood Moon",
+        }
+      }
+    />
+    <Card
+      key="Breeding Pool"
+      userCard={
+        Object {
+          "cardName": "Breeding Pool",
+        }
+      }
+    />
+  </section>
+</div>
+`;
