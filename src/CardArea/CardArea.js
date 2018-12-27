@@ -18,18 +18,26 @@ class CardArea extends Component {
     }
   }
 
+  sortCards() {
+    this.props.userCardsData.sort(this.sortCardsByName);
+    return this.props.userCardsData.map(userCard => {
+      return <Card userCard={userCard} key={userCard.cardName} />
+    });
+  }
+
+  sortDecks() {
+    this.props.userDecks.sort((a, b) => a.price - b.price);
+    return this.props.userDecks.map(userDeck => {
+      return <Deck userDeck={userDeck} key={userDeck.deckName} />
+    });
+  }
+
   render(props) {
     let cardAreaView = [];
     if (this.props.cardAreaView === 'myCardList') {
-      this.props.userCardsData.sort(this.sortCardsByName);
-      cardAreaView = this.props.userCardsData.map(userCard => {
-        return <Card userCard={userCard} key={userCard.cardName} />
-      });
+      cardAreaView = this.sortCards();
     } else if (this.props.cardAreaView === 'compareDecks') {
-      this.props.userDecks.sort((a, b) => a.price - b.price);
-      cardAreaView = this.props.userDecks.map(userDeck => {
-        return <Deck userDeck={userDeck} key={userDeck.deckName} />
-      });
+      cardAreaView = this.sortDecks();
     }
 
     return (
