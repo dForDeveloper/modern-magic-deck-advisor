@@ -7,6 +7,10 @@ class Card extends Component {
     this.state = {};
   }
 
+  setPopUpData = () => {
+    this.props.displayPopUp(this.props.userCard);
+  }
+
   render(props) {
     return (
       <article className="card--container">
@@ -16,6 +20,7 @@ class Card extends Component {
               className="card--image"
               src={this.props.userCard.imageSource}
               alt={this.props.userCard.cardName}
+              onClick={this.setPopUpData}
             />
             <div className="counter--container">
               <h1 className="card--counter">
@@ -31,6 +36,7 @@ class Card extends Component {
               className="card--image"
               src={this.props.cardImage}
               alt={this.props.cardName}
+              onClick={this.setPopUpData}
             />
             <div className="counter--container">
               <p>{this.props.price}</p>
