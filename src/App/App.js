@@ -67,6 +67,12 @@ class App extends Component {
     });
   }
 
+  getExpandedDeckInfo = (deck) => {
+    return this.state.cards.filter(card => {
+      return deck.cards.includes(card.cardName);
+    });
+  }
+
   componentDidMount() {
     fetch('https://whateverly-datasets.herokuapp.com/api/v1/cards')
       .then(cards => cards.json())
@@ -155,6 +161,10 @@ class App extends Component {
     this.setState({ asideView: view })
   }
 
+  setCardAreaView = (view) => {
+    this.setState( {cardAreaView: view})
+  }
+
   removeFaveListItem = (indexToRemove) => {
     const [...newFaveDecks] = this.state.userFaveDecks;
     newFaveDecks.splice(indexToRemove, 1)
@@ -179,7 +189,9 @@ class App extends Component {
           userCardsData={this.state.userCardsData}
           setAsideView={this.setAsideView}
           cardAreaView={this.state.cardAreaView}
-          userDecks={this.state.userDecks} />
+          setCardAreaView={this.setCardAreaView}
+          userDecks={this.state.userDecks}
+          getExpandedDeckInfo={this.getExpandedDeckInfo}/>
       </div>
     )
   }

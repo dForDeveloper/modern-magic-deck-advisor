@@ -10,14 +10,33 @@ class Card extends Component {
   render(props) {
     return (
       <article className="card--container">
-        <img
-          className="card--image"
-          src={this.props.userCard.imageSource}
-          alt={this.props.userCard.cardName}
-        />
-        <div className="counter--container">
-          <h1 className="card--counter">{this.props.userCard.cardCount}x</h1>
-        </div>
+        {this.props.cardAreaView === "myCardList" && (
+          <div>
+            <img
+              className="card--image"
+              src={this.props.userCard.imageSource}
+              alt={this.props.userCard.cardName}
+            />
+            <div className="counter--container">
+              <h1 className="card--counter">
+                {this.props.userCard.cardCount}x
+              </h1>
+            </div>
+          </div>
+        )}
+
+        {this.props.cardAreaView === "expandedDeck" && (
+          <div>
+            <img
+              className="card--image"
+              src={this.props.cardImage}
+              alt={this.props.cardName}
+            />
+            <div className="counter--container">
+              <p>{this.props.price}</p>
+            </div>
+          </div>
+        )}
       </article>
     );
   }
