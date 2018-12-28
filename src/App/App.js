@@ -6,14 +6,22 @@ import CardArea from '../CardArea/CardArea.js';
 class App extends Component {
   constructor() {
     super();
+    let storedUserCards = [];
+    let storedFaveDecks = [{ deckName: "Bant Spirits" }, { deckName: "Izzet Phoenix" }, { deckName: "Death's Shadow" }];
+    if (localStorage.getItem('userCardsData')) {
+      storedUserCards = JSON.parse(localStorage.getItem('userCardsData'));
+    }
+    if (localStorage.getItem('userFaveDecks')) {
+      storedFaveDecks = JSON.parse(localStorage.getItem('userFaveDecks'));
+    }
     this.state = {
       asideView: 'myCardList',
       cardAreaView: 'myCardList',
       cards: [],
       decks: [],
-      userCardsData: [],
+      userCardsData: storedUserCards,
       userDecks: [],
-      userFaveDecks: [{ deckName: "Bant Spirits" }, { deckName: "Izzet Phoenix" }, { deckName: "Death's Shadow" }]
+      userFaveDecks: storedFaveDecks
     };
   }
   
@@ -70,41 +78,43 @@ class App extends Component {
       .catch(err => console.log('decks error', err))
   }
 
-  initializeCardCount = (userCardsData) => {
-    userCardsData.forEach(card => {
-      if (card.cardCount === undefined) {
-        card.cardCount = 1
-      }
-    })
-    this.setState({ userCardsData })
+  addUserCard = (cardName) => {
+    const newCard = this.state.cards.find(card => {
+      return cardName === card.cardName;
+    });
+    newCard.cardCount = 1;
+    const newUserCardsData = this.state.userCardsData.concat([newCard]);
+    this.setCardCount(newUserCardsData);
   }
-  
-  retrieveCardNames = (cardNames) => {
-    let userCardsData = this.state.cards.filter((card) => {
-      return cardNames.includes(card.cardName);
-    })
-    this.initializeCardCount(userCardsData);
+
+  removeUserCard = (indexToRemove) => {
+    const [...newUserCardsData] = this.state.userCardsData;
+    newUserCardsData.splice(indexToRemove, 1)
+    this.setCardCount(newUserCardsData);
   }
 
   setCardCount = (newUserCardsData) => {
-    this.setState({ userCardsData: newUserCardsData })
+    this.setState({ userCardsData: newUserCardsData },
+      localStorage.setItem('userCardsData', JSON.stringify(newUserCardsData)));
   }
 
   setAsideView = (view) => {
-    this.setState( { asideView: view })
+    this.setState({ asideView: view })
   }
 
   removeFaveListItem = (indexToRemove) => {
     const [...newFaveDecks] = this.state.userFaveDecks;
     newFaveDecks.splice(indexToRemove, 1)
-    this.setState({ userFaveDecks: newFaveDecks })
+    this.setState({ userFaveDecks: newFaveDecks },
+      localStorage.setItem('userFaveDecks', JSON.stringify(newFaveDecks)));
   }
 
   render() {
     return (
       <div className="app">
         <Aside
-          retrieveCardNames={this.retrieveCardNames}
+          addUserCard={this.addUserCard}
+          removeUserCard={this.removeUserCard}
           setCardCount={this.setCardCount}
           userCardsData={this.state.userCardsData}
           cards={this.state.cards}
