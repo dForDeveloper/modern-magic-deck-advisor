@@ -30,13 +30,10 @@ class Card extends Component {
             <img
               className="card--image"
               src={this.props.cardImage}
-              alt={this.props.key}
+              alt={this.props.cardName}
             />
             <div className="counter--container">
               <p>{this.props.price}</p>
-              {/* <h1 className="card--counter">
-                {this.props.userCard.cardCount}x
-              </h1> */}
             </div>
           </div>
         )}

@@ -58,20 +58,16 @@ class CardArea extends Component {
   
   expandDeck = (deckObj) => {
     let selectedDeck = this.props.getExpandedDeckInfo(deckObj)
-    this.setState( {selectedDeck} );
+    this.setState({ selectedDeck });
   }
 
   displayDeck = () => {
-    if (this.state.selectedDeck === []) {
-      return null;
-    } else {
       return this.state.selectedDeck.map(card => {
         return <Card cardImage={card.imageSource} 
                     price={card.price}
                     key={card.cardName}
                     cardAreaView={this.props.cardAreaView}/>
       })
-    }
   }
 
 

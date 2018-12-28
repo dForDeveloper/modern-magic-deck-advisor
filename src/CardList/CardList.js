@@ -11,7 +11,8 @@ class CardList extends Component {
   }
 
 
-  render(props) {
+  render() {
+    this.props.cardNames.sort();
     return (
       <div>
         <ul className="cardlist--ul">

@@ -6,8 +6,12 @@ import './Aside.css';
 class Aside extends Component {
   constructor(props) {
     super(props);
+    let storedCardNames = [];
+    if (props.userCardsData.length > 0) {
+      storedCardNames = props.userCardsData.map(card => card.cardName);
+    }
     this.state = {
-      cardNames: [],
+      cardNames: storedCardNames,
       hasDuplicates: false,
       isInvalidCardName: false
     };
@@ -21,7 +25,7 @@ class Aside extends Component {
         hasDuplicates: false,
         isInvalidCardName: false,
       });
-      this.props.retrieveCardNames(cardNames);
+      this.props.addUserCard(cardName);
     } else {
       this.setState({ hasDuplicates: true });
     }
@@ -31,14 +35,14 @@ class Aside extends Component {
     const [...newCardNames] = this.state.cardNames;
     newCardNames.splice(indexToRemove, 1)
     this.setState({ cardNames: newCardNames })
-    this.props.retrieveCardNames(newCardNames);
+    this.props.removeUserCard(indexToRemove);
   }
 
   throwInvalidCardNameError = () => {
     this.setState({ isInvalidCardName: true });
   }
   
-  render(props) {
+  render() {
     return (
       <aside className="aside">
         <Controls addCardToList={this.addCardToList}
