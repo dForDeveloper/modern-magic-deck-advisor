@@ -59,16 +59,10 @@ class App extends Component {
     });
   }
 
-  getExpandedDeckInfo = (obj) => {
-    let deck = this.state.cards.reduce((acc, currentCardObj) => {
-      obj.cards.forEach(card => {
-        if (card === currentCardObj.cardName) {
-          acc.push(currentCardObj);
-        }
-      })
-      return acc;
-    }, [])
-    return deck;
+  getExpandedDeckInfo = (deck) => {
+    return this.state.cards.filter(card => {
+      return deck.cards.includes(card.cardName);
+    });
   }
 
   componentDidMount() {
