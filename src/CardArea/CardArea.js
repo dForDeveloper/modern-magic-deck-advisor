@@ -8,6 +8,8 @@ class CardArea extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      popUpCard: {},
+      showPopUp: false,
       selectedDeck: []
     };
   }
@@ -25,7 +27,8 @@ class CardArea extends Component {
     return this.props.userCardsData.map(userCard => {
       return <Card userCard={userCard} 
                    key={userCard.cardName}
-                   cardAreaView={this.props.cardAreaView} />
+                   cardAreaView={this.props.cardAreaView}
+                   displayPopUp={this.displayPopUp} />
     });
   }
 
@@ -40,21 +43,17 @@ class CardArea extends Component {
               />
     });
   }
-  
-  displayPopup = (event) => {
-    let cardPop = document.querySelector('.card--popup');
-    if (event.target.classList.contains('card--image')) {
-      cardPop.classList.add('card--pop');
-      cardPop.classList.remove('card--popup-hide');
-    }
+
+  displayPopUp = (card) => {
+    this.setState({
+      popUpCard: card,
+      showPopUp: true
+    });
   }
 
   returnToScreen = () => {
-    let cardPop = document.querySelector('.card--popup');
-    cardPop.classList.add('card--popup-hide');
-    cardPop.classList.remove('card--pop');    
+    this.setState({ showPopUp: false });
   }
-
   
   expandDeck = (deckObj) => {
     let selectedDeck = this.props.getExpandedDeckInfo(deckObj)
@@ -70,7 +69,6 @@ class CardArea extends Component {
       })
   }
 
-
   render(props) {
     let cardAreaView = [];
     if (this.props.cardAreaView === 'myCardList') {
@@ -82,25 +80,31 @@ class CardArea extends Component {
     }
 
     return (
-      <div onClick={event => this.displayPopup(event)}
-      className="card-area">
-        <div className="card--popup  card--popup-hide">
-          <img
-            className="popup--card"
-            src="https://img.scryfall.com/cards/large/en/a25/122.jpg"
-          />
-          <div className="popup-info">
-          <div>
-            <h1>Card Title</h1>
-            <h1>Mana Cost:</h1>
-            <h1>Card Type:</h1>
-            <h1>Card Price:</h1>
-            <h1>Card Avg:</h1>
+      <div className="card-area">
+        {this.state.showPopUp && (
+          <div className="card--pop">
+            <img
+              className="popup--card"
+              src={this.state.popUpCard.imageSource}
+              alt={this.state.popUpCard.cardName}
+            />
+            <div className="popup-info">
+            <div>
+              <h2>{this.state.popUpCard.price}</h2>
+              <h3>This card is played in:</h3>
+              <ul>
+                {
+                  this.state.popUpCard.decks.map(deck => {
+                    return <li>{deck}</li>
+                  })
+                }
+              </ul>
+            </div>
+              <i onClick={this.returnToScreen} 
+                className="far fa-times-circle"></i>
+            </div>
           </div>
-            <i onClick={this.returnToScreen} 
-               className="far fa-times-circle"></i>
-          </div>
-        </div>
+        )}
         <Header 
           setAsideView={this.props.setAsideView}/>
         <section className="card-area--section">
