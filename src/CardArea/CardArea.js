@@ -7,7 +7,9 @@ import Deck from '../Deck/Deck.js';
 class CardArea extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      selectedDeck: []
+    };
   }
 
   sortCardsByName(card1, card2) {
@@ -21,16 +23,43 @@ class CardArea extends Component {
   sortCards() {
     this.props.userCardsData.sort(this.sortCardsByName);
     return this.props.userCardsData.map(userCard => {
-      return <Card userCard={userCard} key={userCard.cardName} />
+      return <Card userCard={userCard} 
+                   key={userCard.cardName}
+                   cardAreaView={this.props.cardAreaView} />
     });
   }
 
   sortDecks() {
     this.props.userDecks.sort((a, b) => a.price - b.price);
     return this.props.userDecks.map(userDeck => {
-      return <Deck userDeck={userDeck} key={userDeck.deckName} />
+      return <Deck 
+                userDeck={userDeck} 
+                key={userDeck.deckName}
+                expandDeck={this.expandDeck}
+                setCardAreaView={this.props.setCardAreaView}
+              />
     });
   }
+
+  
+  expandDeck = (deckObj) => {
+    let selectedDeck = this.props.getExpandedDeckInfo(deckObj)
+    this.setState( {selectedDeck} );
+  }
+
+  displayDeck = () => {
+    if (this.state.selectedDeck === []) {
+      return null;
+    } else {
+      return this.state.selectedDeck.map(card => {
+        return <Card cardImage={card.imageSource} 
+                    price={card.price}
+                    key={card.cardName}
+                    cardAreaView={this.props.cardAreaView}/>
+      })
+    }
+  }
+
 
   render(props) {
     let cardAreaView = [];
@@ -38,6 +67,8 @@ class CardArea extends Component {
       cardAreaView = this.sortCards();
     } else if (this.props.cardAreaView === 'compareDecks') {
       cardAreaView = this.sortDecks();
+    } else if (this.props.cardAreaView === 'expandedDeck') {
+      cardAreaView = this.displayDeck();
     }
 
     return (

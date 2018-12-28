@@ -59,6 +59,18 @@ class App extends Component {
     });
   }
 
+  getExpandedDeckInfo = (obj) => {
+    let deck = this.state.cards.reduce((acc, currentCardObj) => {
+      obj.cards.forEach(card => {
+        if (card === currentCardObj.cardName) {
+          acc.push(currentCardObj);
+        }
+      })
+      return acc;
+    }, [])
+    return deck;
+  }
+
   componentDidMount() {
     fetch('https://whateverly-datasets.herokuapp.com/api/v1/cards')
       .then(cards => cards.json())
@@ -94,6 +106,10 @@ class App extends Component {
     this.setState( { asideView: view })
   }
 
+  setCardAreaView = (view) => {
+    this.setState( {cardAreaView: view})
+  }
+
   removeFaveListItem = (indexToRemove) => {
     const [...newFaveDecks] = this.state.userFaveDecks;
     newFaveDecks.splice(indexToRemove, 1)
@@ -116,7 +132,9 @@ class App extends Component {
           userCardsData={this.state.userCardsData}
           setAsideView={this.setAsideView}
           cardAreaView={this.state.cardAreaView}
-          userDecks={this.state.userDecks} />
+          setCardAreaView={this.setCardAreaView}
+          userDecks={this.state.userDecks}
+          getExpandedDeckInfo={this.getExpandedDeckInfo}/>
       </div>
     )
   }
