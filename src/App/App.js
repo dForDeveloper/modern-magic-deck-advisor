@@ -79,25 +79,17 @@ class App extends Component {
   }
 
   getCurrentPrices = (cards) => {
-    let cardPrices;
     const timeOfCache = JSON.parse(localStorage.getItem('timeOfCache'))
     const twentyFourHours = 24 * 60 * 60 * 1000;
     if (!timeOfCache || Date.now() - timeOfCache > twentyFourHours) {
-      const urlBase = 'https://api.scryfall.com/cards/search?q=f%3Am+unique%3Acards+%28';
-      const urlSuffix = cards.map(card => {
-        return `%21"${card.cardName.replace(/\s/g, '+')}"`;
-      });
+      const root = 'https://api.scryfall.com/cards/search?q=f%3Am+unique%3Acards+%28';
+      const url = this.getURLArray(cards);
       Promise.all([
-        this.getPricePromise(urlBase + urlSuffix.slice(0,40).join('+or+') + '%29'),
-        this.getPricePromise(urlBase + urlSuffix.slice(40).join('+or+') + '%29')
+        this.getPricePromise(root + url.slice(0,40).join('+or+') + '%29'),
+        this.getPricePromise(root + url.slice(40).join('+or+') + '%29')
       ])
         .then(priceData => {
-          const totalPriceData = priceData[0].concat(priceData[1]);
-          cardPrices = totalPriceData.map(card => {
-            return { cardName: card.name, price: card.usd };
-          });
-          localStorage.setItem('timeOfCache', JSON.stringify(Date.now()));
-          localStorage.setItem('cardPrices', JSON.stringify(cardPrices));
+          this.storePriceData(priceData);
           this.setCurrentPrices(cards);
         })
         .catch(err => console.log('Promise.all error', err));
@@ -106,11 +98,26 @@ class App extends Component {
     }
   }
 
+  getURLArray = (cards) => {
+    return cards.map(card => {
+      return `%21"${card.cardName.replace(/\s/g, '+')}"`;
+    });
+  }
+
   getPricePromise = (url) => {
     return fetch(url)
       .then(response => response.json())
       .then(response => response.data)
       .catch(err => console.log('price promise error', err));
+  }
+
+  storePriceData = (priceData) => {
+    const totalPriceData = priceData[0].concat(priceData[1]);
+    const cardPrices = totalPriceData.map(card => {
+      return { cardName: card.name, price: card.usd };
+    });
+    localStorage.setItem('timeOfCache', JSON.stringify(Date.now()));
+    localStorage.setItem('cardPrices', JSON.stringify(cardPrices));
   }
 
   setCurrentPrices = (cards) => {

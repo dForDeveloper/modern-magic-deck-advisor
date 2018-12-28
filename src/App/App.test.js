@@ -41,4 +41,10 @@ describe('App', () => {
     expect(wrapper.state('userCardsData').length).toEqual(1);
     expect(wrapper.state('userCardsData')[0].cardName).toEqual('Mox Opal');
   });
+
+  it('should return strings formatted for the API fetch when getURLArray is called', () => {
+    let url = wrapper.instance().getURLArray(userCardsData);
+    expect(url[0]).toEqual(`%21"Blood+Moon"`);
+    expect(url[1]).toEqual(`%21"Mox+Opal"`);
+  });
 });
