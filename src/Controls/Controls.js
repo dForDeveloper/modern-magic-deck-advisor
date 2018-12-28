@@ -12,13 +12,19 @@ class Controls extends Component {
     this.setState({ cardName: event.target.value })
   }
 
+  clearInput = () => {
+    document.querySelector('.controls--input').value = '';
+  }
+
   addCardToList = (event) => {
     event.preventDefault();
     const matchedCard = this.validateCardName();
     if (matchedCard) {
       this.props.addCardToList(matchedCard.cardName)
+      this.clearInput()
     } else {
       this.props.throwInvalidCardNameError();
+      this.clearInput()
     }
   }
 

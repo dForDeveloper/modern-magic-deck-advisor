@@ -7,3 +7,39 @@
   display: flex;
   flex-wrap: wrap;
 }
+
+.card--popup-hide {
+  display: none;
+}
+
+.card--pop {
+  position: absolute;
+  width: 700px;
+  height: 500px;
+  background-color: #A7B8BA;
+  z-index: 2;
+  display: flex;
+  border-radius: 12px;
+}
+
+.popup--card {
+  width: 300px;
+  height: 450px;
+  border-radius: 14px;
+  margin: 25px;
+}
+
+.popup-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 400px;
+}
+
+h1 {
+  margin: 50px 0;
+}
+
+.fa-times-circle {
+  font-size: 3rem;
+}

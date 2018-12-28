@@ -40,6 +40,20 @@ class CardArea extends Component {
               />
     });
   }
+  
+  displayPopup = (event) => {
+    let cardPop = document.querySelector('.card--popup');
+    if (event.target.classList.contains('card--image')) {
+      cardPop.classList.add('card--pop');
+      cardPop.classList.remove('card--popup-hide');
+    }
+  }
+
+  returnToScreen = () => {
+    let cardPop = document.querySelector('.card--popup');
+    cardPop.classList.add('card--popup-hide');
+    cardPop.classList.remove('card--pop');    
+  }
 
   
   expandDeck = (deckObj) => {
@@ -72,7 +86,25 @@ class CardArea extends Component {
     }
 
     return (
-      <div className="card-area">
+      <div onClick={event => this.displayPopup(event)}
+      className="card-area">
+        <div className="card--popup  card--popup-hide">
+          <img
+            className="popup--card"
+            src="https://img.scryfall.com/cards/large/en/a25/122.jpg"
+          />
+          <div className="popup-info">
+          <div>
+            <h1>Card Title</h1>
+            <h1>Mana Cost:</h1>
+            <h1>Card Type:</h1>
+            <h1>Card Price:</h1>
+            <h1>Card Avg:</h1>
+          </div>
+            <i onClick={this.returnToScreen} 
+               className="far fa-times-circle"></i>
+          </div>
+        </div>
         <Header 
           setAsideView={this.props.setAsideView}/>
         <section className="card-area--section">
