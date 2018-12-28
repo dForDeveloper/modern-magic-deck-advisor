@@ -6,14 +6,22 @@ import CardArea from '../CardArea/CardArea.js';
 class App extends Component {
   constructor() {
     super();
+    let storedUserCards = [];
+    let storedFaveDecks = [{ deckName: "Bant Spirits" }, { deckName: "Izzet Phoenix" }, { deckName: "Death's Shadow" }];
+    if (localStorage.getItem('userCardsData')) {
+      storedUserCards = JSON.parse(localStorage.getItem('userCardsData'));
+    }
+    if (localStorage.getItem('userFaveDecks')) {
+      storedFaveDecks = JSON.parse(localStorage.getItem('userFaveDecks'));
+    }
     this.state = {
       asideView: 'myCardList',
       cardAreaView: 'myCardList',
       cards: [],
       decks: [],
-      userCardsData: [],
+      userCardsData: storedUserCards,
       userDecks: [],
-      userFaveDecks: [{ deckName: "Bant Spirits" }, { deckName: "Izzet Phoenix" }, { deckName: "Death's Shadow" }]
+      userFaveDecks: storedFaveDecks
     };
   }
   
@@ -59,10 +67,16 @@ class App extends Component {
     });
   }
 
+  getExpandedDeckInfo = (deck) => {
+    return this.state.cards.filter(card => {
+      return deck.cards.includes(card.cardName);
+    });
+  }
+
   componentDidMount() {
     fetch('https://whateverly-datasets.herokuapp.com/api/v1/cards')
       .then(cards => cards.json())
-      .then(parsedCards => this.setState({ cards: parsedCards.cards }))
+      .then(parsedCards => this.getCurrentPrices(parsedCards.cards))
       .catch(err => console.log('cards error', err))
     fetch('https://whateverly-datasets.herokuapp.com/api/v1/decks')
       .then(decks => decks.json())
@@ -70,41 +84,100 @@ class App extends Component {
       .catch(err => console.log('decks error', err))
   }
 
-  initializeCardCount = (userCardsData) => {
-    userCardsData.forEach(card => {
-      if (card.cardCount === undefined) {
-        card.cardCount = 1
-      }
-    })
-    this.setState({ userCardsData })
+  getCurrentPrices = (cards) => {
+    const timeOfCache = JSON.parse(localStorage.getItem('timeOfCache'))
+    const twentyFourHours = 24 * 60 * 60 * 1000;
+    if (!timeOfCache || Date.now() - timeOfCache > twentyFourHours) {
+      const root = 'https://api.scryfall.com/cards/search?q=f%3Am+unique%3Acards+%28';
+      const url = this.getURLArray(cards);
+      Promise.all([
+        this.getPricePromise(root + url.slice(0,40).join('+or+') + '%29'),
+        this.getPricePromise(root + url.slice(40).join('+or+') + '%29')
+      ])
+        .then(priceData => {
+          this.storePriceData(priceData);
+          this.setCurrentPrices(cards);
+        })
+        .catch(err => console.log('Promise.all error', err));
+    } else {
+      this.setCurrentPrices(cards);
+    }
   }
-  
-  retrieveCardNames = (cardNames) => {
-    let userCardsData = this.state.cards.filter((card) => {
-      return cardNames.includes(card.cardName);
-    })
-    this.initializeCardCount(userCardsData);
+
+  getURLArray = (cards) => {
+    return cards.map(card => {
+      return `%21"${card.cardName.replace(/\s/g, '+')}"`;
+    });
+  }
+
+  getPricePromise = (url) => {
+    return fetch(url)
+      .then(response => response.json())
+      .then(response => response.data)
+      .catch(err => console.log('price promise error', err));
+  }
+
+  storePriceData = (priceData) => {
+    const totalPriceData = priceData[0].concat(priceData[1]);
+    const cardPrices = totalPriceData.map(card => {
+      return { cardName: card.name, price: card.usd };
+    });
+    localStorage.setItem('timeOfCache', JSON.stringify(Date.now()));
+    localStorage.setItem('cardPrices', JSON.stringify(cardPrices));
+  }
+
+  setCurrentPrices = (cards) => {
+    const newCards = cards.map(card => {
+      const currentPrice = JSON.parse(localStorage.getItem('cardPrices'))
+        .find(pricedCard => pricedCard.cardName.includes(card.cardName))
+        .price;
+      card.price = parseFloat(currentPrice);
+      return card;
+    });
+    this.setState({ cards: newCards });
+  }
+
+  addUserCard = (cardName) => {
+    const newCard = this.state.cards.find(card => {
+      return cardName === card.cardName;
+    });
+    newCard.cardCount = 1;
+    const newUserCardsData = this.state.userCardsData.concat([newCard]);
+    this.setCardCount(newUserCardsData);
+  }
+
+  removeUserCard = (indexToRemove) => {
+    const [...newUserCardsData] = this.state.userCardsData;
+    newUserCardsData.splice(indexToRemove, 1)
+    this.setCardCount(newUserCardsData);
   }
 
   setCardCount = (newUserCardsData) => {
-    this.setState({ userCardsData: newUserCardsData })
+    this.setState({ userCardsData: newUserCardsData },
+      localStorage.setItem('userCardsData', JSON.stringify(newUserCardsData)));
   }
 
   setAsideView = (view) => {
-    this.setState( { asideView: view })
+    this.setState({ asideView: view })
+  }
+
+  setCardAreaView = (view) => {
+    this.setState( {cardAreaView: view})
   }
 
   removeFaveListItem = (indexToRemove) => {
     const [...newFaveDecks] = this.state.userFaveDecks;
     newFaveDecks.splice(indexToRemove, 1)
-    this.setState({ userFaveDecks: newFaveDecks })
+    this.setState({ userFaveDecks: newFaveDecks },
+      localStorage.setItem('userFaveDecks', JSON.stringify(newFaveDecks)));
   }
 
   render() {
     return (
       <div className="app">
         <Aside
-          retrieveCardNames={this.retrieveCardNames}
+          addUserCard={this.addUserCard}
+          removeUserCard={this.removeUserCard}
           setCardCount={this.setCardCount}
           userCardsData={this.state.userCardsData}
           cards={this.state.cards}
@@ -116,7 +189,9 @@ class App extends Component {
           userCardsData={this.state.userCardsData}
           setAsideView={this.setAsideView}
           cardAreaView={this.state.cardAreaView}
-          userDecks={this.state.userDecks} />
+          setCardAreaView={this.setCardAreaView}
+          userDecks={this.state.userDecks}
+          getExpandedDeckInfo={this.getExpandedDeckInfo}/>
       </div>
     )
   }

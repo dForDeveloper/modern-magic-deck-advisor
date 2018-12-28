@@ -9,7 +9,8 @@ class CardArea extends Component {
     super(props);
     this.state = {
       popUpCard: {},
-      showPopUp: false
+      showPopUp: false,
+      selectedDeck: []
     };
   }
 
@@ -24,17 +25,22 @@ class CardArea extends Component {
   sortCards() {
     this.props.userCardsData.sort(this.sortCardsByName);
     return this.props.userCardsData.map(userCard => {
-      return <Card
-              userCard={userCard}
-              key={userCard.cardName}
-              displayPopUp={this.displayPopUp} />
+      return <Card userCard={userCard} 
+                   key={userCard.cardName}
+                   cardAreaView={this.props.cardAreaView}
+                   displayPopUp={this.displayPopUp} />
     });
   }
 
   sortDecks() {
     this.props.userDecks.sort((a, b) => a.price - b.price);
     return this.props.userDecks.map(userDeck => {
-      return <Deck userDeck={userDeck} key={userDeck.deckName} />
+      return <Deck 
+                userDeck={userDeck} 
+                key={userDeck.deckName}
+                expandDeck={this.expandDeck}
+                setCardAreaView={this.props.setCardAreaView}
+              />
     });
   }
 
@@ -48,6 +54,20 @@ class CardArea extends Component {
   returnToScreen = () => {
     this.setState({ showPopUp: false });
   }
+  
+  expandDeck = (deckObj) => {
+    let selectedDeck = this.props.getExpandedDeckInfo(deckObj)
+    this.setState({ selectedDeck });
+  }
+
+  displayDeck = () => {
+      return this.state.selectedDeck.map(card => {
+        return <Card cardImage={card.imageSource} 
+                    price={card.price}
+                    key={card.cardName}
+                    cardAreaView={this.props.cardAreaView}/>
+      })
+  }
 
   render(props) {
     let cardAreaView = [];
@@ -55,6 +75,8 @@ class CardArea extends Component {
       cardAreaView = this.sortCards();
     } else if (this.props.cardAreaView === 'compareDecks') {
       cardAreaView = this.sortDecks();
+    } else if (this.props.cardAreaView === 'expandedDeck') {
+      cardAreaView = this.displayDeck();
     }
 
     return (

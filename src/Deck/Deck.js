@@ -6,6 +6,12 @@ class Deck extends Component {
     super(props);
     this.state = {};
   }
+
+
+  handleClick = () => {
+    this.props.setCardAreaView('expandedDeck') 
+    this.props.expandDeck(this.props.userDeck);
+  }
   
   render(props) {
     return (
@@ -16,6 +22,9 @@ class Deck extends Component {
           src="https://musingsofalifelongnerd.files.wordpress.com/2015/01/mtg-card-back.jpg"
           alt={this.props.userDeck.deckName}
         />
+        <button onClick={this.handleClick}>
+                {this.props.userDeck.cards.length} cards
+        </button>
         <div className="price--container">
           <h3 className="price--value">${this.props.userDeck.price}</h3>
         </div>
