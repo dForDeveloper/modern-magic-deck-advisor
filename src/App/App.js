@@ -115,7 +115,6 @@ class App extends Component {
 
   setCurrentPrices = (cards) => {
     const newCards = cards.map(card => {
-      console.log(JSON.parse(localStorage.getItem('cardPrices')))
       const currentPrice = JSON.parse(localStorage.getItem('cardPrices'))
         .find(pricedCard => pricedCard.cardName.includes(card.cardName))
         .price;
