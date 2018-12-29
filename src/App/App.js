@@ -178,8 +178,8 @@ class App extends Component {
   }
 
   removeWishListItem = (indexToRemove) => {
-    const [...newWishList] = this.state.WishList;
-    newWishList.splcie(indexToRemove, 1)
+    const [...newWishList] = this.state.wishList;
+    newWishList.splice(indexToRemove, 1)
     this.setState({ wishList: newWishList },
       localStorage.setItem('wishList', JSON.stringify(newWishList)));
   }

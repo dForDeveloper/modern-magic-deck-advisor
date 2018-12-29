@@ -6,7 +6,7 @@ class WishListItem extends Component {
     super(props);
   }
 
-  remoreWishListItem = event => {
+  removeWishListItem = event => {
     this.props.removeWishListItem(event.target.closest("li").id)
   }
 
