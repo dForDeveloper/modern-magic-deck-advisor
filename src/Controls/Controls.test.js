@@ -29,12 +29,16 @@ describe('Controls', () => {
   })
   
   it('should call props.addCardToList when the button is clicked and there is a matchedCard', () => {
+    wrapper.instance().clearInput = jest.fn();
+    wrapper.update();
     wrapper.find('.controls--input').simulate('change', { target: { value: 'Blood Moon' } });
     wrapper.find('.controls--button').simulate('click', { preventDefault: () => {} });
     expect(addCardToListMock).toBeCalled();
   })
   
   it('should call props.throwInvalidCardNameError when the button is clicked and there is no matchedCard', () => {
+    wrapper.instance().clearInput = jest.fn();
+    wrapper.update();
     wrapper.find('.controls--input').simulate('change', { target: { value: 'asdfgasd' } });
     wrapper.find('.controls--button').simulate('click', { preventDefault: () => {} });
     expect(throwInvalidCardNameErrorMock).toBeCalled();

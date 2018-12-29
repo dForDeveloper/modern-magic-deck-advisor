@@ -8,7 +8,8 @@ class Card extends Component {
   }
 
   setPopUpData = () => {
-    this.props.displayPopUp(this.props.userCard);
+    console.log(this.props.cardAreaView)
+    this.props.displayPopUp(this.props.card);
   }
 
   render(props) {
@@ -18,13 +19,13 @@ class Card extends Component {
           <div>
             <img
               className="card--image"
-              src={this.props.userCard.imageSource}
-              alt={this.props.userCard.cardName}
+              src={this.props.card.imageSource}
+              alt={this.props.card.cardName}
               onClick={this.setPopUpData}
             />
             <div className="counter--container">
               <h1 className="card--counter">
-                {this.props.userCard.cardCount}x
+                {this.props.card.cardCount}x
               </h1>
             </div>
           </div>
@@ -34,12 +35,12 @@ class Card extends Component {
           <div>
             <img
               className="card--image"
-              src={this.props.cardImage}
-              alt={this.props.cardName}
+              src={this.props.card.imageSource}
+              alt={this.props.card.cardName}
               onClick={this.setPopUpData}
             />
             <div className="counter--container">
-              <p>{this.props.price}</p>
+              <p>{this.props.card.price}</p>
             </div>
           </div>
         )}

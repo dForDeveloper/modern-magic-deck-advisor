@@ -25,10 +25,11 @@ class CardArea extends Component {
   sortCards() {
     this.props.userCardsData.sort(this.sortCardsByName);
     return this.props.userCardsData.map(userCard => {
-      return <Card userCard={userCard} 
-                   key={userCard.cardName}
-                   cardAreaView={this.props.cardAreaView}
-                   displayPopUp={this.displayPopUp} />
+      return <Card
+              card={userCard} 
+              key={userCard.cardName}
+              cardAreaView={this.props.cardAreaView}
+              displayPopUp={this.displayPopUp} />
     });
   }
 
@@ -62,10 +63,11 @@ class CardArea extends Component {
 
   displayDeck = () => {
       return this.state.selectedDeck.map(card => {
-        return <Card cardImage={card.imageSource} 
-                    price={card.price}
-                    key={card.cardName}
-                    cardAreaView={this.props.cardAreaView}/>
+        return <Card
+                card={card} 
+                key={card.cardName}
+                cardAreaView={this.props.cardAreaView}
+                displayPopUp={this.displayPopUp} />
       })
   }
 
