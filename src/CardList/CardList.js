@@ -15,6 +15,7 @@ class CardList extends Component {
     this.props.cardNames.sort();
     return (
       <div>
+        <h1>My Cards:</h1>
         <ul className="cardlist--ul">
           {
             this.props.cardNames.map((cardName, index) => {

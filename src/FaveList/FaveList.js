@@ -9,6 +9,7 @@ class FaveList extends Component {
   render(props) {
     return(
       <div>
+        <h1>My Favorite Decks:</h1>
         <ul>
           {
             this.props.userFaveDecks.map((deck, index) => {

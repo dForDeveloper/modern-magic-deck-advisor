@@ -9,6 +9,7 @@ class WishList extends Component {
   render(props) {
     return(
       <div>
+        <h1> Wish List:</h1>
         <ul>
           {
             this.props.wishList.map((card, index) => {
