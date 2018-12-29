@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 class Controls extends Component {
   constructor(props) {
     super(props);
+    this.textInput = React.createRef();
     this.state = {
       cardName: ''
     };
@@ -13,7 +14,8 @@ class Controls extends Component {
   }
 
   clearInput = () => {
-    document.querySelector('.controls--input').value = '';
+    this.textInput.current.value = '';
+    this.textInput.current.focus();
   }
 
   addCardToList = (event) => {
@@ -21,11 +23,10 @@ class Controls extends Component {
     const matchedCard = this.validateCardName();
     if (matchedCard) {
       this.props.addCardToList(matchedCard.cardName)
-      this.clearInput()
     } else {
       this.props.throwInvalidCardNameError();
-      this.clearInput()
     }
+    this.clearInput();
   }
 
   validateCardName = () => {
@@ -43,8 +44,17 @@ class Controls extends Component {
     }
     return(
       <form>
-        <input type="text" onChange={this.updateCardName} className="controls--input"></input>
-        <button onClick={this.addCardToList} className="controls--button">Click to add card</button>
+        <input
+          type="text"
+          className="controls--input"
+          onChange={this.updateCardName}
+          ref={this.textInput}>
+        </input>
+        <button
+          className="controls--button"
+          onClick={this.addCardToList}>
+            Add Card
+        </button>
         <p>{errorMessage}</p>
       </form>
     )
