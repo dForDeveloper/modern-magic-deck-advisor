@@ -1,7 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FaveListItem should match the snapshot 1`] = `
-<li>
+<li
+  id={0}
+>
+  Bant Spirits
   <i
     className="far fa-trash-alt"
     onClick={[Function]}
