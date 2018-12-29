@@ -8,11 +8,15 @@ class App extends Component {
     super();
     let storedUserCards = [];
     let storedFaveDecks = [{ deckName: "Bant Spirits" }, { deckName: "Izzet Phoenix" }, { deckName: "Death's Shadow" }];
+    let storedWishList = [{ cardName: "Blood Moon" }, { cardName: "Mox Opal" }, { cardName: "Breeding Pool" }]
     if (localStorage.getItem('userCardsData')) {
       storedUserCards = JSON.parse(localStorage.getItem('userCardsData'));
     }
     if (localStorage.getItem('userFaveDecks')) {
       storedFaveDecks = JSON.parse(localStorage.getItem('userFaveDecks'));
+    }
+    if (localStorage.getItem('wishList')) {
+      storedWishList = JSON.parse(localStorage.getItem('wishList'));
     }
     this.state = {
       asideView: 'myCardList',
@@ -21,7 +25,8 @@ class App extends Component {
       decks: [],
       userCardsData: storedUserCards,
       userDecks: [],
-      userFaveDecks: storedFaveDecks
+      userFaveDecks: storedFaveDecks,
+      wishList: storedWishList
     };
   }
   
@@ -172,6 +177,13 @@ class App extends Component {
       localStorage.setItem('userFaveDecks', JSON.stringify(newFaveDecks)));
   }
 
+  removeWishListItem = (indexToRemove) => {
+    const [...newWishList] = this.state.wishList;
+    newWishList.splice(indexToRemove, 1)
+    this.setState({ wishList: newWishList },
+      localStorage.setItem('wishList', JSON.stringify(newWishList)));
+  }
+
   render() {
     return (
       <div className="app">
@@ -184,7 +196,9 @@ class App extends Component {
           compareBuilds={this.compareBuilds}
           asideView={this.state.asideView}
           userFaveDecks={this.state.userFaveDecks}
-          removeFaveListItem={this.removeFaveListItem} />
+          removeFaveListItem={this.removeFaveListItem}
+          wishList={this.state.wishList}
+          removeWishListItem={this.removeWishListItem} />
         <CardArea
           userCardsData={this.state.userCardsData}
           setAsideView={this.setAsideView}

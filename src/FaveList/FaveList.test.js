@@ -12,12 +12,11 @@ describe('FaveList', () => {
     wrapper = shallow(
       <FaveList
       userFaveDecks={userFaveDecks}
-      removeFaveListItem={removeFaveListItemMock}
-      />
+      removeFaveListItem={removeFaveListItemMock}/>
     )
   });
 
   it('should match the snapshot', () => {
     expect(wrapper).toMatchSnapshot();
-  })
+  });
 })

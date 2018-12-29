@@ -10,7 +10,7 @@ class FaveListItem extends Component {
     this.props.removeFaveListItem(event.target.closest("li").id)
   }
 
-  render(props) {
+  render() {
     return(
       <li id={this.props.deckIndex}>
         {this.props.deckName}

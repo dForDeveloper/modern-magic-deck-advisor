@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WishList should match the snapshot 1`] = `
+<div>
+  <ul>
+    <WishListItem
+      cardIndex={0}
+      cardName="Blood Moon"
+      key="Blood Moon"
+      removeWishListItem={[MockFunction]}
+    />
+    <WishListItem
+      cardIndex={1}
+      cardName="Mox Opal"
+      key="Mox Opal"
+      removeWishListItem={[MockFunction]}
+    />
+    <WishListItem
+      cardIndex={2}
+      cardName="Breeding Pool"
+      key="Breeding Pool"
+      removeWishListItem={[MockFunction]}
+    />
+  </ul>
+</div>
+`;

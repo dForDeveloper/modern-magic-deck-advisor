@@ -57,7 +57,9 @@ class Aside extends Component {
                    userCardsData={this.props.userCardsData}
                    compareBuilds={this.props.compareBuilds}
                    userFaveDecks={this.props.userFaveDecks}
-                   removeFaveListItem={this.props.removeFaveListItem} />
+                   removeFaveListItem={this.props.removeFaveListItem}
+                   wishList={this.props.wishList}
+                   removeWishListItem={this.props.removeWishListItem} />
       </aside>
     );
   }
