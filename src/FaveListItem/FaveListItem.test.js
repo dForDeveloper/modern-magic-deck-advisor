@@ -8,6 +8,7 @@ const removeFaveListItemMock = jest.fn();
 
 describe("FaveListItem", () => {
   let wrapper;
+  
   beforeEach(() => {
     wrapper = shallow(
       <FaveListItem 
@@ -27,7 +28,7 @@ describe("FaveListItem", () => {
     wrapper.find(".fa-trash-alt").simulate("click", {
       target: { 
         closest: () => {
-          return { id: "0" }
+          return { id: 0 }
         } 
       }
     })
