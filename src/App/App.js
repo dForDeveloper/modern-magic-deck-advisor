@@ -164,13 +164,6 @@ class App extends Component {
     this.setState( {cardAreaView: view})
   }
 
-  removeFaveListItem = (indexToRemove) => {
-    const [...newFaveDecks] = this.state.userFaveDecks;
-    newFaveDecks.splice(indexToRemove, 1)
-    this.setState({ userFaveDecks: newFaveDecks },
-      localStorage.setItem('userFaveDecks', JSON.stringify(newFaveDecks)));
-  }
-
   addToWishlist = (card) => {
     card.wishListCount = 1;
     const newWishList = this.state.wishList.concat([card]);
