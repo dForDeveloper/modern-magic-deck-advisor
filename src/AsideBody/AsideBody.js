@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import Controls from '../Controls/Controls.js';
 import './AsideBody.css';
 import CardList from '../CardList/CardList.js';
 import FaveList from '../FaveList/FaveList.js';
@@ -10,11 +9,11 @@ function AsideBody(props) {
     return (
       <div>
         <CardList 
-          cardNames={props.cardNames} 
           removeListItem={props.removeListItem}
           setCardCount={props.setCardCount}
           userCardsData={props.userCardsData} 
-          compareBuilds={props.compareBuilds}/>
+          compareBuilds={props.compareBuilds}
+          saveArray={props.saveArray}/>
       </div>
     )
   } else if (props.asideView === "faveDecks") {
@@ -30,7 +29,8 @@ function AsideBody(props) {
       <div>
         <WishList 
           wishList={props.wishList}
-          removeWishListItem={props.removeWishListItem}/>
+          removeWishListItem={props.removeWishListItem}
+          saveArray={props.saveArray}/>
       </div>
     )
   }

@@ -10,13 +10,36 @@ class WishListItem extends Component {
     this.props.removeWishListItem(event.target.closest("li").id)
   }
 
+  increaseWishListCount = () => {
+    if (this.props.wishListCount < 4) {
+      this.updateWishList(this.props.wishListCount + 1);
+    }
+  }
+
+  decreaseWishListCount = () => {
+    if (this.props.wishListCount > 1) {
+      this.updateWishList(this.props.wishListCount - 1);
+    }
+  }
+
+  updateWishList = (newCount) => {
+    const newWishList = this.props.wishList.map(card => {
+      if (this.props.cardName === card.cardName) {
+        card.wishListCount = newCount;
+      }
+      return card;
+    });
+    this.props.saveArray('wishList', newWishList);
+  }
+
   render() {
     return(
-      <li id={this.props.cardIndex}>
+      <li id={this.props.cardIndex} className="wishlist--item">
         {this.props.cardName}
-        <i 
-          onClick={this.removeWishListItem}
-          className="far fa-trash-alt" />
+        <i className="fas fa-minus" onClick={this.decreaseWishListCount}/>
+        <span>{this.props.wishListCount}</span>
+        <i className="fas fa-plus" onClick={this.increaseWishListCount}/>
+        <i className="far fa-trash-alt" onClick={this.removeWishListItem}/>
       </li>
     )
   }

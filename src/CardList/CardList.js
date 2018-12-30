@@ -5,27 +5,27 @@ import './CardList.css'
 class CardList extends Component {
   constructor(props) {
     super(props)
-    this.state = {
-
-    }
   }
 
-
   render() {
-    this.props.cardNames.sort();
+    const cardNames = this.props.userCardsData.map(card => card.cardName);
+    cardNames.sort();
     return (
       <div>
         <h1>My Cards:</h1>
         <ul className="cardlist--ul">
           {
-            this.props.cardNames.map((cardName, index) => {
-              return (<CardListItem 
-                cardName={cardName}
-                cardIndex={index}
-                key={cardName}
-                removeListItem={this.props.removeListItem}
-                setCardCount={this.props.setCardCount} 
-                userCardsData={this.props.userCardsData}/>)
+            cardNames.map((cardName, index) => {
+              return (
+                <CardListItem 
+                  cardName={cardName}
+                  cardIndex={index}
+                  key={cardName}
+                  removeListItem={this.props.removeListItem}
+                  setCardCount={this.props.setCardCount} 
+                  userCardsData={this.props.userCardsData}
+                  saveArray={this.props.saveArray}/>
+              )
             }, this)
           }
         </ul>

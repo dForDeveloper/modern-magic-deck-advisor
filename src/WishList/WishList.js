@@ -13,21 +13,23 @@ class WishList extends Component {
         <ul>
           {
             this.props.wishList.map((card, index) => {
-              return( <WishListItem
-                cardName={card.cardName}
-                cardIndex={index}
-                key={card.cardName}
-                removeWishListItem={this.props.removeWishListItem}
-                />)
+              return(
+                <WishListItem
+                  cardName={card.cardName}
+                  cardIndex={index}
+                  wishListCount={card.wishListCount}
+                  key={card.cardName}
+                  wishList={this.props.wishList}
+                  removeWishListItem={this.props.removeWishListItem}
+                  saveArray={this.props.saveArray}/>
+              )
             })
           }
         </ul>
       </div>
     )
   }
-  
 }
 
-  
 
 export default WishList;

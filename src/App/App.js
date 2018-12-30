@@ -148,18 +148,17 @@ class App extends Component {
     });
     newCard.cardCount = 1;
     const newUserCardsData = this.state.userCardsData.concat([newCard]);
-    this.setCardCount(newUserCardsData);
-  }
-
-  removeUserCard = (indexToRemove) => {
-    const [...newUserCardsData] = this.state.userCardsData;
-    newUserCardsData.splice(indexToRemove, 1)
-    this.setCardCount(newUserCardsData);
+    this.saveArray('userCardsData', newUserCardsData);
   }
 
   setCardCount = (newUserCardsData) => {
     this.setState({ userCardsData: newUserCardsData },
       localStorage.setItem('userCardsData', JSON.stringify(newUserCardsData)));
+  }
+
+  saveArray = (arrayName, arrayToSave) => {
+    this.setState({ [arrayName]: arrayToSave },
+      localStorage.setItem(arrayName, JSON.stringify(arrayToSave)));
   }
 
   setAsideView = (view) => {
@@ -205,7 +204,8 @@ class App extends Component {
           userFaveDecks={this.state.userFaveDecks}
           removeFaveListItem={this.removeFaveListItem}
           wishList={this.state.wishList}
-          removeWishListItem={this.removeWishListItem} />
+          removeWishListItem={this.removeWishListItem}
+          saveArray={this.saveArray}/>
         <CardArea
           userCardsData={this.state.userCardsData}
           setAsideView={this.setAsideView}

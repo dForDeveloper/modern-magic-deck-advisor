@@ -11,23 +11,25 @@ class CardListItem extends Component {
     };
   }
 
-  removeListItem = event => {
-    this.props.removeListItem(parseInt(event.target.closest("li").id));
-  };
+  removeListItem = () => {
+    const [...newUserCardsData] = this.props.userCardsData;
+    newUserCardsData.splice(this.props.cardIndex, 1);
+    this.props.saveArray('userCardsData', newUserCardsData);
+  }
 
   increaseCardCount = props => {
     if (this.state.count < 4) {
       this.setState(state => {return { count: state.count + 1 }},
         () => this.updateUserCardsDataState(props));
     }
-  };
+  }
 
   decreaseCardCount = props => {
     if (this.state.count > 1) {
       this.setState(state => {return { count: state.count - 1 }},
         () => this.updateUserCardsDataState(props));
     }
-  };
+  }
 
   updateUserCardsDataState = () => {
     const newUserCardsData = this.props.userCardsData.map(card => {
@@ -37,7 +39,7 @@ class CardListItem extends Component {
       return card;
     });
     return this.props.setCardCount(newUserCardsData);
-  };
+  }
 
   render() {
     return (
