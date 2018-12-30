@@ -2,32 +2,28 @@ import React, { Component } from 'react';
 import FaveListItem from '../FaveListItem/FaveListItem.js'
 
 class FaveList extends Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render(props) {
+  render() {
+    const faveDeckNames = this.props.faveDecks.map(deck => deck.deckName);
+    faveDeckNames.sort();
+    console.log(faveDeckNames)
     return(
       <div>
         <h1>My Favorite Decks:</h1>
         <ul>
           {
-            this.props.userFaveDecks.map((deck, index) => {
-              return( <FaveListItem
-                deckName={deck.deckName}
+            faveDeckNames.map((deck, index) => {
+              return (
+              <FaveListItem
+                deckName={deck}
                 deckIndex={index}
-                key={deck.deckName}
-                removeFaveListItem={this.props.removeFaveListItem}
-                />)
+                key={deck}/>
+              )
             })
           }
         </ul>
       </div>
     )
   }
-  
 }
-
-  
 
 export default FaveList;

@@ -25,23 +25,27 @@ class CardArea extends Component {
   sortCards() {
     this.props.userCardsData.sort(this.sortCardsByName);
     return this.props.userCardsData.map(userCard => {
-      return <Card
-              card={userCard} 
-              key={userCard.cardName}
-              cardAreaView={this.props.cardAreaView}
-              displayPopUp={this.displayPopUp} />
+      return (
+        <Card
+          card={userCard} 
+          key={userCard.cardName}
+          cardAreaView={this.props.cardAreaView}
+          displayPopUp={this.displayPopUp}/>
+      );
     });
   }
 
   sortDecks() {
     this.props.userDecks.sort((a, b) => a.price - b.price);
     return this.props.userDecks.map(userDeck => {
-      return <Deck 
-                userDeck={userDeck} 
-                key={userDeck.deckName}
-                expandDeck={this.expandDeck}
-                setCardAreaView={this.props.setCardAreaView}
-              />
+      return (
+        <Deck 
+          userDeck={userDeck} 
+          key={userDeck.deckName}
+          expandDeck={this.expandDeck}
+          setCardAreaView={this.props.setCardAreaView}
+          addToFaveDecks={this.props.addToFaveDecks}/>
+      );
     });
   }
 
@@ -57,22 +61,24 @@ class CardArea extends Component {
   }
   
   expandDeck = (deckObj) => {
-    let selectedDeck = this.props.getExpandedDeckInfo(deckObj)
+    const selectedDeck = this.props.getExpandedDeckInfo(deckObj)
     this.setState({ selectedDeck });
   }
 
   displayDeck = () => {
-      return this.state.selectedDeck.map(card => {
-        return <Card
-                card={card} 
-                key={card.cardName}
-                cardAreaView={this.props.cardAreaView}
-                displayPopUp={this.displayPopUp}
-                addToWishlist={this.props.addToWishlist} />
-      })
+    return this.state.selectedDeck.map(card => {
+      return (
+        <Card
+          card={card} 
+          key={card.cardName}
+          cardAreaView={this.props.cardAreaView}
+          displayPopUp={this.displayPopUp}
+          addToWishlist={this.props.addToWishlist}/>
+      );
+    });
   }
 
-  render(props) {
+  render() {
     let cardAreaView = [];
     if (this.props.cardAreaView === 'myCardList') {
       cardAreaView = this.sortCards();

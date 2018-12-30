@@ -7,13 +7,13 @@ class App extends Component {
   constructor() {
     super();
     let storedUserCards = [];
-    let storedFaveDecks = [{ deckName: "Bant Spirits" }, { deckName: "Izzet Phoenix" }, { deckName: "Death's Shadow" }];
+    let storedFaveDecks = [];
     let storedWishList = [];
     if (localStorage.getItem('userCardsData')) {
       storedUserCards = JSON.parse(localStorage.getItem('userCardsData'));
     }
-    if (localStorage.getItem('userFaveDecks')) {
-      storedFaveDecks = JSON.parse(localStorage.getItem('userFaveDecks'));
+    if (localStorage.getItem('faveDecks')) {
+      storedFaveDecks = JSON.parse(localStorage.getItem('faveDecks'));
     }
     if (localStorage.getItem('wishList')) {
       storedWishList = JSON.parse(localStorage.getItem('wishList'));
@@ -23,9 +23,9 @@ class App extends Component {
       cardAreaView: 'myCardList',
       cards: [],
       decks: [],
-      userCardsData: storedUserCards,
       userDecks: [],
-      userFaveDecks: storedFaveDecks,
+      userCardsData: storedUserCards,
+      faveDecks: storedFaveDecks,
       wishList: storedWishList
     };
   }
@@ -177,18 +177,21 @@ class App extends Component {
     this.saveArray('wishList', newWishList);
   }
 
+  addToFaveDecks = (deck) => {
+    const newFaveDecks = this.state.faveDecks.concat([deck]);
+    this.saveArray('faveDecks', newFaveDecks);
+  }
+
   render() {
     return (
       <div className="app">
         <Aside
           addUserCard={this.addUserCard}
-          removeUserCard={this.removeUserCard}
           userCardsData={this.state.userCardsData}
           cards={this.state.cards}
           compareBuilds={this.compareBuilds}
           asideView={this.state.asideView}
-          userFaveDecks={this.state.userFaveDecks}
-          removeFaveListItem={this.removeFaveListItem}
+          faveDecks={this.state.faveDecks}
           wishList={this.state.wishList}
           saveArray={this.saveArray}/>
         <CardArea
@@ -198,7 +201,8 @@ class App extends Component {
           setCardAreaView={this.setCardAreaView}
           userDecks={this.state.userDecks}
           getExpandedDeckInfo={this.getExpandedDeckInfo}
-          addToWishlist={this.addToWishlist}/>
+          addToWishlist={this.addToWishlist}
+          addToFaveDecks={this.addToFaveDecks}/>
       </div>
     )
   }

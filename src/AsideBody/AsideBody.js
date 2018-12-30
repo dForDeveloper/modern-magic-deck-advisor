@@ -15,8 +15,8 @@ function AsideBody(props) {
   } else if (props.asideView === "faveDecks") {
     return (
       <FaveList 
-        userFaveDecks={props.userFaveDecks}
-        removeFaveListItem={props.removeFaveListItem}/>
+        faveDecks={props.faveDecks}
+        saveArray={props.saveArray}/>
     )
   } else if (props.asideView === "wishList") {
     return (

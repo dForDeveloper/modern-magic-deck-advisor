@@ -2,11 +2,6 @@ import React, { Component } from "react";
 import "./Card.css";
 
 class Card extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-
   setPopUpData = () => {
     console.log(this.props.cardAreaView)
     this.props.displayPopUp(this.props.card);
@@ -16,7 +11,7 @@ class Card extends Component {
     this.props.addToWishlist(this.props.card);
   }
 
-  render(props) {
+  render() {
     return (
       <article className="card--container">
         {this.props.cardAreaView === "myCardList" && (

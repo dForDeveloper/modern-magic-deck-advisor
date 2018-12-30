@@ -15,8 +15,7 @@ class Aside extends Component {
           asideView={this.props.asideView}
           userCardsData={this.props.userCardsData}
           compareBuilds={this.props.compareBuilds}
-          userFaveDecks={this.props.userFaveDecks}
-          removeFaveListItem={this.props.removeFaveListItem}
+          faveDecks={this.props.faveDecks}
           wishList={this.props.wishList}
           saveArray={this.props.saveArray}/>
       </aside>
