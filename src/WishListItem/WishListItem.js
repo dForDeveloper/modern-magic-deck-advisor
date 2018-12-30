@@ -2,12 +2,10 @@ import React, { Component } from "react";
 import "./WishListItem.scss";
 
 class WishListItem extends Component {
-  constructor(props) {
-    super(props);
-  }
-
-  removeWishListItem = event => {
-    this.props.removeWishListItem(event.target.closest("li").id)
+  removeWishListItem = () => {
+    const [...newWishList] = this.props.wishList;
+    newWishList.splice(this.props.cardIndex, 1);
+    this.props.saveArray('wishList', newWishList);
   }
 
   increaseWishListCount = () => {

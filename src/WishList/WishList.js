@@ -2,11 +2,7 @@ import React, { Component } from 'react';
 import WishListItem from '../WishListItem/WishListItem.js'
 
 class WishList extends Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render(props) {
+  render() {
     return(
       <div>
         <h1> Wish List:</h1>
@@ -20,7 +16,6 @@ class WishList extends Component {
                   wishListCount={card.wishListCount}
                   key={card.cardName}
                   wishList={this.props.wishList}
-                  removeWishListItem={this.props.removeWishListItem}
                   saveArray={this.props.saveArray}/>
               )
             })

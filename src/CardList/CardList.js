@@ -3,10 +3,6 @@ import CardListItem from '../CardListItem/CardListItem.js';
 import './CardList.css'
 
 class CardList extends Component {
-  constructor(props) {
-    super(props)
-  }
-
   render() {
     const cardNames = this.props.userCardsData.map(card => card.cardName);
     cardNames.sort();
@@ -20,9 +16,8 @@ class CardList extends Component {
                 <CardListItem 
                   cardName={cardName}
                   cardIndex={index}
+                  cardCount={this.props.userCardsData[index].cardCount}
                   key={cardName}
-                  removeListItem={this.props.removeListItem}
-                  setCardCount={this.props.setCardCount} 
                   userCardsData={this.props.userCardsData}
                   saveArray={this.props.saveArray}/>
               )
