@@ -12,6 +12,10 @@ class Card extends Component {
     this.props.displayPopUp(this.props.card);
   }
 
+  addToWishlist = () => {
+    this.props.addToWishlist(this.props.card);
+  }
+
   render(props) {
     return (
       <article className="card--container">
@@ -30,7 +34,6 @@ class Card extends Component {
             </div>
           </div>
         )}
-
         {this.props.cardAreaView === "expandedDeck" && (
           <div>
             <img
@@ -41,6 +44,9 @@ class Card extends Component {
             />
             <div className="counter--container">
               <p>{this.props.card.price}</p>
+              <button onClick={this.addToWishlist}>
+                Add to Wishlist
+              </button>
             </div>
           </div>
         )}

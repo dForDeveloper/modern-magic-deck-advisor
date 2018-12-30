@@ -67,7 +67,8 @@ class CardArea extends Component {
                 card={card} 
                 key={card.cardName}
                 cardAreaView={this.props.cardAreaView}
-                displayPopUp={this.displayPopUp} />
+                displayPopUp={this.displayPopUp}
+                addToWishlist={this.props.addToWishlist} />
       })
   }
 

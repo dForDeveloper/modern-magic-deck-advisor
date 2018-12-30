@@ -8,7 +8,7 @@ class App extends Component {
     super();
     let storedUserCards = [];
     let storedFaveDecks = [{ deckName: "Bant Spirits" }, { deckName: "Izzet Phoenix" }, { deckName: "Death's Shadow" }];
-    let storedWishList = [{ cardName: "Blood Moon" }, { cardName: "Mox Opal" }, { cardName: "Breeding Pool" }]
+    let storedWishList = [];
     if (localStorage.getItem('userCardsData')) {
       storedUserCards = JSON.parse(localStorage.getItem('userCardsData'));
     }
@@ -184,6 +184,13 @@ class App extends Component {
       localStorage.setItem('wishList', JSON.stringify(newWishList)));
   }
 
+  addToWishlist = (card) => {
+    card.wishListCount = 1;
+    const newWishList = this.state.wishList.concat([card]);
+    this.setState({ wishList: newWishList},
+      localStorage.setItem('wishList', JSON.stringify(newWishList)));
+  }
+
   render() {
     return (
       <div className="app">
@@ -205,7 +212,8 @@ class App extends Component {
           cardAreaView={this.state.cardAreaView}
           setCardAreaView={this.setCardAreaView}
           userDecks={this.state.userDecks}
-          getExpandedDeckInfo={this.getExpandedDeckInfo}/>
+          getExpandedDeckInfo={this.getExpandedDeckInfo}
+          addToWishlist={this.addToWishlist} />
       </div>
     )
   }
