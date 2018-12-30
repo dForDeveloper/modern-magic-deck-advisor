@@ -5,7 +5,9 @@ class Controls extends Component {
     super(props);
     this.textInput = React.createRef();
     this.state = {
-      cardName: ''
+      cardName: '',
+      isInvalidCardName: false,
+      hasDuplicates: false
     };
   }
 
