@@ -151,11 +151,6 @@ class App extends Component {
     this.saveArray('userCardsData', newUserCardsData);
   }
 
-  setCardCount = (newUserCardsData) => {
-    this.setState({ userCardsData: newUserCardsData },
-      localStorage.setItem('userCardsData', JSON.stringify(newUserCardsData)));
-  }
-
   saveArray = (arrayName, arrayToSave) => {
     this.setState({ [arrayName]: arrayToSave },
       localStorage.setItem(arrayName, JSON.stringify(arrayToSave)));
@@ -176,18 +171,10 @@ class App extends Component {
       localStorage.setItem('userFaveDecks', JSON.stringify(newFaveDecks)));
   }
 
-  removeWishListItem = (indexToRemove) => {
-    const [...newWishList] = this.state.wishList;
-    newWishList.splice(indexToRemove, 1)
-    this.setState({ wishList: newWishList },
-      localStorage.setItem('wishList', JSON.stringify(newWishList)));
-  }
-
   addToWishlist = (card) => {
     card.wishListCount = 1;
     const newWishList = this.state.wishList.concat([card]);
-    this.setState({ wishList: newWishList},
-      localStorage.setItem('wishList', JSON.stringify(newWishList)));
+    this.saveArray('wishList', newWishList);
   }
 
   render() {
@@ -196,7 +183,6 @@ class App extends Component {
         <Aside
           addUserCard={this.addUserCard}
           removeUserCard={this.removeUserCard}
-          setCardCount={this.setCardCount}
           userCardsData={this.state.userCardsData}
           cards={this.state.cards}
           compareBuilds={this.compareBuilds}
@@ -204,7 +190,6 @@ class App extends Component {
           userFaveDecks={this.state.userFaveDecks}
           removeFaveListItem={this.removeFaveListItem}
           wishList={this.state.wishList}
-          removeWishListItem={this.removeWishListItem}
           saveArray={this.saveArray}/>
         <CardArea
           userCardsData={this.state.userCardsData}
@@ -213,7 +198,7 @@ class App extends Component {
           setCardAreaView={this.setCardAreaView}
           userDecks={this.state.userDecks}
           getExpandedDeckInfo={this.getExpandedDeckInfo}
-          addToWishlist={this.addToWishlist} />
+          addToWishlist={this.addToWishlist}/>
       </div>
     )
   }

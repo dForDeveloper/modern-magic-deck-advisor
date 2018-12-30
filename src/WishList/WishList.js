@@ -5,7 +5,7 @@ class WishList extends Component {
   render() {
     return(
       <div>
-        <h1> Wish List:</h1>
+        <h1>Wish List:</h1>
         <ul>
           {
             this.props.wishList.map((card, index) => {
@@ -25,6 +25,5 @@ class WishList extends Component {
     )
   }
 }
-
 
 export default WishList;

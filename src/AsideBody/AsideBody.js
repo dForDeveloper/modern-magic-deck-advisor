@@ -8,7 +8,6 @@ function AsideBody(props) {
   if (props.asideView === "myCardList") {
     return (
       <CardList 
-        removeListItem={props.removeListItem}
         userCardsData={props.userCardsData} 
         compareBuilds={props.compareBuilds}
         saveArray={props.saveArray}/>
@@ -23,7 +22,6 @@ function AsideBody(props) {
     return (
       <WishList 
         wishList={props.wishList}
-        removeWishListItem={props.removeWishListItem}
         saveArray={props.saveArray}/>
     )
   }
