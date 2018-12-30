@@ -2,8 +2,11 @@ import React from 'react';
 import FaveList from './FaveList';
 import { shallow } from 'enzyme';
 
-const userFaveDecks = [{ deckName: "Bant Spirits" }, { deckName: "Izzet Phoenix" }, { deckName: "Death's Shadow" }];
-const removeFaveListItemMock = jest.fn();
+const faveDecks = [
+  { deckName: "Bant Spirits" },
+  { deckName: "Izzet Phoenix" }
+];
+const saveArrayMock = jest.fn();
 
 describe('FaveList', () => {
   let wrapper;
@@ -11,12 +14,12 @@ describe('FaveList', () => {
   beforeEach(() => {
     wrapper = shallow(
       <FaveList
-      userFaveDecks={userFaveDecks}
-      removeFaveListItem={removeFaveListItemMock}/>
+      faveDecks={faveDecks}
+      saveArray={saveArrayMock}/>
     )
   });
 
   it('should match the snapshot', () => {
     expect(wrapper).toMatchSnapshot();
   });
-})
+});
