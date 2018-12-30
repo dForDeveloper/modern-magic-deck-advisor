@@ -5,7 +5,6 @@ class FaveList extends Component {
   render() {
     const faveDeckNames = this.props.faveDecks.map(deck => deck.deckName);
     faveDeckNames.sort();
-    console.log(faveDeckNames)
     return(
       <div>
         <h1>My Favorite Decks:</h1>
@@ -16,7 +15,9 @@ class FaveList extends Component {
               <FaveListItem
                 deckName={deck}
                 deckIndex={index}
-                key={deck}/>
+                key={deck}
+                faveDecks={this.props.faveDecks}
+                saveArray={this.props.saveArray}/>
               )
             })
           }

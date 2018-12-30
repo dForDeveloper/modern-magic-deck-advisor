@@ -2,8 +2,10 @@ import React, { Component } from "react";
 import "./FaveListItem.scss";
 
 class FaveListItem extends Component {
-  removeFaveListItem = event => {
-    // this.props.removeFaveListItem(event.target.closest("li").id)
+  removeFaveListItem = () => {
+    const [...newFaveDecks] = this.props.faveDecks;
+    newFaveDecks.splice(this.props.deckIndex, 1);
+    this.props.saveArray('faveDecks', newFaveDecks);
   }
 
   render() {
