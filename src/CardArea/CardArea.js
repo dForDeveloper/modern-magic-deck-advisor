@@ -10,7 +10,7 @@ class CardArea extends Component {
     this.state = {
       popUpCard: {},
       showPopUp: false,
-      selectedDeck: []
+      cardsInDeck: []
     };
   }
 
@@ -61,12 +61,21 @@ class CardArea extends Component {
   }
   
   expandDeck = (deckObj) => {
-    const selectedDeck = this.props.getExpandedDeckInfo(deckObj)
-    this.setState({ selectedDeck });
+    const cardsInDeck = this.props.getExpandedDeckInfo(deckObj);
+    cardsInDeck.map(cardInDeck => {
+      const matchedCard = this.props.userCardsData.find(userCard => {
+        return userCard.cardName === cardInDeck.cardName;
+      });
+      cardInDeck.requiredCount = deckObj.cardCounts[cardInDeck.cardName];
+      cardInDeck.userCount = matchedCard ? 
+        Math.min(cardInDeck.requiredCount, matchedCard.cardCount) : 0;
+      return cardInDeck;
+    });
+    this.setState({ cardsInDeck });
   }
 
   displayDeck = () => {
-    return this.state.selectedDeck.map(card => {
+    return this.state.cardsInDeck.map(card => {
       return (
         <Card
           card={card} 

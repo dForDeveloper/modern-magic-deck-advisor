@@ -39,6 +39,12 @@ class Card extends Component {
             />
             <div className="counter--container">
               <p>{this.props.card.price}</p>
+              <p>
+                {
+                  `You have ${this.props.card.userCount}
+                   of ${this.props.card.requiredCount}`
+                }
+              </p>
               <button onClick={this.addToWishlist}>
                 Add to Wishlist
               </button>
