@@ -8,18 +8,21 @@
 
 @mixin symbols() {
   font-size: .75rem;
-  padding: 0px 5px;
+  padding-left: 5px;
 }
 
-@mixin list-h1() {
-  font-family: $secondary;
-  font-size: 30px;
-  text-align: center;
+@mixin heading($fontsize, $fontweight, $textalign) {
+  font-family: $primary;
+  font-size: $fontsize;
+  font-weight: $fontweight;
+  text-align: $textalign;
 }
 
 @mixin button($display, $height, $margin, $width) {
   display: $display;
   border-radius: 5px;
+  font-family: $secondary;
+  font-weight: 700;
   height: $height;
   margin: $margin;
   width: $width;

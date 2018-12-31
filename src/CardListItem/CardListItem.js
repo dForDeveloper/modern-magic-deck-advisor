@@ -35,7 +35,7 @@ class CardListItem extends Component {
       <li id={this.props.cardIndex} className="list--li">
         {this.props.cardName}
         <i className="fas fa-minus" onClick={this.decreaseCardCount}/>
-        <span>{this.props.cardCount}</span>
+        <span> {this.props.cardCount}</span>
         <i className="fas fa-plus" onClick={this.increaseCardCount}/>
         <i className="far fa-trash-alt" onClick={this.removeListItem}/>
       </li>

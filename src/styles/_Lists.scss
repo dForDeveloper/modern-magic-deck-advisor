@@ -1,5 +1,5 @@
 .list--h1 {
-  @include list-h1();
+  @include heading(35px, 700, center);
 }
 
 .list--ul {
