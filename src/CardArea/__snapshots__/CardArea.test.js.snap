@@ -13,16 +13,6 @@ exports[`CardArea should match the snapshot 1`] = `
     <Card
       card={
         Object {
-          "cardName": "Arid Mesa",
-        }
-      }
-      cardAreaView="myCardList"
-      displayPopUp={[Function]}
-      key="Arid Mesa"
-    />
-    <Card
-      card={
-        Object {
           "cardName": "Blood Moon",
         }
       }
@@ -39,6 +29,16 @@ exports[`CardArea should match the snapshot 1`] = `
       cardAreaView="myCardList"
       displayPopUp={[Function]}
       key="Breeding Pool"
+    />
+    <Card
+      card={
+        Object {
+          "cardName": "Arid Mesa",
+        }
+      }
+      cardAreaView="myCardList"
+      displayPopUp={[Function]}
+      key="Arid Mesa"
     />
   </section>
 </div>

@@ -3,19 +3,17 @@ import FaveListItem from '../FaveListItem/FaveListItem.js'
 import '../styles/main.scss';
 
 function FaveList(props) {
-  const faveDeckNames = props.faveDecks.map(deck => deck.deckName);
-  faveDeckNames.sort();
   return(
     <div>
       <h1>My Favorite Decks:</h1>
       <ul>
         {
-          faveDeckNames.map((deck, index) => {
+          props.faveDecks.map((deck, index) => {
             return (
             <FaveListItem
-              deckName={deck}
+              deckName={deck.deckName}
               deckIndex={index}
-              key={deck}
+              key={deck.deckName}
               faveDecks={props.faveDecks}
               saveArray={props.saveArray}/>
             )
