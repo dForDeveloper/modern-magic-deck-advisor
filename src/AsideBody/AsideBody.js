@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-// import Controls from '../Controls/Controls.js';
+import React from 'react';
 import './AsideBody.css';
 import CardList from '../CardList/CardList.js';
 import FaveList from '../FaveList/FaveList.js';
@@ -8,33 +7,24 @@ import WishList from '../WishList/WishList.js';
 function AsideBody(props) {
   if (props.asideView === "myCardList") {
     return (
-      <div>
-        <CardList 
-          cardNames={props.cardNames} 
-          removeListItem={props.removeListItem}
-          setCardCount={props.setCardCount}
-          userCardsData={props.userCardsData} 
-          compareBuilds={props.compareBuilds}/>
-      </div>
+      <CardList 
+        userCardsData={props.userCardsData} 
+        compareBuilds={props.compareBuilds}
+        saveArray={props.saveArray}/>
     )
   } else if (props.asideView === "faveDecks") {
     return (
-      <div>
-        <FaveList 
-          userFaveDecks={props.userFaveDecks}
-          removeFaveListItem={props.removeFaveListItem}/>
-      </div>
+      <FaveList 
+        faveDecks={props.faveDecks}
+        saveArray={props.saveArray}/>
     )
-  } else if (props.asideView === "wishList"){
+  } else if (props.asideView === "wishList") {
     return (
-      <div>
-        <WishList 
-          wishList={props.wishList}
-          removeWishListItem={props.removeWishListItem}/>
-      </div>
+      <WishList 
+        wishList={props.wishList}
+        saveArray={props.saveArray}/>
     )
   }
 }
-
 
 export default AsideBody;

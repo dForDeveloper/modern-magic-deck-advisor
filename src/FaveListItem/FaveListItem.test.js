@@ -2,11 +2,15 @@ import React from 'react';
 import FaveListItem from './FaveListItem';
 import { shallow } from 'enzyme';
 
-const deckName = "Bant Spirits"
+const deckName = 'Bant Spirits'
 const index = 0;
-const removeFaveListItemMock = jest.fn();
+const faveDecks = [
+  { deckName: 'Bant Spirits' },
+  { deckName: 'Izzet Phoenix' }
+];
+const saveArrayMock = jest.fn();
 
-describe("FaveListItem", () => {
+describe('FaveListItem', () => {
   let wrapper;
   
   beforeEach(() => {
@@ -15,8 +19,8 @@ describe("FaveListItem", () => {
         deckName={deckName}
         deckIndex={index}
         key={deckName}
-        removeFaveListItem={removeFaveListItemMock}
-      />
+        faveDecks={faveDecks}
+        saveArray={saveArrayMock}/>
     )
   });
 
@@ -24,14 +28,8 @@ describe("FaveListItem", () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should call removeFaveListItem method from props when removeFaveListItem is called', () => {
-    wrapper.find(".fa-trash-alt").simulate("click", {
-      target: { 
-        closest: () => {
-          return { id: 0 }
-        } 
-      }
-    })
-    expect(removeFaveListItemMock).toBeCalled();
+  it('should call props.saveArray when the trash can is clicked', () => {
+    wrapper.find('.fa-trash-alt').simulate('click');
+    expect(saveArrayMock).toBeCalled();
   });
-})
+});

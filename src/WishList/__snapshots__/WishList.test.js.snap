@@ -2,24 +2,63 @@
 
 exports[`WishList should match the snapshot 1`] = `
 <div>
+  <h1>
+    Wish List:
+  </h1>
   <ul>
     <WishListItem
       cardIndex={0}
       cardName="Blood Moon"
       key="Blood Moon"
-      removeWishListItem={[MockFunction]}
+      wishList={
+        Array [
+          Object {
+            "cardName": "Blood Moon",
+          },
+          Object {
+            "cardName": "Mox Opal",
+          },
+          Object {
+            "cardName": "Breeding Pool",
+          },
+        ]
+      }
     />
     <WishListItem
       cardIndex={1}
       cardName="Mox Opal"
       key="Mox Opal"
-      removeWishListItem={[MockFunction]}
+      wishList={
+        Array [
+          Object {
+            "cardName": "Blood Moon",
+          },
+          Object {
+            "cardName": "Mox Opal",
+          },
+          Object {
+            "cardName": "Breeding Pool",
+          },
+        ]
+      }
     />
     <WishListItem
       cardIndex={2}
       cardName="Breeding Pool"
       key="Breeding Pool"
-      removeWishListItem={[MockFunction]}
+      wishList={
+        Array [
+          Object {
+            "cardName": "Blood Moon",
+          },
+          Object {
+            "cardName": "Mox Opal",
+          },
+          Object {
+            "cardName": "Breeding Pool",
+          },
+        ]
+      }
     />
   </ul>
 </div>

@@ -2,24 +2,41 @@
 
 exports[`FaveList should match the snapshot 1`] = `
 <div>
+  <h1>
+    My Favorite Decks:
+  </h1>
   <ul>
     <FaveListItem
       deckIndex={0}
       deckName="Bant Spirits"
+      faveDecks={
+        Array [
+          Object {
+            "deckName": "Bant Spirits",
+          },
+          Object {
+            "deckName": "Izzet Phoenix",
+          },
+        ]
+      }
       key="Bant Spirits"
-      removeFaveListItem={[MockFunction]}
+      saveArray={[MockFunction]}
     />
     <FaveListItem
       deckIndex={1}
       deckName="Izzet Phoenix"
+      faveDecks={
+        Array [
+          Object {
+            "deckName": "Bant Spirits",
+          },
+          Object {
+            "deckName": "Izzet Phoenix",
+          },
+        ]
+      }
       key="Izzet Phoenix"
-      removeFaveListItem={[MockFunction]}
-    />
-    <FaveListItem
-      deckIndex={2}
-      deckName="Death's Shadow"
-      key="Death's Shadow"
-      removeFaveListItem={[MockFunction]}
+      saveArray={[MockFunction]}
     />
   </ul>
 </div>

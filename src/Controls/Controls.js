@@ -5,7 +5,9 @@ class Controls extends Component {
     super(props);
     this.textInput = React.createRef();
     this.state = {
-      cardName: ''
+      cardName: '',
+      isInvalidCardName: false,
+      hasDuplicates: false
     };
   }
 
@@ -13,18 +15,13 @@ class Controls extends Component {
     this.setState({ cardName: event.target.value })
   }
 
-  clearInput = () => {
-    this.textInput.current.value = '';
-    this.textInput.current.focus();
-  }
-
-  addCardToList = (event) => {
+  submitCard = (event) => {
     event.preventDefault();
     const matchedCard = this.validateCardName();
     if (matchedCard) {
-      this.props.addCardToList(matchedCard.cardName)
+      this.addCardToList(matchedCard.cardName)
     } else {
-      this.props.throwInvalidCardNameError();
+      this.throwInvalidCardNameError();
     }
     this.clearInput();
   }
@@ -35,11 +32,36 @@ class Controls extends Component {
     });
   }
 
-  render(props) {
-    let errorMessage = '';
-    if (this.props.isInvalidCardName) {
+  addCardToList = (cardName) => {
+    let cardNames = this.props.userCardsData.map(card => card.cardName);
+    if (!cardNames.includes(cardName)) {
+      this.setState({
+        hasDuplicates: false,
+        isInvalidCardName: false
+      });
+      this.props.addUserCard(cardName);
+    } else {
+      this.setState({ 
+        hasDuplicates: true,
+        isInvalidCardName: false
+      });
+    }
+  }
+
+  throwInvalidCardNameError = () => {
+    this.setState({ isInvalidCardName: true });
+  }
+
+  clearInput = () => {
+    this.textInput.current.value = '';
+    this.textInput.current.focus();
+  }
+
+  render() {
+    let errorMessage;
+    if (this.state.isInvalidCardName) {
       errorMessage = "The card name you entered is not in the database"
-    } else if (this.props.hasDuplicates) {
+    } else if (this.state.hasDuplicates) {
       errorMessage = "This card is already in your list"
     }
     return(
@@ -52,7 +74,7 @@ class Controls extends Component {
         </input>
         <button
           className="controls--button"
-          onClick={this.addCardToList}>
+          onClick={this.submitCard}>
             Add Card
         </button>
         <p>{errorMessage}</p>

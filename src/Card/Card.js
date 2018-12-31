@@ -2,17 +2,16 @@ import React, { Component } from "react";
 import "./Card.css";
 
 class Card extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-
   setPopUpData = () => {
     console.log(this.props.cardAreaView)
     this.props.displayPopUp(this.props.card);
   }
 
-  render(props) {
+  addToWishlist = () => {
+    this.props.addToWishlist(this.props.card);
+  }
+
+  render() {
     return (
       <article className="card--container">
         {this.props.cardAreaView === "myCardList" && (
@@ -30,7 +29,6 @@ class Card extends Component {
             </div>
           </div>
         )}
-
         {this.props.cardAreaView === "expandedDeck" && (
           <div>
             <img
@@ -41,6 +39,9 @@ class Card extends Component {
             />
             <div className="counter--container">
               <p>{this.props.card.price}</p>
+              <button onClick={this.addToWishlist}>
+                Add to Wishlist
+              </button>
             </div>
           </div>
         )}

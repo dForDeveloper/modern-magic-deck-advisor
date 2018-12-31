@@ -1,33 +1,27 @@
-import React, { Component } from 'react';
+import React from 'react';
 import WishListItem from '../WishListItem/WishListItem.js'
 
-class WishList extends Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render(props) {
-    return(
-      <div>
-        <h1> Wish List:</h1>
-        <ul>
-          {
-            this.props.wishList.map((card, index) => {
-              return( <WishListItem
+function WishList(props) {
+  return(
+    <div>
+      <h1>Wish List:</h1>
+      <ul>
+        {
+          props.wishList.map((card, index) => {
+            return(
+              <WishListItem
                 cardName={card.cardName}
                 cardIndex={index}
+                wishListCount={card.wishListCount}
                 key={card.cardName}
-                removeWishListItem={this.props.removeWishListItem}
-                />)
-            })
-          }
-        </ul>
-      </div>
-    )
-  }
-  
+                wishList={props.wishList}
+                saveArray={props.saveArray}/>
+            )
+          })
+        }
+      </ul>
+    </div>
+  )
 }
-
-  
 
 export default WishList;
