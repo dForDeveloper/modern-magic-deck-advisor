@@ -7,13 +7,13 @@ class App extends Component {
   constructor() {
     super();
     let storedUserCards = [];
-    let storedFaveDecks = [{ deckName: "Bant Spirits" }, { deckName: "Izzet Phoenix" }, { deckName: "Death's Shadow" }];
-    let storedWishList = [{ cardName: "Blood Moon" }, { cardName: "Mox Opal" }, { cardName: "Breeding Pool" }]
+    let storedFaveDecks = [];
+    let storedWishList = [];
     if (localStorage.getItem('userCardsData')) {
       storedUserCards = JSON.parse(localStorage.getItem('userCardsData'));
     }
-    if (localStorage.getItem('userFaveDecks')) {
-      storedFaveDecks = JSON.parse(localStorage.getItem('userFaveDecks'));
+    if (localStorage.getItem('faveDecks')) {
+      storedFaveDecks = JSON.parse(localStorage.getItem('faveDecks'));
     }
     if (localStorage.getItem('wishList')) {
       storedWishList = JSON.parse(localStorage.getItem('wishList'));
@@ -23,9 +23,9 @@ class App extends Component {
       cardAreaView: 'myCardList',
       cards: [],
       decks: [],
-      userCardsData: storedUserCards,
       userDecks: [],
-      userFaveDecks: storedFaveDecks,
+      userCardsData: storedUserCards,
+      faveDecks: storedFaveDecks,
       wishList: storedWishList
     };
   }
@@ -148,18 +148,12 @@ class App extends Component {
     });
     newCard.cardCount = 1;
     const newUserCardsData = this.state.userCardsData.concat([newCard]);
-    this.setCardCount(newUserCardsData);
+    this.saveArray('userCardsData', newUserCardsData);
   }
 
-  removeUserCard = (indexToRemove) => {
-    const [...newUserCardsData] = this.state.userCardsData;
-    newUserCardsData.splice(indexToRemove, 1)
-    this.setCardCount(newUserCardsData);
-  }
-
-  setCardCount = (newUserCardsData) => {
-    this.setState({ userCardsData: newUserCardsData },
-      localStorage.setItem('userCardsData', JSON.stringify(newUserCardsData)));
+  saveArray = (arrayName, arrayToSave) => {
+    this.setState({ [arrayName]: arrayToSave },
+      localStorage.setItem(arrayName, JSON.stringify(arrayToSave)));
   }
 
   setAsideView = (view) => {
@@ -170,18 +164,15 @@ class App extends Component {
     this.setState( {cardAreaView: view})
   }
 
-  removeFaveListItem = (indexToRemove) => {
-    const [...newFaveDecks] = this.state.userFaveDecks;
-    newFaveDecks.splice(indexToRemove, 1)
-    this.setState({ userFaveDecks: newFaveDecks },
-      localStorage.setItem('userFaveDecks', JSON.stringify(newFaveDecks)));
+  addToWishlist = (card) => {
+    card.wishListCount = 1;
+    const newWishList = this.state.wishList.concat([card]);
+    this.saveArray('wishList', newWishList);
   }
 
-  removeWishListItem = (indexToRemove) => {
-    const [...newWishList] = this.state.wishList;
-    newWishList.splice(indexToRemove, 1)
-    this.setState({ wishList: newWishList },
-      localStorage.setItem('wishList', JSON.stringify(newWishList)));
+  addToFaveDecks = (deck) => {
+    const newFaveDecks = this.state.faveDecks.concat([deck]);
+    this.saveArray('faveDecks', newFaveDecks);
   }
 
   render() {
@@ -189,23 +180,22 @@ class App extends Component {
       <div className="app">
         <Aside
           addUserCard={this.addUserCard}
-          removeUserCard={this.removeUserCard}
-          setCardCount={this.setCardCount}
           userCardsData={this.state.userCardsData}
           cards={this.state.cards}
           compareBuilds={this.compareBuilds}
           asideView={this.state.asideView}
-          userFaveDecks={this.state.userFaveDecks}
-          removeFaveListItem={this.removeFaveListItem}
+          faveDecks={this.state.faveDecks}
           wishList={this.state.wishList}
-          removeWishListItem={this.removeWishListItem} />
+          saveArray={this.saveArray}/>
         <CardArea
           userCardsData={this.state.userCardsData}
           setAsideView={this.setAsideView}
           cardAreaView={this.state.cardAreaView}
           setCardAreaView={this.setCardAreaView}
           userDecks={this.state.userDecks}
-          getExpandedDeckInfo={this.getExpandedDeckInfo}/>
+          getExpandedDeckInfo={this.getExpandedDeckInfo}
+          addToWishlist={this.addToWishlist}
+          addToFaveDecks={this.addToFaveDecks}/>
       </div>
     )
   }

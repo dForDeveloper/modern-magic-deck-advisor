@@ -2,18 +2,16 @@ import React, { Component } from 'react';
 import '../styles/main.scss';
 
 class Deck extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-
-
   handleClick = () => {
     this.props.setCardAreaView('expandedDeck') 
     this.props.expandDeck(this.props.userDeck);
   }
+
+  addToFaveDecks = () => {
+    this.props.addToFaveDecks(this.props.userDeck);
+  }
   
-  render(props) {
+  render() {
     return (
       <article className="deck--container">
         <h2 className="deck--name">{this.props.userDeck.deckName}</h2>
@@ -27,6 +25,9 @@ class Deck extends Component {
         </button>
         <div className="price--container">
           <h3 className="price--value">${this.props.userDeck.price}</h3>
+          <button onClick={this.addToFaveDecks}>
+            Add to Favorite Decks
+          </button>
         </div>
       </article>
     );

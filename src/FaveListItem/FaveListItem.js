@@ -2,16 +2,14 @@ import React, { Component } from "react";
 import '../styles/main.scss';
 
 class FaveListItem extends Component {
-  constructor(props) {
-    super(props);
-  }
-
-  removeFaveListItem = event => {
-    this.props.removeFaveListItem(event.target.closest("li").id)
+  removeFaveListItem = () => {
+    const [...newFaveDecks] = this.props.faveDecks;
+    newFaveDecks.splice(this.props.deckIndex, 1);
+    this.props.saveArray('faveDecks', newFaveDecks);
   }
 
   render() {
-    return(
+    return (
       <li id={this.props.deckIndex}>
         {this.props.deckName}
         <i 

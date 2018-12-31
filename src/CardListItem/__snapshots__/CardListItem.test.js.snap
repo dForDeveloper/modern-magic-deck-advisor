@@ -11,7 +11,7 @@ exports[`CardListItem should match the snapshot 1`] = `
     onClick={[Function]}
   />
   <span>
-    1
+    2
   </span>
   <i
     className="fas fa-plus"
