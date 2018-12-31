@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import CardListItem from '../CardListItem/CardListItem.js';
 import './CardList.css'
 

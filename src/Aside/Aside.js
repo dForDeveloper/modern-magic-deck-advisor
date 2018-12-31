@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Controls from '../Controls/Controls.js';
 import AsideBody from '../AsideBody/AsideBody.js';
 import './Aside.css';

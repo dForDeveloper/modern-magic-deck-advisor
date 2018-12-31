@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import FaveListItem from '../FaveListItem/FaveListItem.js'
 
 function FaveList(props) {
