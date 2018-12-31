@@ -1,0 +1,49 @@
+.card-area {
+  background-color: lightgray;
+  height: 100vh;
+}
+
+.card-area--section {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card--popup-hide {
+  display: none;
+}
+
+.popup--div {
+  padding: 20px;
+  position: absolute;
+  width: 700px;
+  height: 500px;
+  background-color: #A7B8BA;
+  z-index: 2;
+  display: flex;
+  border-radius: 12px;
+
+  .popup--list {
+    font-size: 1.5rem;
+    list-style-image: url('/public/check-circle-regular.svg');
+    line-height: 2.5rem;
+  }
+  
+  .popup--card-image {
+    width: 300px;
+    height: 450px;
+    border-radius: 14px;
+  }
+
+  .popup--info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 400px;
+  }
+
+  .fa-times-circle {
+    font-size: 2.5rem;
+    // margin: 20px;
+  }
+}
+

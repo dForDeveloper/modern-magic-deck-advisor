@@ -1,0 +1,19 @@
+.deck--container {
+  width: 216px;
+  margin: 10px;
+}
+
+.deck--image {
+  height: 300px;
+  border-radius: 12px;
+}
+
+.price--container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.price--value {
+  margin: 5px 0;
+  font-size: 1.5rem;
+}
