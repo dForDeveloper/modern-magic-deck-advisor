@@ -38,7 +38,7 @@ class WishListItem extends Component {
         <span>{this.props.wishListCount} </span>
         <i className="fas fa-plus" onClick={this.increaseWishListCount}/> 
         <i className="far fa-trash-alt" onClick={this.removeWishListItem}/> 
-        <span> - ${(this.props.price * this.props.wishListCount).toFixed(2)}</span>
+        <span className="listprice--span"> Total Cost - ${(this.props.price * this.props.wishListCount).toFixed(2)}</span>
       </li>
     )
   }

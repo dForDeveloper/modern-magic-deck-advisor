@@ -3,11 +3,15 @@
 }
 
 .list--ul {
-  @include list();
-}
-
-.list--li {
-  @include list-item();
+  padding-left: 10px;
+  .list--li {
+    @include list-item();
+    .listprice--span {
+      display: block;
+      padding-left: 20px;
+      font-weight: 500;
+    }
+  }
 }
 
 .far,

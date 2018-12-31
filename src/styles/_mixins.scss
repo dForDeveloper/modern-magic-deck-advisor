@@ -1,12 +1,9 @@
 @mixin list-item() {
+  font-family: $secondary;
+  font-size: 15px;
+  font-weight: 700;
   list-style: none;
   margin-top: 8px;
-  font-family: $secondary;
-  font-size: 15px;  
-}
-
-@mixin list() {
-  padding-left: 10px;
 }
 
 @mixin symbols() {
