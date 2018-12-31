@@ -17,3 +17,10 @@
   text-align: center;
 }
 
+@mixin button($display, $height, $margin, $width) {
+  display: $display;
+  border-radius: 5px;
+  height: $height;
+  margin: $margin;
+  width: $width;
+}

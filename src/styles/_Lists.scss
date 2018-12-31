@@ -6,11 +6,6 @@
   padding-left: 10px;
   .list--li {
     @include list-item();
-    .listprice--span {
-      display: block;
-      padding-left: 20px;
-      font-weight: 500;
-    }
   }
 }
 
@@ -19,3 +14,12 @@
   @include symbols();
 }
 
+.listprice--span {
+  display: block;
+  padding-left: 20px;
+  font-weight: 500;
+}
+
+.compare-builds--button {
+  @include button(block, 30px, 0px auto, 150px);
+}
