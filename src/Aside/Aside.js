@@ -3,24 +3,22 @@ import Controls from '../Controls/Controls.js';
 import AsideBody from '../AsideBody/AsideBody.js';
 import './Aside.css';
 
-class Aside extends Component {  
-  render() {
-    return (
-      <aside className="aside">
-        <Controls
-          addUserCard={this.props.addUserCard}
-          cards={this.props.cards}
-          userCardsData={this.props.userCardsData}/>
-        <AsideBody
-          asideView={this.props.asideView}
-          userCardsData={this.props.userCardsData}
-          compareBuilds={this.props.compareBuilds}
-          faveDecks={this.props.faveDecks}
-          wishList={this.props.wishList}
-          saveArray={this.props.saveArray}/>
-      </aside>
-    );
-  }
+function Aside(props) {  
+  return (
+    <aside className="aside">
+      <Controls
+        addUserCard={props.addUserCard}
+        cards={props.cards}
+        userCardsData={props.userCardsData}/>
+      <AsideBody
+        asideView={props.asideView}
+        userCardsData={props.userCardsData}
+        compareBuilds={props.compareBuilds}
+        faveDecks={props.faveDecks}
+        wishList={props.wishList}
+        saveArray={props.saveArray}/>
+    </aside>
+  );
 }
 
 export default Aside;
