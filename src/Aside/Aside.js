@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
+import '../styles/main.scss';
 import Controls from '../Controls/Controls.js';
 import AsideBody from '../AsideBody/AsideBody.js';
-import './Aside.css';
+
 
 class Aside extends Component {
   constructor(props) {
@@ -45,6 +46,7 @@ class Aside extends Component {
   render() {
     return (
       <aside className="aside">
+        <img alt="Magic The Gathering" src="./magic_logo.png" className="aside--magic-logo"></img>
         <Controls addCardToList={this.addCardToList}
                   throwInvalidCardNameError={this.throwInvalidCardNameError}
                   isInvalidCardName={this.state.isInvalidCardName}

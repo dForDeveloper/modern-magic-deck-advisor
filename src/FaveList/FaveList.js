@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import FaveListItem from '../FaveListItem/FaveListItem.js'
+import '../styles/main.scss';
 
 class FaveList extends Component {
   constructor(props) {

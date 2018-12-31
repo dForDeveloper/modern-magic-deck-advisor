@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.scss';
+import '../styles/main.scss';
 import Aside from '../Aside/Aside.js';
 import CardArea from '../CardArea/CardArea.js';
 

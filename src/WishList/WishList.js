@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import WishListItem from '../WishListItem/WishListItem.js'
+import '../styles/main.scss';
 
 class WishList extends Component {
   constructor(props) {

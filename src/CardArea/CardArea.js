@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './CardArea.scss';
+import '../styles/main.scss';
 import Card from '../Card/Card.js';
 import Header from '../Header/Header.js';
 import Deck from '../Deck/Deck.js';
@@ -84,17 +84,17 @@ class CardArea extends Component {
     return (
       <div className="card-area">
         {this.state.showPopUp && (
-          <div className="card--pop">
+          <div className="popup--div">
             <img
-              className="popup--card"
+              className="popup--card-image"
               src={this.state.popUpCard.imageSource}
               alt={this.state.popUpCard.cardName}
             />
-            <div className="popup-info">
+            <div className="popup--info">
             <div>
               <h2>{this.state.popUpCard.price}</h2>
               <h3>This card is played in:</h3>
-              <ul>
+              <ul className="popup--list">
                 {
                   this.state.popUpCard.decks.map(deck => {
                     return <li>{deck}</li>

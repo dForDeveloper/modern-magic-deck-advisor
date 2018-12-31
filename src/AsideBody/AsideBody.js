@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 // import Controls from '../Controls/Controls.js';
-import './AsideBody.css';
+import '../styles/main.scss';
 import CardList from '../CardList/CardList.js';
 import FaveList from '../FaveList/FaveList.js';
 import WishList from '../WishList/WishList.js';
