@@ -7,8 +7,8 @@ function FaveList(props) {
   faveDeckNames.sort();
   return(
     <div>
-      <h1>My Favorite Decks:</h1>
-      <ul>
+      <h1 className="list--h1">My Favorite Decks:</h1>
+      <ul className="list--ul">
         {
           faveDeckNames.map((deck, index) => {
             return (

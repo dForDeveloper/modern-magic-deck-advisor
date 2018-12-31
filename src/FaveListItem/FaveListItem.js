@@ -10,7 +10,7 @@ class FaveListItem extends Component {
 
   render() {
     return (
-      <li id={this.props.deckIndex}>
+      <li id={this.props.deckIndex} className="list--li">
         {this.props.deckName}
         <i 
           onClick={this.removeFaveListItem}

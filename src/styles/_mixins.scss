@@ -1,0 +1,21 @@
+@mixin list-item() {
+  list-style: none;
+  margin-top: 8px;
+  font-family: $secondary;
+  font-size: 15px;  
+}
+
+@mixin list() {
+  padding-left: 10px;
+}
+
+@mixin symbols() {
+  font-size: .75rem;
+  padding: 0px 5px;
+}
+
+@mixin list-h1() {
+  font-family: $secondary;
+  font-size: 30px;
+  text-align: center;
+}

@@ -32,7 +32,7 @@ class CardListItem extends Component {
 
   render() {
     return (
-      <li id={this.props.cardIndex} className="cardlist--item">
+      <li id={this.props.cardIndex} className="list--li">
         {this.props.cardName}
         <i className="fas fa-minus" onClick={this.decreaseCardCount}/>
         <span>{this.props.cardCount}</span>
