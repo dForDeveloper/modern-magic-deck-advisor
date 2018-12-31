@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import '../styles/main.scss';
 
 class Controls extends Component {
   constructor(props) {

@@ -1,0 +1,27 @@
+.header {
+  // background-image: url(header-background.png);
+  // background-size: cover;
+  // background-repeat: no-repeat;
+  border-bottom: 2px solid tomato;
+  display: flex;
+  justify-content: flex-end;  
+  height: 100px;
+  width: 100%;
+}
+
+.header--ul {
+  list-style: none;
+  display: flex;
+
+  li {
+    border-bottom: 4px solid transparent;
+    height: 30px;
+    margin: 20px;
+    text-transform: uppercase;
+  }
+
+  li:hover {
+    border-bottom: 4px solid tomato;
+    cursor: pointer;
+  }
+}

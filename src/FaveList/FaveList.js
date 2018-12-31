@@ -1,5 +1,6 @@
 import React from 'react';
 import FaveListItem from '../FaveListItem/FaveListItem.js'
+import '../styles/main.scss';
 
 function FaveList(props) {
   const faveDeckNames = props.faveDecks.map(deck => deck.deckName);

@@ -1,6 +1,6 @@
 import React from 'react'
 import CardListItem from '../CardListItem/CardListItem.js';
-import './CardList.css'
+import '../styles/main.scss';
 
 function CardList(props) {
   const cardNames = props.userCardsData.map(card => card.cardName);

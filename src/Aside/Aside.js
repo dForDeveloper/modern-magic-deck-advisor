@@ -1,11 +1,12 @@
 import React from 'react';
+import '../styles/main.scss';
 import Controls from '../Controls/Controls.js';
 import AsideBody from '../AsideBody/AsideBody.js';
-import './Aside.css';
 
 function Aside(props) {  
   return (
     <aside className="aside">
+      <img alt="Magic The Gathering" src="./magic_logo.png" className="aside--magic-logo"></img>
       <Controls
         addUserCard={props.addUserCard}
         cards={props.cards}

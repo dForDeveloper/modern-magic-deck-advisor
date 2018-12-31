@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./FaveListItem.scss";
+import '../styles/main.scss';
 
 class FaveListItem extends Component {
   removeFaveListItem = () => {

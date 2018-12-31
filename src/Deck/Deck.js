@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Deck.css'
+import '../styles/main.scss';
 
 class Deck extends Component {
   handleClick = () => {

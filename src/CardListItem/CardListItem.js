@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./CardListItem.css";
+import '../styles/main.scss';
 
 class CardListItem extends Component {
   removeListItem = () => {

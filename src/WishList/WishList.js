@@ -1,5 +1,6 @@
 import React from 'react';
 import WishListItem from '../WishListItem/WishListItem.js'
+import '../styles/main.scss';
 
 function WishList(props) {
   return(

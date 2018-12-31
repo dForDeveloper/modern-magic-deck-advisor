@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./Card.css";
+import '../styles/main.scss';
 
 class Card extends Component {
   setPopUpData = () => {
@@ -22,9 +22,9 @@ class Card extends Component {
               alt={this.props.card.cardName}
               onClick={this.setPopUpData}
             />
-            <div className="counter--container">
+            <div className="card--counter-container">
               <h1 className="card--counter">
-                {this.props.card.cardCount}x
+                {this.props.card.cardCount}X
               </h1>
             </div>
           </div>

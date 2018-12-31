@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Header.css'
+import '../styles/main.scss';
 
 class Header extends Component {
   constructor(props) {
@@ -15,14 +15,13 @@ class Header extends Component {
   }
 
   setAsideViewWishList = () => {
-      this.props.setAsideView("wishList")
+    this.props.setAsideView("wishList")
   }
 
 
   render(props) {
     return(
       <header className="header">
-        <img alt="Magic The Gathering" src="./magic_logo.png" className="magic-logo"></img>
         <ul className="header--ul">
           <li onClick={this.setAsideViewMyCards} className="my-cards">My Cards</li>
           <li onClick={this.setAsideViewFaveDecks} className="fave-decks">My Favorites</li>
