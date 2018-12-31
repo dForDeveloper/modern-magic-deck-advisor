@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Deck.css'
+import './Deck.scss'
 
 class Deck extends Component {
   constructor(props) {

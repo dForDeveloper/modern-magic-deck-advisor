@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './CardArea.css';
+import './CardArea.scss';
 import Card from '../Card/Card.js';
 import Header from '../Header/Header.js';
 import Deck from '../Deck/Deck.js';
