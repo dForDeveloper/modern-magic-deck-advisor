@@ -6,9 +6,9 @@
   margin-top: 8px;
 }
 
-@mixin symbols() {
+@mixin symbols($padding) {
   font-size: .75rem;
-  padding-left: 5px;
+  padding: $padding;
 }
 
 @mixin heading($fontsize, $fontweight, $textalign) {
@@ -19,8 +19,8 @@
 }
 
 @mixin button($display, $height, $margin, $width) {
-  display: $display;
   border-radius: 5px;
+  display: $display;
   font-family: $secondary;
   font-weight: 700;
   height: $height;
