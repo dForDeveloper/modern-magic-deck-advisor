@@ -1,7 +1,9 @@
 import React from 'react';
 import '../styles/main.scss';
 import Controls from '../Controls/Controls.js';
-import AsideBody from '../AsideBody/AsideBody.js';
+import CardList from '../CardList/CardList.js';
+import FaveList from '../FaveList/FaveList.js';
+import WishList from '../WishList/WishList.js';
 
 function Aside(props) {  
   return (
@@ -11,13 +13,19 @@ function Aside(props) {
         addUserCard={props.addUserCard}
         cards={props.cards}
         userCardsData={props.userCardsData}/>
-      <AsideBody
-        asideView={props.asideView}
-        userCardsData={props.userCardsData}
-        compareBuilds={props.compareBuilds}
-        faveDecks={props.faveDecks}
-        wishList={props.wishList}
-        saveArray={props.saveArray}/>
+      {props.asideView === "myCardList" &&
+        <CardList 
+          userCardsData={props.userCardsData} 
+          compareBuilds={props.compareBuilds}
+          saveArray={props.saveArray}/>}
+      {props.asideView === "faveDecks" &&
+        <FaveList 
+          faveDecks={props.faveDecks}
+          saveArray={props.saveArray}/>}
+      {props.asideView === "wishList" &&
+        <WishList 
+          wishList={props.wishList}
+          saveArray={props.saveArray}/>}
     </aside>
   );
 }

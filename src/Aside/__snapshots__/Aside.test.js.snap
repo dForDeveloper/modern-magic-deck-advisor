@@ -1,0 +1,3989 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Aside should match the snapshot when asideView is faveDecks 1`] = `
+<aside
+  className="aside"
+>
+  <img
+    alt="Magic The Gathering"
+    className="aside--magic-logo"
+    src="./magic_logo.png"
+  />
+  <Controls
+    addUserCard={[MockFunction]}
+    cards={
+      Array [
+        Object {
+          "averageCount": 1.5,
+          "cardName": "Breeding Pool",
+          "cardTypes": Array [
+            "land",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Bant Spirits",
+            "Infect",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/gtc/240.jpg",
+          "price": 12.46,
+        },
+        Object {
+          "averageCount": 2,
+          "cardName": "Cavern of Souls",
+          "cardTypes": Array [
+            "land",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Bant Spirits",
+            "Humans",
+            "Eldrazi and Taxes",
+            "Elves",
+            "Amulet Titan",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/mm3/232.jpg",
+          "price": 54.46,
+        },
+        Object {
+          "averageCount": 3.6666666666666665,
+          "cardName": "Flooded Strand",
+          "cardTypes": Array [
+            "land",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Bant Spirits",
+            "UW Control",
+            "Jeskai Control",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/ktk/233.jpg",
+          "price": 16.55,
+        },
+        Object {
+          "averageCount": 2.5714285714285716,
+          "cardName": "Horizon Canopy",
+          "cardTypes": Array [
+            "land",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Bant Spirits",
+            "Humans",
+            "Hardened Scales",
+            "Bogles",
+            "Eldrazi and Taxes",
+            "Elves",
+            "Counters Company",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/ima/240.jpg",
+          "price": 56.1,
+        },
+        Object {
+          "averageCount": 1.3333333333333333,
+          "cardName": "Misty Rainforest",
+          "cardTypes": Array [
+            "land",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Bant Spirits",
+            "Ponza",
+            "Blue Moon",
+            "Titanshift",
+            "Infect",
+            "Counters Company",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/mm3/240.jpg",
+          "price": 42.23,
+        },
+        Object {
+          "averageCount": 3,
+          "cardName": "Windswept Heath",
+          "cardTypes": Array [
+            "land",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Bant Spirits",
+            "Bogles",
+            "Ponza",
+            "Titanshift",
+            "Infect",
+            "Counters Company",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/ktk/248.jpg",
+          "price": 12.41,
+        },
+        Object {
+          "averageCount": 4,
+          "cardName": "Noble Hierarch",
+          "cardTypes": Array [
+            "creature",
+          ],
+          "colors": Array [
+            "white",
+            "blue",
+            "green",
+          ],
+          "convertedManaCost": 1,
+          "decks": Array [
+            "Bant Spirits",
+            "Humans",
+            "Infect",
+            "Counters Company",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/mm2/151.jpg",
+          "price": 48.72,
+        },
+        Object {
+          "averageCount": 3,
+          "cardName": "Phantasmal Image",
+          "cardTypes": Array [
+            "creature",
+          ],
+          "colors": Array [
+            "blue",
+          ],
+          "convertedManaCost": 2,
+          "decks": Array [
+            "Bant Spirits",
+            "Humans",
+            "Merfolk",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/mm3/46.jpg",
+          "price": 16.97,
+        },
+        Object {
+          "averageCount": 3.6666666666666665,
+          "cardName": "Collected Company",
+          "cardTypes": Array [
+            "instant",
+          ],
+          "colors": Array [
+            "green",
+          ],
+          "convertedManaCost": 4,
+          "decks": Array [
+            "Bant Spirits",
+            "Elves",
+            "Counters Company",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/dtk/177.jpg",
+          "price": 17.4,
+        },
+        Object {
+          "averageCount": 3.6666666666666665,
+          "cardName": "Aether Vial",
+          "cardTypes": Array [
+            "artifact",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 1,
+          "decks": Array [
+            "Bant Spirits",
+            "Humans",
+            "Merfolk",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/ima/212.jpg",
+          "price": 32.59,
+        },
+        Object {
+          "averageCount": 2.5,
+          "cardName": "Polluted Delta",
+          "cardTypes": Array [
+            "land",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Izzet Phoenix",
+            "Death's Shadow",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/ktk/239.jpg",
+          "price": 17.31,
+        },
+        Object {
+          "averageCount": 3,
+          "cardName": "Scalding Tarn",
+          "cardTypes": Array [
+            "land",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Izzet Phoenix",
+            "Death's Shadow",
+            "Jeskai Control",
+            "Blue Moon",
+            "Storm",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/mm3/244.jpg",
+          "price": 71.57,
+        },
+        Object {
+          "averageCount": 2.4,
+          "cardName": "Steam Vents",
+          "cardTypes": Array [
+            "land",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Izzet Phoenix",
+            "Death's Shadow",
+            "Jeskai Control",
+            "Blue Moon",
+            "Storm",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/rtr/247.jpg",
+          "price": 10.79,
+        },
+        Object {
+          "averageCount": 4,
+          "cardName": "Arclight Phoenix",
+          "cardTypes": Array [
+            "red",
+          ],
+          "colors": Array [
+            "creature",
+          ],
+          "convertedManaCost": 4,
+          "decks": Array [
+            "Izzet Phoenix",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/front/7/8/787de9ce-02c5-4a17-a88b-d38e83dbeb0b.jpg",
+          "price": 23.95,
+        },
+        Object {
+          "averageCount": 4,
+          "cardName": "Thing in the Ice",
+          "cardTypes": Array [
+            "creature",
+          ],
+          "colors": Array [
+            "blue",
+          ],
+          "convertedManaCost": 2,
+          "decks": Array [
+            "Izzet Phoenix",
+            "Blue Moon",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/soi/92a.jpg",
+          "price": 13.66,
+        },
+        Object {
+          "averageCount": 3,
+          "cardName": "Manamorphose",
+          "cardTypes": Array [
+            "instant",
+          ],
+          "colors": Array [
+            "red",
+            "green",
+          ],
+          "convertedManaCost": 2,
+          "decks": Array [
+            "Izzet Phoenix",
+            "Storm",
+            "Grishoalbrand",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/mma/191.jpg",
+          "price": 19.65,
+        },
+        Object {
+          "averageCount": 1.5714285714285714,
+          "cardName": "Blood Crypt",
+          "cardTypes": Array [
+            "land",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Death's Shadow",
+            "Hollow One",
+            "Jund",
+            "Mardu Pyromancer",
+            "Dredge",
+            "Living End",
+            "Grishoalbrand",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/rtr/238.jpg",
+          "price": 13.45,
+        },
+        Object {
+          "averageCount": 3.25,
+          "cardName": "Bloodstained Mire",
+          "cardTypes": Array [
+            "land",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Death's Shadow",
+            "Burn",
+            "Hollow One",
+            "Jund",
+            "BG Rock",
+            "Mardu Pyromancer",
+            "Dredge",
+            "Grishoalbrand",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/ktk/230.jpg",
+          "price": 21.9,
+        },
+        Object {
+          "averageCount": 3.25,
+          "cardName": "Snapcaster Mage",
+          "cardTypes": Array [
+            "creature",
+          ],
+          "colors": Array [
+            "blue",
+          ],
+          "convertedManaCost": 2,
+          "decks": Array [
+            "Death's Shadow",
+            "UW Control",
+            "Jeskai Control",
+            "Blue Moon",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/mm3/50.jpg",
+          "price": 54.54,
+        },
+        Object {
+          "averageCount": 3,
+          "cardName": "Thoughtseize",
+          "cardTypes": Array [
+            "sorcery",
+          ],
+          "colors": Array [
+            "black",
+          ],
+          "convertedManaCost": 1,
+          "decks": Array [
+            "Death's Shadow",
+            "Jund",
+            "BG Rock",
+            "Mardu Pyromancer",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/ima/110.jpg",
+          "price": 12.49,
+        },
+        Object {
+          "averageCount": 1.6666666666666667,
+          "cardName": "Arid Mesa",
+          "cardTypes": Array [
+            "land",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Burn",
+            "Hollow One",
+            "Mardu Pyromancer",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/mm3/229.jpg",
+          "price": 36.67,
+        },
+        Object {
+          "averageCount": 2.625,
+          "cardName": "Wooded Foothills",
+          "cardTypes": Array [
+            "land",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Burn",
+            "Hollow One",
+            "Jund",
+            "Bogles",
+            "Ponza",
+            "Dredge",
+            "Titanshift",
+            "Infect",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/ktk/249.jpg",
+          "price": 20.55,
+        },
+        Object {
+          "averageCount": 4,
+          "cardName": "Goblin Guide",
+          "cardTypes": Array [
+            "creature",
+          ],
+          "colors": Array [
+            "red",
+          ],
+          "convertedManaCost": 1,
+          "decks": Array [
+            "Burn",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/mm3/96.jpg",
+          "price": 18.03,
+        },
+        Object {
+          "averageCount": 1,
+          "cardName": "Seachrome Coast",
+          "cardTypes": Array [
+            "land",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Humans",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/som/229.jpg",
+          "price": 15.7,
+        },
+        Object {
+          "averageCount": 4,
+          "cardName": "Meddling Mage",
+          "cardTypes": Array [
+            "creature",
+          ],
+          "colors": Array [
+            "white",
+            "blue",
+          ],
+          "convertedManaCost": 2,
+          "decks": Array [
+            "Humans",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/arb/8.jpg",
+          "price": 21.82,
+        },
+        Object {
+          "averageCount": 3.2,
+          "cardName": "Blackcleave Cliffs",
+          "cardTypes": Array [
+            "land",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Hollow One",
+            "Jund",
+            "Mardu Pyromancer",
+            "Living End",
+            "Grishoalbrand",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/som/224.jpg",
+          "price": 40.46,
+        },
+        Object {
+          "averageCount": 2.2,
+          "cardName": "Stomping Ground",
+          "cardTypes": Array [
+            "land",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Hollow One",
+            "Ponza",
+            "Dredge",
+            "Titanshift",
+            "Living End",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/gtc/247.jpg",
+          "price": 13.32,
+        },
+        Object {
+          "averageCount": 4,
+          "cardName": "Bloodghast",
+          "cardTypes": Array [
+            "creature",
+          ],
+          "colors": Array [
+            "black",
+          ],
+          "convertedManaCost": 2,
+          "decks": Array [
+            "Hollow One",
+            "Dredge",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/ima/82.jpg",
+          "price": 14.82,
+        },
+        Object {
+          "averageCount": 1.5,
+          "cardName": "Collective Brutality",
+          "cardTypes": Array [
+            "sorcery",
+          ],
+          "colors": Array [
+            "black",
+          ],
+          "convertedManaCost": 2,
+          "decks": Array [
+            "Hollow One",
+            "BG Rock",
+            "Mardu Pyromancer",
+            "Grishoalbrand",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/emn/85.jpg",
+          "price": 13.35,
+        },
+        Object {
+          "averageCount": 4,
+          "cardName": "Goblin Lore",
+          "cardTypes": Array [
+            "sorcery",
+          ],
+          "colors": Array [
+            "red",
+          ],
+          "convertedManaCost": 2,
+          "decks": Array [
+            "Hollow One",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/10e/208.jpg",
+          "price": 20.42,
+        },
+        Object {
+          "averageCount": 3.5,
+          "cardName": "Verdant Catacombs",
+          "cardTypes": Array [
+            "land",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Jund",
+            "BG Rock",
+            "Infect",
+            "Living End",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/mm3/249.jpg",
+          "price": 52.48,
+        },
+        Object {
+          "averageCount": 3.5,
+          "cardName": "Dark Confidant",
+          "cardTypes": Array [
+            "creature",
+          ],
+          "colors": Array [
+            "black",
+          ],
+          "convertedManaCost": 2,
+          "decks": Array [
+            "Jund",
+            "BG Rock",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/mm2/75.jpg",
+          "price": 49,
+        },
+        Object {
+          "averageCount": 4,
+          "cardName": "Tarmogoyf",
+          "cardTypes": Array [
+            "creature",
+          ],
+          "colors": Array [
+            "green",
+          ],
+          "convertedManaCost": 2,
+          "decks": Array [
+            "Jund",
+            "BG Rock",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/mm3/141.jpg",
+          "price": 52.1,
+        },
+        Object {
+          "averageCount": 3.5,
+          "cardName": "Assassin's Trophy",
+          "cardTypes": Array [
+            "instant",
+          ],
+          "colors": Array [
+            "black",
+            "green",
+          ],
+          "convertedManaCost": 2,
+          "decks": Array [
+            "Jund",
+            "BG Rock",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/front/9/0/906b6e99-128f-4c11-8daf-16099d35b0d4.jpg",
+          "price": 11.28,
+        },
+        Object {
+          "averageCount": 2.5,
+          "cardName": "Kolaghan's Command",
+          "cardTypes": Array [
+            "instant",
+          ],
+          "colors": Array [
+            "black",
+            "red",
+          ],
+          "convertedManaCost": 3,
+          "decks": Array [
+            "Jund",
+            "Mardu Pyromancer",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/dtk/224.jpg",
+          "price": 16.51,
+        },
+        Object {
+          "averageCount": 3.5,
+          "cardName": "Liliana of the Veil",
+          "cardTypes": Array [
+            "planeswalker",
+          ],
+          "colors": Array [
+            "black",
+          ],
+          "convertedManaCost": 3,
+          "decks": Array [
+            "Jund",
+            "BG Rock",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/mm3/76.jpg",
+          "price": 72.78,
+        },
+        Object {
+          "averageCount": 1.5,
+          "cardName": "Liliana, the Last Hope",
+          "cardTypes": Array [
+            "planeswalker",
+          ],
+          "colors": Array [
+            "black",
+          ],
+          "convertedManaCost": 3,
+          "decks": Array [
+            "Jund",
+            "BG Rock",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/emn/93.jpg",
+          "price": 43.8,
+        },
+        Object {
+          "averageCount": 4,
+          "cardName": "Inkmoth Nexus",
+          "cardTypes": Array [
+            "land",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Hardened Scales",
+            "Affinity",
+            "Infect",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/mbs/145.jpg",
+          "price": 15.38,
+        },
+        Object {
+          "averageCount": 4,
+          "cardName": "Arcbound Ravager",
+          "cardTypes": Array [
+            "artifact",
+            "creature",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 2,
+          "decks": Array [
+            "Hardened Scales",
+            "Affinity",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/mma/198.jpg",
+          "price": 37.37,
+        },
+        Object {
+          "averageCount": 4,
+          "cardName": "Steel Overseer",
+          "cardTypes": Array [
+            "artifact",
+            "creature",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 2,
+          "decks": Array [
+            "Hardened Scales",
+            "Affinity",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/ddf/44.jpg",
+          "price": 16.49,
+        },
+        Object {
+          "averageCount": 2.6,
+          "cardName": "Walking Ballista",
+          "cardTypes": Array [
+            "artifact",
+            "creature",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Hardened Scales",
+            "Eldrazi Tron",
+            "Tron",
+            "Amulet Titan",
+            "Counters Company",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/front/3/2/329a8738-3e17-403a-857a-0ba529ce8cd1.jpg",
+          "price": 13.64,
+        },
+        Object {
+          "averageCount": 4,
+          "cardName": "Mox Opal",
+          "cardTypes": Array [
+            "artifact",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Hardened Scales",
+            "Affinity",
+            "KCI",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/mm2/223.jpg",
+          "price": 89.72,
+        },
+        Object {
+          "averageCount": 1,
+          "cardName": "Karn, Scion of Urza",
+          "cardTypes": Array [
+            "planeswalker",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 4,
+          "decks": Array [
+            "Affinity",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/dom/1.jpg",
+          "price": 18.41,
+        },
+        Object {
+          "averageCount": 1,
+          "cardName": "Dryad Arbor",
+          "cardTypes": Array [
+            "land",
+            "creature",
+          ],
+          "colors": Array [
+            "green",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Bogles",
+            "Infect",
+            "Counters Company",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/fut/174.jpg",
+          "price": 12.74,
+        },
+        Object {
+          "averageCount": 1.5,
+          "cardName": "Ulamog, the Ceaseless Hunger",
+          "cardTypes": Array [
+            "creature",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 10,
+          "decks": Array [
+            "Eldrazi Tron",
+            "Tron",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/bfz/15.jpg",
+          "price": 18.41,
+        },
+        Object {
+          "averageCount": 2.5,
+          "cardName": "Karn Liberated",
+          "cardTypes": Array [
+            "planeswalker",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 7,
+          "decks": Array [
+            "Eldrazi Tron",
+            "Tron",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/mm2/4.jpg",
+          "price": 58,
+        },
+        Object {
+          "averageCount": 3,
+          "cardName": "Gemstone Caverns",
+          "cardTypes": Array [
+            "land",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Eldrazi and Taxes",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/tsp/274.jpg",
+          "price": 19.41,
+        },
+        Object {
+          "averageCount": 4,
+          "cardName": "Chalice of the Void",
+          "cardTypes": Array [
+            "artifact",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Eldrazi and Taxes",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/a25/222.jpg",
+          "price": 34.45,
+        },
+        Object {
+          "averageCount": 3,
+          "cardName": "Wurmcoil Engine",
+          "cardTypes": Array [
+            "artifact",
+            "creature",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 6,
+          "decks": Array [
+            "Tron",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/cm2/231.jpg",
+          "price": 18.49,
+        },
+        Object {
+          "averageCount": 2,
+          "cardName": "Ugin, the Spirit Dragon",
+          "cardTypes": Array [
+            "planeswalker",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 8,
+          "decks": Array [
+            "Tron",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/frf/1.jpg",
+          "price": 46.66,
+        },
+        Object {
+          "averageCount": 3.5,
+          "cardName": "Celestial Colonnade",
+          "cardTypes": Array [
+            "land",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "UW Control",
+            "Jeskai Control",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/wwk/133.jpg",
+          "price": 22.14,
+        },
+        Object {
+          "averageCount": 1,
+          "cardName": "Vendilion Clique",
+          "cardTypes": Array [
+            "creature",
+          ],
+          "colors": Array [
+            "blue",
+          ],
+          "convertedManaCost": 3,
+          "decks": Array [
+            "UW Control",
+            "Blue Moon",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/a25/76.jpg",
+          "price": 17.51,
+        },
+        Object {
+          "averageCount": 3.3333333333333335,
+          "cardName": "Cryptic Command",
+          "cardTypes": Array [
+            "instant",
+          ],
+          "colors": Array [
+            "blue",
+          ],
+          "convertedManaCost": 4,
+          "decks": Array [
+            "UW Control",
+            "Jeskai Control",
+            "Blue Moon",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/ima/48.jpg",
+          "price": 20.06,
+        },
+        Object {
+          "averageCount": 1.6666666666666667,
+          "cardName": "Jace, the Mind Sculptor",
+          "cardTypes": Array [
+            "planeswalker",
+          ],
+          "colors": Array [
+            "blue",
+          ],
+          "convertedManaCost": 4,
+          "decks": Array [
+            "UW Control",
+            "Jeskai Control",
+            "Blue Moon",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/a25/62.jpg",
+          "price": 86.08,
+        },
+        Object {
+          "averageCount": 2,
+          "cardName": "Teferi, Hero of Dominaria",
+          "cardTypes": Array [
+            "planeswalker",
+          ],
+          "colors": Array [
+            "white",
+            "blue",
+          ],
+          "convertedManaCost": 5,
+          "decks": Array [
+            "UW Control",
+            "Jeskai Control",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/front/5/d/5d10b752-d9cb-419d-a5c4-d4ee1acb655e.jpg",
+          "price": 43.96,
+        },
+        Object {
+          "averageCount": 1.5,
+          "cardName": "Sulfur Falls",
+          "cardTypes": Array [
+            "land",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Jeskai Control",
+            "Blue Moon",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/dom/247.jpg",
+          "price": 11.06,
+        },
+        Object {
+          "averageCount": 2,
+          "cardName": "Search for Azcanta",
+          "cardTypes": Array [
+            "enchantment",
+          ],
+          "colors": Array [
+            "blue",
+          ],
+          "convertedManaCost": 2,
+          "decks": Array [
+            "Jeskai Control",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/xln/74a.jpg",
+          "price": 13.77,
+        },
+        Object {
+          "averageCount": 2.6666666666666665,
+          "cardName": "Blood Moon",
+          "cardTypes": Array [
+            "enchantment",
+          ],
+          "colors": Array [
+            "red",
+          ],
+          "convertedManaCost": 3,
+          "decks": Array [
+            "Ponza",
+            "Mardu Pyromancer",
+            "Blue Moon",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/a25/122.jpg",
+          "price": 14.97,
+        },
+        Object {
+          "averageCount": 3,
+          "cardName": "Marsh Flats",
+          "cardTypes": Array [
+            "land",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Mardu Pyromancer",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/mm3/239.jpg",
+          "price": 35.94,
+        },
+        Object {
+          "averageCount": 4,
+          "cardName": "Copperline Gorge",
+          "cardTypes": Array [
+            "land",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Dredge",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/som/225.jpg",
+          "price": 16.69,
+        },
+        Object {
+          "averageCount": 4,
+          "cardName": "Life from the Loam",
+          "cardTypes": Array [
+            "sorcery",
+          ],
+          "colors": Array [
+            "green",
+          ],
+          "convertedManaCost": 2,
+          "decks": Array [
+            "Dredge",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/mma/153.jpg",
+          "price": 12.48,
+        },
+        Object {
+          "averageCount": 4,
+          "cardName": "Valakut, the Molten Pinnacle",
+          "cardTypes": Array [
+            "land",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Titanshift",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/zen/228.jpg",
+          "price": 13.35,
+        },
+        Object {
+          "averageCount": 1,
+          "cardName": "Prismatic Omen",
+          "cardTypes": Array [
+            "enchantment",
+          ],
+          "colors": Array [
+            "green",
+          ],
+          "convertedManaCost": 2,
+          "decks": Array [
+            "Titanshift",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/shm/126.jpg",
+          "price": 26.43,
+        },
+        Object {
+          "averageCount": 2,
+          "cardName": "Engineered Explosives",
+          "cardTypes": Array [
+            "artifact",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "KCI",
+            "Amulet Titan",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/mma/204.jpg",
+          "price": 29.03,
+        },
+        Object {
+          "averageCount": 4,
+          "cardName": "Krark-Clan Ironworks",
+          "cardTypes": Array [
+            "artifact",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 4,
+          "decks": Array [
+            "KCI",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/5dn/134.jpg",
+          "price": 10.55,
+        },
+        Object {
+          "averageCount": 4,
+          "cardName": "Gilt-Leaf Palace",
+          "cardTypes": Array [
+            "land",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Elves",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/lrw/268.jpg",
+          "price": 30.19,
+        },
+        Object {
+          "averageCount": 1,
+          "cardName": "Vesuva",
+          "cardTypes": Array [
+            "land",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Amulet Titan",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/tsp/281.jpg",
+          "price": 19.95,
+        },
+        Object {
+          "averageCount": 4,
+          "cardName": "Azusa, Lost but Seeking",
+          "cardTypes": Array [
+            "creature",
+          ],
+          "colors": Array [
+            "green",
+          ],
+          "convertedManaCost": 3,
+          "decks": Array [
+            "Amulet Titan",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/a25/161.jpg",
+          "price": 21.2,
+        },
+        Object {
+          "averageCount": 4,
+          "cardName": "Amulet of Vigor",
+          "cardTypes": Array [
+            "artifact",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 1,
+          "decks": Array [
+            "Amulet Titan",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/wwk/121.jpg",
+          "price": 22.31,
+        },
+        Object {
+          "averageCount": 3,
+          "cardName": "Living End",
+          "cardTypes": Array [
+            "sorcery",
+          ],
+          "colors": Array [
+            "black",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Living End",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/tsp/115.jpg",
+          "price": 14.65,
+        },
+        Object {
+          "averageCount": 4,
+          "cardName": "Goryo's Vengeance",
+          "cardTypes": Array [
+            "instant",
+          ],
+          "colors": Array [
+            "black",
+          ],
+          "convertedManaCost": 2,
+          "decks": Array [
+            "Grishoalbrand",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/bok/67.jpg",
+          "price": 12.52,
+        },
+        Object {
+          "averageCount": 4,
+          "cardName": "Through the Breach",
+          "cardTypes": Array [
+            "instant",
+          ],
+          "colors": Array [
+            "red",
+          ],
+          "convertedManaCost": 5,
+          "decks": Array [
+            "Grishoalbrand",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/chk/193.jpg",
+          "price": 14.46,
+        },
+      ]
+    }
+    userCardsData={
+      Array [
+        Object {
+          "cardName": "Blood Moon",
+        },
+        Object {
+          "cardName": "Breeding Pool",
+        },
+        Object {
+          "cardName": "Arid Mesa",
+        },
+      ]
+    }
+  />
+  <FaveList
+    faveDecks={
+      Array [
+        Object {
+          "deckName": "Jund",
+        },
+        Object {
+          "deckName": "Hollow One",
+        },
+      ]
+    }
+    saveArray={[MockFunction]}
+  />
+</aside>
+`;
+
+exports[`Aside should match the snapshot when asideView is myCardList 1`] = `
+<aside
+  className="aside"
+>
+  <img
+    alt="Magic The Gathering"
+    className="aside--magic-logo"
+    src="./magic_logo.png"
+  />
+  <Controls
+    addUserCard={[MockFunction]}
+    cards={
+      Array [
+        Object {
+          "averageCount": 1.5,
+          "cardName": "Breeding Pool",
+          "cardTypes": Array [
+            "land",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Bant Spirits",
+            "Infect",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/gtc/240.jpg",
+          "price": 12.46,
+        },
+        Object {
+          "averageCount": 2,
+          "cardName": "Cavern of Souls",
+          "cardTypes": Array [
+            "land",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Bant Spirits",
+            "Humans",
+            "Eldrazi and Taxes",
+            "Elves",
+            "Amulet Titan",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/mm3/232.jpg",
+          "price": 54.46,
+        },
+        Object {
+          "averageCount": 3.6666666666666665,
+          "cardName": "Flooded Strand",
+          "cardTypes": Array [
+            "land",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Bant Spirits",
+            "UW Control",
+            "Jeskai Control",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/ktk/233.jpg",
+          "price": 16.55,
+        },
+        Object {
+          "averageCount": 2.5714285714285716,
+          "cardName": "Horizon Canopy",
+          "cardTypes": Array [
+            "land",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Bant Spirits",
+            "Humans",
+            "Hardened Scales",
+            "Bogles",
+            "Eldrazi and Taxes",
+            "Elves",
+            "Counters Company",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/ima/240.jpg",
+          "price": 56.1,
+        },
+        Object {
+          "averageCount": 1.3333333333333333,
+          "cardName": "Misty Rainforest",
+          "cardTypes": Array [
+            "land",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Bant Spirits",
+            "Ponza",
+            "Blue Moon",
+            "Titanshift",
+            "Infect",
+            "Counters Company",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/mm3/240.jpg",
+          "price": 42.23,
+        },
+        Object {
+          "averageCount": 3,
+          "cardName": "Windswept Heath",
+          "cardTypes": Array [
+            "land",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Bant Spirits",
+            "Bogles",
+            "Ponza",
+            "Titanshift",
+            "Infect",
+            "Counters Company",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/ktk/248.jpg",
+          "price": 12.41,
+        },
+        Object {
+          "averageCount": 4,
+          "cardName": "Noble Hierarch",
+          "cardTypes": Array [
+            "creature",
+          ],
+          "colors": Array [
+            "white",
+            "blue",
+            "green",
+          ],
+          "convertedManaCost": 1,
+          "decks": Array [
+            "Bant Spirits",
+            "Humans",
+            "Infect",
+            "Counters Company",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/mm2/151.jpg",
+          "price": 48.72,
+        },
+        Object {
+          "averageCount": 3,
+          "cardName": "Phantasmal Image",
+          "cardTypes": Array [
+            "creature",
+          ],
+          "colors": Array [
+            "blue",
+          ],
+          "convertedManaCost": 2,
+          "decks": Array [
+            "Bant Spirits",
+            "Humans",
+            "Merfolk",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/mm3/46.jpg",
+          "price": 16.97,
+        },
+        Object {
+          "averageCount": 3.6666666666666665,
+          "cardName": "Collected Company",
+          "cardTypes": Array [
+            "instant",
+          ],
+          "colors": Array [
+            "green",
+          ],
+          "convertedManaCost": 4,
+          "decks": Array [
+            "Bant Spirits",
+            "Elves",
+            "Counters Company",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/dtk/177.jpg",
+          "price": 17.4,
+        },
+        Object {
+          "averageCount": 3.6666666666666665,
+          "cardName": "Aether Vial",
+          "cardTypes": Array [
+            "artifact",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 1,
+          "decks": Array [
+            "Bant Spirits",
+            "Humans",
+            "Merfolk",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/ima/212.jpg",
+          "price": 32.59,
+        },
+        Object {
+          "averageCount": 2.5,
+          "cardName": "Polluted Delta",
+          "cardTypes": Array [
+            "land",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Izzet Phoenix",
+            "Death's Shadow",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/ktk/239.jpg",
+          "price": 17.31,
+        },
+        Object {
+          "averageCount": 3,
+          "cardName": "Scalding Tarn",
+          "cardTypes": Array [
+            "land",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Izzet Phoenix",
+            "Death's Shadow",
+            "Jeskai Control",
+            "Blue Moon",
+            "Storm",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/mm3/244.jpg",
+          "price": 71.57,
+        },
+        Object {
+          "averageCount": 2.4,
+          "cardName": "Steam Vents",
+          "cardTypes": Array [
+            "land",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Izzet Phoenix",
+            "Death's Shadow",
+            "Jeskai Control",
+            "Blue Moon",
+            "Storm",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/rtr/247.jpg",
+          "price": 10.79,
+        },
+        Object {
+          "averageCount": 4,
+          "cardName": "Arclight Phoenix",
+          "cardTypes": Array [
+            "red",
+          ],
+          "colors": Array [
+            "creature",
+          ],
+          "convertedManaCost": 4,
+          "decks": Array [
+            "Izzet Phoenix",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/front/7/8/787de9ce-02c5-4a17-a88b-d38e83dbeb0b.jpg",
+          "price": 23.95,
+        },
+        Object {
+          "averageCount": 4,
+          "cardName": "Thing in the Ice",
+          "cardTypes": Array [
+            "creature",
+          ],
+          "colors": Array [
+            "blue",
+          ],
+          "convertedManaCost": 2,
+          "decks": Array [
+            "Izzet Phoenix",
+            "Blue Moon",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/soi/92a.jpg",
+          "price": 13.66,
+        },
+        Object {
+          "averageCount": 3,
+          "cardName": "Manamorphose",
+          "cardTypes": Array [
+            "instant",
+          ],
+          "colors": Array [
+            "red",
+            "green",
+          ],
+          "convertedManaCost": 2,
+          "decks": Array [
+            "Izzet Phoenix",
+            "Storm",
+            "Grishoalbrand",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/mma/191.jpg",
+          "price": 19.65,
+        },
+        Object {
+          "averageCount": 1.5714285714285714,
+          "cardName": "Blood Crypt",
+          "cardTypes": Array [
+            "land",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Death's Shadow",
+            "Hollow One",
+            "Jund",
+            "Mardu Pyromancer",
+            "Dredge",
+            "Living End",
+            "Grishoalbrand",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/rtr/238.jpg",
+          "price": 13.45,
+        },
+        Object {
+          "averageCount": 3.25,
+          "cardName": "Bloodstained Mire",
+          "cardTypes": Array [
+            "land",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Death's Shadow",
+            "Burn",
+            "Hollow One",
+            "Jund",
+            "BG Rock",
+            "Mardu Pyromancer",
+            "Dredge",
+            "Grishoalbrand",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/ktk/230.jpg",
+          "price": 21.9,
+        },
+        Object {
+          "averageCount": 3.25,
+          "cardName": "Snapcaster Mage",
+          "cardTypes": Array [
+            "creature",
+          ],
+          "colors": Array [
+            "blue",
+          ],
+          "convertedManaCost": 2,
+          "decks": Array [
+            "Death's Shadow",
+            "UW Control",
+            "Jeskai Control",
+            "Blue Moon",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/mm3/50.jpg",
+          "price": 54.54,
+        },
+        Object {
+          "averageCount": 3,
+          "cardName": "Thoughtseize",
+          "cardTypes": Array [
+            "sorcery",
+          ],
+          "colors": Array [
+            "black",
+          ],
+          "convertedManaCost": 1,
+          "decks": Array [
+            "Death's Shadow",
+            "Jund",
+            "BG Rock",
+            "Mardu Pyromancer",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/ima/110.jpg",
+          "price": 12.49,
+        },
+        Object {
+          "averageCount": 1.6666666666666667,
+          "cardName": "Arid Mesa",
+          "cardTypes": Array [
+            "land",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Burn",
+            "Hollow One",
+            "Mardu Pyromancer",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/mm3/229.jpg",
+          "price": 36.67,
+        },
+        Object {
+          "averageCount": 2.625,
+          "cardName": "Wooded Foothills",
+          "cardTypes": Array [
+            "land",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Burn",
+            "Hollow One",
+            "Jund",
+            "Bogles",
+            "Ponza",
+            "Dredge",
+            "Titanshift",
+            "Infect",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/ktk/249.jpg",
+          "price": 20.55,
+        },
+        Object {
+          "averageCount": 4,
+          "cardName": "Goblin Guide",
+          "cardTypes": Array [
+            "creature",
+          ],
+          "colors": Array [
+            "red",
+          ],
+          "convertedManaCost": 1,
+          "decks": Array [
+            "Burn",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/mm3/96.jpg",
+          "price": 18.03,
+        },
+        Object {
+          "averageCount": 1,
+          "cardName": "Seachrome Coast",
+          "cardTypes": Array [
+            "land",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Humans",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/som/229.jpg",
+          "price": 15.7,
+        },
+        Object {
+          "averageCount": 4,
+          "cardName": "Meddling Mage",
+          "cardTypes": Array [
+            "creature",
+          ],
+          "colors": Array [
+            "white",
+            "blue",
+          ],
+          "convertedManaCost": 2,
+          "decks": Array [
+            "Humans",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/arb/8.jpg",
+          "price": 21.82,
+        },
+        Object {
+          "averageCount": 3.2,
+          "cardName": "Blackcleave Cliffs",
+          "cardTypes": Array [
+            "land",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Hollow One",
+            "Jund",
+            "Mardu Pyromancer",
+            "Living End",
+            "Grishoalbrand",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/som/224.jpg",
+          "price": 40.46,
+        },
+        Object {
+          "averageCount": 2.2,
+          "cardName": "Stomping Ground",
+          "cardTypes": Array [
+            "land",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Hollow One",
+            "Ponza",
+            "Dredge",
+            "Titanshift",
+            "Living End",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/gtc/247.jpg",
+          "price": 13.32,
+        },
+        Object {
+          "averageCount": 4,
+          "cardName": "Bloodghast",
+          "cardTypes": Array [
+            "creature",
+          ],
+          "colors": Array [
+            "black",
+          ],
+          "convertedManaCost": 2,
+          "decks": Array [
+            "Hollow One",
+            "Dredge",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/ima/82.jpg",
+          "price": 14.82,
+        },
+        Object {
+          "averageCount": 1.5,
+          "cardName": "Collective Brutality",
+          "cardTypes": Array [
+            "sorcery",
+          ],
+          "colors": Array [
+            "black",
+          ],
+          "convertedManaCost": 2,
+          "decks": Array [
+            "Hollow One",
+            "BG Rock",
+            "Mardu Pyromancer",
+            "Grishoalbrand",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/emn/85.jpg",
+          "price": 13.35,
+        },
+        Object {
+          "averageCount": 4,
+          "cardName": "Goblin Lore",
+          "cardTypes": Array [
+            "sorcery",
+          ],
+          "colors": Array [
+            "red",
+          ],
+          "convertedManaCost": 2,
+          "decks": Array [
+            "Hollow One",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/10e/208.jpg",
+          "price": 20.42,
+        },
+        Object {
+          "averageCount": 3.5,
+          "cardName": "Verdant Catacombs",
+          "cardTypes": Array [
+            "land",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Jund",
+            "BG Rock",
+            "Infect",
+            "Living End",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/mm3/249.jpg",
+          "price": 52.48,
+        },
+        Object {
+          "averageCount": 3.5,
+          "cardName": "Dark Confidant",
+          "cardTypes": Array [
+            "creature",
+          ],
+          "colors": Array [
+            "black",
+          ],
+          "convertedManaCost": 2,
+          "decks": Array [
+            "Jund",
+            "BG Rock",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/mm2/75.jpg",
+          "price": 49,
+        },
+        Object {
+          "averageCount": 4,
+          "cardName": "Tarmogoyf",
+          "cardTypes": Array [
+            "creature",
+          ],
+          "colors": Array [
+            "green",
+          ],
+          "convertedManaCost": 2,
+          "decks": Array [
+            "Jund",
+            "BG Rock",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/mm3/141.jpg",
+          "price": 52.1,
+        },
+        Object {
+          "averageCount": 3.5,
+          "cardName": "Assassin's Trophy",
+          "cardTypes": Array [
+            "instant",
+          ],
+          "colors": Array [
+            "black",
+            "green",
+          ],
+          "convertedManaCost": 2,
+          "decks": Array [
+            "Jund",
+            "BG Rock",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/front/9/0/906b6e99-128f-4c11-8daf-16099d35b0d4.jpg",
+          "price": 11.28,
+        },
+        Object {
+          "averageCount": 2.5,
+          "cardName": "Kolaghan's Command",
+          "cardTypes": Array [
+            "instant",
+          ],
+          "colors": Array [
+            "black",
+            "red",
+          ],
+          "convertedManaCost": 3,
+          "decks": Array [
+            "Jund",
+            "Mardu Pyromancer",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/dtk/224.jpg",
+          "price": 16.51,
+        },
+        Object {
+          "averageCount": 3.5,
+          "cardName": "Liliana of the Veil",
+          "cardTypes": Array [
+            "planeswalker",
+          ],
+          "colors": Array [
+            "black",
+          ],
+          "convertedManaCost": 3,
+          "decks": Array [
+            "Jund",
+            "BG Rock",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/mm3/76.jpg",
+          "price": 72.78,
+        },
+        Object {
+          "averageCount": 1.5,
+          "cardName": "Liliana, the Last Hope",
+          "cardTypes": Array [
+            "planeswalker",
+          ],
+          "colors": Array [
+            "black",
+          ],
+          "convertedManaCost": 3,
+          "decks": Array [
+            "Jund",
+            "BG Rock",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/emn/93.jpg",
+          "price": 43.8,
+        },
+        Object {
+          "averageCount": 4,
+          "cardName": "Inkmoth Nexus",
+          "cardTypes": Array [
+            "land",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Hardened Scales",
+            "Affinity",
+            "Infect",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/mbs/145.jpg",
+          "price": 15.38,
+        },
+        Object {
+          "averageCount": 4,
+          "cardName": "Arcbound Ravager",
+          "cardTypes": Array [
+            "artifact",
+            "creature",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 2,
+          "decks": Array [
+            "Hardened Scales",
+            "Affinity",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/mma/198.jpg",
+          "price": 37.37,
+        },
+        Object {
+          "averageCount": 4,
+          "cardName": "Steel Overseer",
+          "cardTypes": Array [
+            "artifact",
+            "creature",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 2,
+          "decks": Array [
+            "Hardened Scales",
+            "Affinity",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/ddf/44.jpg",
+          "price": 16.49,
+        },
+        Object {
+          "averageCount": 2.6,
+          "cardName": "Walking Ballista",
+          "cardTypes": Array [
+            "artifact",
+            "creature",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Hardened Scales",
+            "Eldrazi Tron",
+            "Tron",
+            "Amulet Titan",
+            "Counters Company",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/front/3/2/329a8738-3e17-403a-857a-0ba529ce8cd1.jpg",
+          "price": 13.64,
+        },
+        Object {
+          "averageCount": 4,
+          "cardName": "Mox Opal",
+          "cardTypes": Array [
+            "artifact",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Hardened Scales",
+            "Affinity",
+            "KCI",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/mm2/223.jpg",
+          "price": 89.72,
+        },
+        Object {
+          "averageCount": 1,
+          "cardName": "Karn, Scion of Urza",
+          "cardTypes": Array [
+            "planeswalker",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 4,
+          "decks": Array [
+            "Affinity",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/dom/1.jpg",
+          "price": 18.41,
+        },
+        Object {
+          "averageCount": 1,
+          "cardName": "Dryad Arbor",
+          "cardTypes": Array [
+            "land",
+            "creature",
+          ],
+          "colors": Array [
+            "green",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Bogles",
+            "Infect",
+            "Counters Company",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/fut/174.jpg",
+          "price": 12.74,
+        },
+        Object {
+          "averageCount": 1.5,
+          "cardName": "Ulamog, the Ceaseless Hunger",
+          "cardTypes": Array [
+            "creature",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 10,
+          "decks": Array [
+            "Eldrazi Tron",
+            "Tron",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/bfz/15.jpg",
+          "price": 18.41,
+        },
+        Object {
+          "averageCount": 2.5,
+          "cardName": "Karn Liberated",
+          "cardTypes": Array [
+            "planeswalker",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 7,
+          "decks": Array [
+            "Eldrazi Tron",
+            "Tron",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/mm2/4.jpg",
+          "price": 58,
+        },
+        Object {
+          "averageCount": 3,
+          "cardName": "Gemstone Caverns",
+          "cardTypes": Array [
+            "land",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Eldrazi and Taxes",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/tsp/274.jpg",
+          "price": 19.41,
+        },
+        Object {
+          "averageCount": 4,
+          "cardName": "Chalice of the Void",
+          "cardTypes": Array [
+            "artifact",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Eldrazi and Taxes",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/a25/222.jpg",
+          "price": 34.45,
+        },
+        Object {
+          "averageCount": 3,
+          "cardName": "Wurmcoil Engine",
+          "cardTypes": Array [
+            "artifact",
+            "creature",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 6,
+          "decks": Array [
+            "Tron",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/cm2/231.jpg",
+          "price": 18.49,
+        },
+        Object {
+          "averageCount": 2,
+          "cardName": "Ugin, the Spirit Dragon",
+          "cardTypes": Array [
+            "planeswalker",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 8,
+          "decks": Array [
+            "Tron",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/frf/1.jpg",
+          "price": 46.66,
+        },
+        Object {
+          "averageCount": 3.5,
+          "cardName": "Celestial Colonnade",
+          "cardTypes": Array [
+            "land",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "UW Control",
+            "Jeskai Control",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/wwk/133.jpg",
+          "price": 22.14,
+        },
+        Object {
+          "averageCount": 1,
+          "cardName": "Vendilion Clique",
+          "cardTypes": Array [
+            "creature",
+          ],
+          "colors": Array [
+            "blue",
+          ],
+          "convertedManaCost": 3,
+          "decks": Array [
+            "UW Control",
+            "Blue Moon",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/a25/76.jpg",
+          "price": 17.51,
+        },
+        Object {
+          "averageCount": 3.3333333333333335,
+          "cardName": "Cryptic Command",
+          "cardTypes": Array [
+            "instant",
+          ],
+          "colors": Array [
+            "blue",
+          ],
+          "convertedManaCost": 4,
+          "decks": Array [
+            "UW Control",
+            "Jeskai Control",
+            "Blue Moon",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/ima/48.jpg",
+          "price": 20.06,
+        },
+        Object {
+          "averageCount": 1.6666666666666667,
+          "cardName": "Jace, the Mind Sculptor",
+          "cardTypes": Array [
+            "planeswalker",
+          ],
+          "colors": Array [
+            "blue",
+          ],
+          "convertedManaCost": 4,
+          "decks": Array [
+            "UW Control",
+            "Jeskai Control",
+            "Blue Moon",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/a25/62.jpg",
+          "price": 86.08,
+        },
+        Object {
+          "averageCount": 2,
+          "cardName": "Teferi, Hero of Dominaria",
+          "cardTypes": Array [
+            "planeswalker",
+          ],
+          "colors": Array [
+            "white",
+            "blue",
+          ],
+          "convertedManaCost": 5,
+          "decks": Array [
+            "UW Control",
+            "Jeskai Control",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/front/5/d/5d10b752-d9cb-419d-a5c4-d4ee1acb655e.jpg",
+          "price": 43.96,
+        },
+        Object {
+          "averageCount": 1.5,
+          "cardName": "Sulfur Falls",
+          "cardTypes": Array [
+            "land",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Jeskai Control",
+            "Blue Moon",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/dom/247.jpg",
+          "price": 11.06,
+        },
+        Object {
+          "averageCount": 2,
+          "cardName": "Search for Azcanta",
+          "cardTypes": Array [
+            "enchantment",
+          ],
+          "colors": Array [
+            "blue",
+          ],
+          "convertedManaCost": 2,
+          "decks": Array [
+            "Jeskai Control",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/xln/74a.jpg",
+          "price": 13.77,
+        },
+        Object {
+          "averageCount": 2.6666666666666665,
+          "cardName": "Blood Moon",
+          "cardTypes": Array [
+            "enchantment",
+          ],
+          "colors": Array [
+            "red",
+          ],
+          "convertedManaCost": 3,
+          "decks": Array [
+            "Ponza",
+            "Mardu Pyromancer",
+            "Blue Moon",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/a25/122.jpg",
+          "price": 14.97,
+        },
+        Object {
+          "averageCount": 3,
+          "cardName": "Marsh Flats",
+          "cardTypes": Array [
+            "land",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Mardu Pyromancer",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/mm3/239.jpg",
+          "price": 35.94,
+        },
+        Object {
+          "averageCount": 4,
+          "cardName": "Copperline Gorge",
+          "cardTypes": Array [
+            "land",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Dredge",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/som/225.jpg",
+          "price": 16.69,
+        },
+        Object {
+          "averageCount": 4,
+          "cardName": "Life from the Loam",
+          "cardTypes": Array [
+            "sorcery",
+          ],
+          "colors": Array [
+            "green",
+          ],
+          "convertedManaCost": 2,
+          "decks": Array [
+            "Dredge",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/mma/153.jpg",
+          "price": 12.48,
+        },
+        Object {
+          "averageCount": 4,
+          "cardName": "Valakut, the Molten Pinnacle",
+          "cardTypes": Array [
+            "land",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Titanshift",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/zen/228.jpg",
+          "price": 13.35,
+        },
+        Object {
+          "averageCount": 1,
+          "cardName": "Prismatic Omen",
+          "cardTypes": Array [
+            "enchantment",
+          ],
+          "colors": Array [
+            "green",
+          ],
+          "convertedManaCost": 2,
+          "decks": Array [
+            "Titanshift",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/shm/126.jpg",
+          "price": 26.43,
+        },
+        Object {
+          "averageCount": 2,
+          "cardName": "Engineered Explosives",
+          "cardTypes": Array [
+            "artifact",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "KCI",
+            "Amulet Titan",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/mma/204.jpg",
+          "price": 29.03,
+        },
+        Object {
+          "averageCount": 4,
+          "cardName": "Krark-Clan Ironworks",
+          "cardTypes": Array [
+            "artifact",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 4,
+          "decks": Array [
+            "KCI",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/5dn/134.jpg",
+          "price": 10.55,
+        },
+        Object {
+          "averageCount": 4,
+          "cardName": "Gilt-Leaf Palace",
+          "cardTypes": Array [
+            "land",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Elves",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/lrw/268.jpg",
+          "price": 30.19,
+        },
+        Object {
+          "averageCount": 1,
+          "cardName": "Vesuva",
+          "cardTypes": Array [
+            "land",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Amulet Titan",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/tsp/281.jpg",
+          "price": 19.95,
+        },
+        Object {
+          "averageCount": 4,
+          "cardName": "Azusa, Lost but Seeking",
+          "cardTypes": Array [
+            "creature",
+          ],
+          "colors": Array [
+            "green",
+          ],
+          "convertedManaCost": 3,
+          "decks": Array [
+            "Amulet Titan",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/a25/161.jpg",
+          "price": 21.2,
+        },
+        Object {
+          "averageCount": 4,
+          "cardName": "Amulet of Vigor",
+          "cardTypes": Array [
+            "artifact",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 1,
+          "decks": Array [
+            "Amulet Titan",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/wwk/121.jpg",
+          "price": 22.31,
+        },
+        Object {
+          "averageCount": 3,
+          "cardName": "Living End",
+          "cardTypes": Array [
+            "sorcery",
+          ],
+          "colors": Array [
+            "black",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Living End",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/tsp/115.jpg",
+          "price": 14.65,
+        },
+        Object {
+          "averageCount": 4,
+          "cardName": "Goryo's Vengeance",
+          "cardTypes": Array [
+            "instant",
+          ],
+          "colors": Array [
+            "black",
+          ],
+          "convertedManaCost": 2,
+          "decks": Array [
+            "Grishoalbrand",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/bok/67.jpg",
+          "price": 12.52,
+        },
+        Object {
+          "averageCount": 4,
+          "cardName": "Through the Breach",
+          "cardTypes": Array [
+            "instant",
+          ],
+          "colors": Array [
+            "red",
+          ],
+          "convertedManaCost": 5,
+          "decks": Array [
+            "Grishoalbrand",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/chk/193.jpg",
+          "price": 14.46,
+        },
+      ]
+    }
+    userCardsData={
+      Array [
+        Object {
+          "cardName": "Blood Moon",
+        },
+        Object {
+          "cardName": "Breeding Pool",
+        },
+        Object {
+          "cardName": "Arid Mesa",
+        },
+      ]
+    }
+  />
+  <CardList
+    compareBuilds={[MockFunction]}
+    saveArray={[MockFunction]}
+    userCardsData={
+      Array [
+        Object {
+          "cardName": "Blood Moon",
+        },
+        Object {
+          "cardName": "Breeding Pool",
+        },
+        Object {
+          "cardName": "Arid Mesa",
+        },
+      ]
+    }
+  />
+</aside>
+`;
+
+exports[`Aside should match the snapshot when asideView is wishList 1`] = `
+<aside
+  className="aside"
+>
+  <img
+    alt="Magic The Gathering"
+    className="aside--magic-logo"
+    src="./magic_logo.png"
+  />
+  <Controls
+    addUserCard={[MockFunction]}
+    cards={
+      Array [
+        Object {
+          "averageCount": 1.5,
+          "cardName": "Breeding Pool",
+          "cardTypes": Array [
+            "land",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Bant Spirits",
+            "Infect",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/gtc/240.jpg",
+          "price": 12.46,
+        },
+        Object {
+          "averageCount": 2,
+          "cardName": "Cavern of Souls",
+          "cardTypes": Array [
+            "land",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Bant Spirits",
+            "Humans",
+            "Eldrazi and Taxes",
+            "Elves",
+            "Amulet Titan",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/mm3/232.jpg",
+          "price": 54.46,
+        },
+        Object {
+          "averageCount": 3.6666666666666665,
+          "cardName": "Flooded Strand",
+          "cardTypes": Array [
+            "land",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Bant Spirits",
+            "UW Control",
+            "Jeskai Control",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/ktk/233.jpg",
+          "price": 16.55,
+        },
+        Object {
+          "averageCount": 2.5714285714285716,
+          "cardName": "Horizon Canopy",
+          "cardTypes": Array [
+            "land",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Bant Spirits",
+            "Humans",
+            "Hardened Scales",
+            "Bogles",
+            "Eldrazi and Taxes",
+            "Elves",
+            "Counters Company",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/ima/240.jpg",
+          "price": 56.1,
+        },
+        Object {
+          "averageCount": 1.3333333333333333,
+          "cardName": "Misty Rainforest",
+          "cardTypes": Array [
+            "land",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Bant Spirits",
+            "Ponza",
+            "Blue Moon",
+            "Titanshift",
+            "Infect",
+            "Counters Company",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/mm3/240.jpg",
+          "price": 42.23,
+        },
+        Object {
+          "averageCount": 3,
+          "cardName": "Windswept Heath",
+          "cardTypes": Array [
+            "land",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Bant Spirits",
+            "Bogles",
+            "Ponza",
+            "Titanshift",
+            "Infect",
+            "Counters Company",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/ktk/248.jpg",
+          "price": 12.41,
+        },
+        Object {
+          "averageCount": 4,
+          "cardName": "Noble Hierarch",
+          "cardTypes": Array [
+            "creature",
+          ],
+          "colors": Array [
+            "white",
+            "blue",
+            "green",
+          ],
+          "convertedManaCost": 1,
+          "decks": Array [
+            "Bant Spirits",
+            "Humans",
+            "Infect",
+            "Counters Company",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/mm2/151.jpg",
+          "price": 48.72,
+        },
+        Object {
+          "averageCount": 3,
+          "cardName": "Phantasmal Image",
+          "cardTypes": Array [
+            "creature",
+          ],
+          "colors": Array [
+            "blue",
+          ],
+          "convertedManaCost": 2,
+          "decks": Array [
+            "Bant Spirits",
+            "Humans",
+            "Merfolk",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/mm3/46.jpg",
+          "price": 16.97,
+        },
+        Object {
+          "averageCount": 3.6666666666666665,
+          "cardName": "Collected Company",
+          "cardTypes": Array [
+            "instant",
+          ],
+          "colors": Array [
+            "green",
+          ],
+          "convertedManaCost": 4,
+          "decks": Array [
+            "Bant Spirits",
+            "Elves",
+            "Counters Company",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/dtk/177.jpg",
+          "price": 17.4,
+        },
+        Object {
+          "averageCount": 3.6666666666666665,
+          "cardName": "Aether Vial",
+          "cardTypes": Array [
+            "artifact",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 1,
+          "decks": Array [
+            "Bant Spirits",
+            "Humans",
+            "Merfolk",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/ima/212.jpg",
+          "price": 32.59,
+        },
+        Object {
+          "averageCount": 2.5,
+          "cardName": "Polluted Delta",
+          "cardTypes": Array [
+            "land",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Izzet Phoenix",
+            "Death's Shadow",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/ktk/239.jpg",
+          "price": 17.31,
+        },
+        Object {
+          "averageCount": 3,
+          "cardName": "Scalding Tarn",
+          "cardTypes": Array [
+            "land",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Izzet Phoenix",
+            "Death's Shadow",
+            "Jeskai Control",
+            "Blue Moon",
+            "Storm",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/mm3/244.jpg",
+          "price": 71.57,
+        },
+        Object {
+          "averageCount": 2.4,
+          "cardName": "Steam Vents",
+          "cardTypes": Array [
+            "land",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Izzet Phoenix",
+            "Death's Shadow",
+            "Jeskai Control",
+            "Blue Moon",
+            "Storm",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/rtr/247.jpg",
+          "price": 10.79,
+        },
+        Object {
+          "averageCount": 4,
+          "cardName": "Arclight Phoenix",
+          "cardTypes": Array [
+            "red",
+          ],
+          "colors": Array [
+            "creature",
+          ],
+          "convertedManaCost": 4,
+          "decks": Array [
+            "Izzet Phoenix",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/front/7/8/787de9ce-02c5-4a17-a88b-d38e83dbeb0b.jpg",
+          "price": 23.95,
+        },
+        Object {
+          "averageCount": 4,
+          "cardName": "Thing in the Ice",
+          "cardTypes": Array [
+            "creature",
+          ],
+          "colors": Array [
+            "blue",
+          ],
+          "convertedManaCost": 2,
+          "decks": Array [
+            "Izzet Phoenix",
+            "Blue Moon",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/soi/92a.jpg",
+          "price": 13.66,
+        },
+        Object {
+          "averageCount": 3,
+          "cardName": "Manamorphose",
+          "cardTypes": Array [
+            "instant",
+          ],
+          "colors": Array [
+            "red",
+            "green",
+          ],
+          "convertedManaCost": 2,
+          "decks": Array [
+            "Izzet Phoenix",
+            "Storm",
+            "Grishoalbrand",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/mma/191.jpg",
+          "price": 19.65,
+        },
+        Object {
+          "averageCount": 1.5714285714285714,
+          "cardName": "Blood Crypt",
+          "cardTypes": Array [
+            "land",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Death's Shadow",
+            "Hollow One",
+            "Jund",
+            "Mardu Pyromancer",
+            "Dredge",
+            "Living End",
+            "Grishoalbrand",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/rtr/238.jpg",
+          "price": 13.45,
+        },
+        Object {
+          "averageCount": 3.25,
+          "cardName": "Bloodstained Mire",
+          "cardTypes": Array [
+            "land",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Death's Shadow",
+            "Burn",
+            "Hollow One",
+            "Jund",
+            "BG Rock",
+            "Mardu Pyromancer",
+            "Dredge",
+            "Grishoalbrand",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/ktk/230.jpg",
+          "price": 21.9,
+        },
+        Object {
+          "averageCount": 3.25,
+          "cardName": "Snapcaster Mage",
+          "cardTypes": Array [
+            "creature",
+          ],
+          "colors": Array [
+            "blue",
+          ],
+          "convertedManaCost": 2,
+          "decks": Array [
+            "Death's Shadow",
+            "UW Control",
+            "Jeskai Control",
+            "Blue Moon",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/mm3/50.jpg",
+          "price": 54.54,
+        },
+        Object {
+          "averageCount": 3,
+          "cardName": "Thoughtseize",
+          "cardTypes": Array [
+            "sorcery",
+          ],
+          "colors": Array [
+            "black",
+          ],
+          "convertedManaCost": 1,
+          "decks": Array [
+            "Death's Shadow",
+            "Jund",
+            "BG Rock",
+            "Mardu Pyromancer",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/ima/110.jpg",
+          "price": 12.49,
+        },
+        Object {
+          "averageCount": 1.6666666666666667,
+          "cardName": "Arid Mesa",
+          "cardTypes": Array [
+            "land",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Burn",
+            "Hollow One",
+            "Mardu Pyromancer",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/mm3/229.jpg",
+          "price": 36.67,
+        },
+        Object {
+          "averageCount": 2.625,
+          "cardName": "Wooded Foothills",
+          "cardTypes": Array [
+            "land",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Burn",
+            "Hollow One",
+            "Jund",
+            "Bogles",
+            "Ponza",
+            "Dredge",
+            "Titanshift",
+            "Infect",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/ktk/249.jpg",
+          "price": 20.55,
+        },
+        Object {
+          "averageCount": 4,
+          "cardName": "Goblin Guide",
+          "cardTypes": Array [
+            "creature",
+          ],
+          "colors": Array [
+            "red",
+          ],
+          "convertedManaCost": 1,
+          "decks": Array [
+            "Burn",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/mm3/96.jpg",
+          "price": 18.03,
+        },
+        Object {
+          "averageCount": 1,
+          "cardName": "Seachrome Coast",
+          "cardTypes": Array [
+            "land",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Humans",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/som/229.jpg",
+          "price": 15.7,
+        },
+        Object {
+          "averageCount": 4,
+          "cardName": "Meddling Mage",
+          "cardTypes": Array [
+            "creature",
+          ],
+          "colors": Array [
+            "white",
+            "blue",
+          ],
+          "convertedManaCost": 2,
+          "decks": Array [
+            "Humans",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/arb/8.jpg",
+          "price": 21.82,
+        },
+        Object {
+          "averageCount": 3.2,
+          "cardName": "Blackcleave Cliffs",
+          "cardTypes": Array [
+            "land",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Hollow One",
+            "Jund",
+            "Mardu Pyromancer",
+            "Living End",
+            "Grishoalbrand",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/som/224.jpg",
+          "price": 40.46,
+        },
+        Object {
+          "averageCount": 2.2,
+          "cardName": "Stomping Ground",
+          "cardTypes": Array [
+            "land",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Hollow One",
+            "Ponza",
+            "Dredge",
+            "Titanshift",
+            "Living End",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/gtc/247.jpg",
+          "price": 13.32,
+        },
+        Object {
+          "averageCount": 4,
+          "cardName": "Bloodghast",
+          "cardTypes": Array [
+            "creature",
+          ],
+          "colors": Array [
+            "black",
+          ],
+          "convertedManaCost": 2,
+          "decks": Array [
+            "Hollow One",
+            "Dredge",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/ima/82.jpg",
+          "price": 14.82,
+        },
+        Object {
+          "averageCount": 1.5,
+          "cardName": "Collective Brutality",
+          "cardTypes": Array [
+            "sorcery",
+          ],
+          "colors": Array [
+            "black",
+          ],
+          "convertedManaCost": 2,
+          "decks": Array [
+            "Hollow One",
+            "BG Rock",
+            "Mardu Pyromancer",
+            "Grishoalbrand",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/emn/85.jpg",
+          "price": 13.35,
+        },
+        Object {
+          "averageCount": 4,
+          "cardName": "Goblin Lore",
+          "cardTypes": Array [
+            "sorcery",
+          ],
+          "colors": Array [
+            "red",
+          ],
+          "convertedManaCost": 2,
+          "decks": Array [
+            "Hollow One",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/10e/208.jpg",
+          "price": 20.42,
+        },
+        Object {
+          "averageCount": 3.5,
+          "cardName": "Verdant Catacombs",
+          "cardTypes": Array [
+            "land",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Jund",
+            "BG Rock",
+            "Infect",
+            "Living End",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/mm3/249.jpg",
+          "price": 52.48,
+        },
+        Object {
+          "averageCount": 3.5,
+          "cardName": "Dark Confidant",
+          "cardTypes": Array [
+            "creature",
+          ],
+          "colors": Array [
+            "black",
+          ],
+          "convertedManaCost": 2,
+          "decks": Array [
+            "Jund",
+            "BG Rock",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/mm2/75.jpg",
+          "price": 49,
+        },
+        Object {
+          "averageCount": 4,
+          "cardName": "Tarmogoyf",
+          "cardTypes": Array [
+            "creature",
+          ],
+          "colors": Array [
+            "green",
+          ],
+          "convertedManaCost": 2,
+          "decks": Array [
+            "Jund",
+            "BG Rock",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/mm3/141.jpg",
+          "price": 52.1,
+        },
+        Object {
+          "averageCount": 3.5,
+          "cardName": "Assassin's Trophy",
+          "cardTypes": Array [
+            "instant",
+          ],
+          "colors": Array [
+            "black",
+            "green",
+          ],
+          "convertedManaCost": 2,
+          "decks": Array [
+            "Jund",
+            "BG Rock",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/front/9/0/906b6e99-128f-4c11-8daf-16099d35b0d4.jpg",
+          "price": 11.28,
+        },
+        Object {
+          "averageCount": 2.5,
+          "cardName": "Kolaghan's Command",
+          "cardTypes": Array [
+            "instant",
+          ],
+          "colors": Array [
+            "black",
+            "red",
+          ],
+          "convertedManaCost": 3,
+          "decks": Array [
+            "Jund",
+            "Mardu Pyromancer",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/dtk/224.jpg",
+          "price": 16.51,
+        },
+        Object {
+          "averageCount": 3.5,
+          "cardName": "Liliana of the Veil",
+          "cardTypes": Array [
+            "planeswalker",
+          ],
+          "colors": Array [
+            "black",
+          ],
+          "convertedManaCost": 3,
+          "decks": Array [
+            "Jund",
+            "BG Rock",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/mm3/76.jpg",
+          "price": 72.78,
+        },
+        Object {
+          "averageCount": 1.5,
+          "cardName": "Liliana, the Last Hope",
+          "cardTypes": Array [
+            "planeswalker",
+          ],
+          "colors": Array [
+            "black",
+          ],
+          "convertedManaCost": 3,
+          "decks": Array [
+            "Jund",
+            "BG Rock",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/emn/93.jpg",
+          "price": 43.8,
+        },
+        Object {
+          "averageCount": 4,
+          "cardName": "Inkmoth Nexus",
+          "cardTypes": Array [
+            "land",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Hardened Scales",
+            "Affinity",
+            "Infect",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/mbs/145.jpg",
+          "price": 15.38,
+        },
+        Object {
+          "averageCount": 4,
+          "cardName": "Arcbound Ravager",
+          "cardTypes": Array [
+            "artifact",
+            "creature",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 2,
+          "decks": Array [
+            "Hardened Scales",
+            "Affinity",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/mma/198.jpg",
+          "price": 37.37,
+        },
+        Object {
+          "averageCount": 4,
+          "cardName": "Steel Overseer",
+          "cardTypes": Array [
+            "artifact",
+            "creature",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 2,
+          "decks": Array [
+            "Hardened Scales",
+            "Affinity",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/ddf/44.jpg",
+          "price": 16.49,
+        },
+        Object {
+          "averageCount": 2.6,
+          "cardName": "Walking Ballista",
+          "cardTypes": Array [
+            "artifact",
+            "creature",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Hardened Scales",
+            "Eldrazi Tron",
+            "Tron",
+            "Amulet Titan",
+            "Counters Company",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/front/3/2/329a8738-3e17-403a-857a-0ba529ce8cd1.jpg",
+          "price": 13.64,
+        },
+        Object {
+          "averageCount": 4,
+          "cardName": "Mox Opal",
+          "cardTypes": Array [
+            "artifact",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Hardened Scales",
+            "Affinity",
+            "KCI",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/mm2/223.jpg",
+          "price": 89.72,
+        },
+        Object {
+          "averageCount": 1,
+          "cardName": "Karn, Scion of Urza",
+          "cardTypes": Array [
+            "planeswalker",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 4,
+          "decks": Array [
+            "Affinity",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/dom/1.jpg",
+          "price": 18.41,
+        },
+        Object {
+          "averageCount": 1,
+          "cardName": "Dryad Arbor",
+          "cardTypes": Array [
+            "land",
+            "creature",
+          ],
+          "colors": Array [
+            "green",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Bogles",
+            "Infect",
+            "Counters Company",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/fut/174.jpg",
+          "price": 12.74,
+        },
+        Object {
+          "averageCount": 1.5,
+          "cardName": "Ulamog, the Ceaseless Hunger",
+          "cardTypes": Array [
+            "creature",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 10,
+          "decks": Array [
+            "Eldrazi Tron",
+            "Tron",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/bfz/15.jpg",
+          "price": 18.41,
+        },
+        Object {
+          "averageCount": 2.5,
+          "cardName": "Karn Liberated",
+          "cardTypes": Array [
+            "planeswalker",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 7,
+          "decks": Array [
+            "Eldrazi Tron",
+            "Tron",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/mm2/4.jpg",
+          "price": 58,
+        },
+        Object {
+          "averageCount": 3,
+          "cardName": "Gemstone Caverns",
+          "cardTypes": Array [
+            "land",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Eldrazi and Taxes",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/tsp/274.jpg",
+          "price": 19.41,
+        },
+        Object {
+          "averageCount": 4,
+          "cardName": "Chalice of the Void",
+          "cardTypes": Array [
+            "artifact",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Eldrazi and Taxes",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/a25/222.jpg",
+          "price": 34.45,
+        },
+        Object {
+          "averageCount": 3,
+          "cardName": "Wurmcoil Engine",
+          "cardTypes": Array [
+            "artifact",
+            "creature",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 6,
+          "decks": Array [
+            "Tron",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/cm2/231.jpg",
+          "price": 18.49,
+        },
+        Object {
+          "averageCount": 2,
+          "cardName": "Ugin, the Spirit Dragon",
+          "cardTypes": Array [
+            "planeswalker",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 8,
+          "decks": Array [
+            "Tron",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/frf/1.jpg",
+          "price": 46.66,
+        },
+        Object {
+          "averageCount": 3.5,
+          "cardName": "Celestial Colonnade",
+          "cardTypes": Array [
+            "land",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "UW Control",
+            "Jeskai Control",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/wwk/133.jpg",
+          "price": 22.14,
+        },
+        Object {
+          "averageCount": 1,
+          "cardName": "Vendilion Clique",
+          "cardTypes": Array [
+            "creature",
+          ],
+          "colors": Array [
+            "blue",
+          ],
+          "convertedManaCost": 3,
+          "decks": Array [
+            "UW Control",
+            "Blue Moon",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/a25/76.jpg",
+          "price": 17.51,
+        },
+        Object {
+          "averageCount": 3.3333333333333335,
+          "cardName": "Cryptic Command",
+          "cardTypes": Array [
+            "instant",
+          ],
+          "colors": Array [
+            "blue",
+          ],
+          "convertedManaCost": 4,
+          "decks": Array [
+            "UW Control",
+            "Jeskai Control",
+            "Blue Moon",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/ima/48.jpg",
+          "price": 20.06,
+        },
+        Object {
+          "averageCount": 1.6666666666666667,
+          "cardName": "Jace, the Mind Sculptor",
+          "cardTypes": Array [
+            "planeswalker",
+          ],
+          "colors": Array [
+            "blue",
+          ],
+          "convertedManaCost": 4,
+          "decks": Array [
+            "UW Control",
+            "Jeskai Control",
+            "Blue Moon",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/a25/62.jpg",
+          "price": 86.08,
+        },
+        Object {
+          "averageCount": 2,
+          "cardName": "Teferi, Hero of Dominaria",
+          "cardTypes": Array [
+            "planeswalker",
+          ],
+          "colors": Array [
+            "white",
+            "blue",
+          ],
+          "convertedManaCost": 5,
+          "decks": Array [
+            "UW Control",
+            "Jeskai Control",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/front/5/d/5d10b752-d9cb-419d-a5c4-d4ee1acb655e.jpg",
+          "price": 43.96,
+        },
+        Object {
+          "averageCount": 1.5,
+          "cardName": "Sulfur Falls",
+          "cardTypes": Array [
+            "land",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Jeskai Control",
+            "Blue Moon",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/dom/247.jpg",
+          "price": 11.06,
+        },
+        Object {
+          "averageCount": 2,
+          "cardName": "Search for Azcanta",
+          "cardTypes": Array [
+            "enchantment",
+          ],
+          "colors": Array [
+            "blue",
+          ],
+          "convertedManaCost": 2,
+          "decks": Array [
+            "Jeskai Control",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/xln/74a.jpg",
+          "price": 13.77,
+        },
+        Object {
+          "averageCount": 2.6666666666666665,
+          "cardName": "Blood Moon",
+          "cardTypes": Array [
+            "enchantment",
+          ],
+          "colors": Array [
+            "red",
+          ],
+          "convertedManaCost": 3,
+          "decks": Array [
+            "Ponza",
+            "Mardu Pyromancer",
+            "Blue Moon",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/a25/122.jpg",
+          "price": 14.97,
+        },
+        Object {
+          "averageCount": 3,
+          "cardName": "Marsh Flats",
+          "cardTypes": Array [
+            "land",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Mardu Pyromancer",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/mm3/239.jpg",
+          "price": 35.94,
+        },
+        Object {
+          "averageCount": 4,
+          "cardName": "Copperline Gorge",
+          "cardTypes": Array [
+            "land",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Dredge",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/som/225.jpg",
+          "price": 16.69,
+        },
+        Object {
+          "averageCount": 4,
+          "cardName": "Life from the Loam",
+          "cardTypes": Array [
+            "sorcery",
+          ],
+          "colors": Array [
+            "green",
+          ],
+          "convertedManaCost": 2,
+          "decks": Array [
+            "Dredge",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/mma/153.jpg",
+          "price": 12.48,
+        },
+        Object {
+          "averageCount": 4,
+          "cardName": "Valakut, the Molten Pinnacle",
+          "cardTypes": Array [
+            "land",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Titanshift",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/zen/228.jpg",
+          "price": 13.35,
+        },
+        Object {
+          "averageCount": 1,
+          "cardName": "Prismatic Omen",
+          "cardTypes": Array [
+            "enchantment",
+          ],
+          "colors": Array [
+            "green",
+          ],
+          "convertedManaCost": 2,
+          "decks": Array [
+            "Titanshift",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/shm/126.jpg",
+          "price": 26.43,
+        },
+        Object {
+          "averageCount": 2,
+          "cardName": "Engineered Explosives",
+          "cardTypes": Array [
+            "artifact",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "KCI",
+            "Amulet Titan",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/mma/204.jpg",
+          "price": 29.03,
+        },
+        Object {
+          "averageCount": 4,
+          "cardName": "Krark-Clan Ironworks",
+          "cardTypes": Array [
+            "artifact",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 4,
+          "decks": Array [
+            "KCI",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/5dn/134.jpg",
+          "price": 10.55,
+        },
+        Object {
+          "averageCount": 4,
+          "cardName": "Gilt-Leaf Palace",
+          "cardTypes": Array [
+            "land",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Elves",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/lrw/268.jpg",
+          "price": 30.19,
+        },
+        Object {
+          "averageCount": 1,
+          "cardName": "Vesuva",
+          "cardTypes": Array [
+            "land",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Amulet Titan",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/tsp/281.jpg",
+          "price": 19.95,
+        },
+        Object {
+          "averageCount": 4,
+          "cardName": "Azusa, Lost but Seeking",
+          "cardTypes": Array [
+            "creature",
+          ],
+          "colors": Array [
+            "green",
+          ],
+          "convertedManaCost": 3,
+          "decks": Array [
+            "Amulet Titan",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/a25/161.jpg",
+          "price": 21.2,
+        },
+        Object {
+          "averageCount": 4,
+          "cardName": "Amulet of Vigor",
+          "cardTypes": Array [
+            "artifact",
+          ],
+          "colors": Array [
+            "colorless",
+          ],
+          "convertedManaCost": 1,
+          "decks": Array [
+            "Amulet Titan",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/wwk/121.jpg",
+          "price": 22.31,
+        },
+        Object {
+          "averageCount": 3,
+          "cardName": "Living End",
+          "cardTypes": Array [
+            "sorcery",
+          ],
+          "colors": Array [
+            "black",
+          ],
+          "convertedManaCost": 0,
+          "decks": Array [
+            "Living End",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/tsp/115.jpg",
+          "price": 14.65,
+        },
+        Object {
+          "averageCount": 4,
+          "cardName": "Goryo's Vengeance",
+          "cardTypes": Array [
+            "instant",
+          ],
+          "colors": Array [
+            "black",
+          ],
+          "convertedManaCost": 2,
+          "decks": Array [
+            "Grishoalbrand",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/bok/67.jpg",
+          "price": 12.52,
+        },
+        Object {
+          "averageCount": 4,
+          "cardName": "Through the Breach",
+          "cardTypes": Array [
+            "instant",
+          ],
+          "colors": Array [
+            "red",
+          ],
+          "convertedManaCost": 5,
+          "decks": Array [
+            "Grishoalbrand",
+          ],
+          "imageSource": "https://img.scryfall.com/cards/large/en/chk/193.jpg",
+          "price": 14.46,
+        },
+      ]
+    }
+    userCardsData={
+      Array [
+        Object {
+          "cardName": "Blood Moon",
+        },
+        Object {
+          "cardName": "Breeding Pool",
+        },
+        Object {
+          "cardName": "Arid Mesa",
+        },
+      ]
+    }
+  />
+  <WishList
+    saveArray={[MockFunction]}
+    wishList={
+      Array [
+        Object {
+          "cardName": "Tarmogoyf",
+        },
+        Object {
+          "cardName": "Mox Opal",
+        },
+        Object {
+          "cardName": "Karn Liberated",
+        },
+      ]
+    }
+  />
+</aside>
+`;
