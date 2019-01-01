@@ -50,6 +50,19 @@ class Card extends Component {
             </div>
           </div>
         )}
+        {this.props.cardAreaView === 'wishList' && (
+          <div>
+          <img
+            className="card--image"
+            src={this.props.card.imageSource}
+            alt={this.props.card.cardName}
+            onClick={this.setPopUpData}
+          />
+          <div>
+            <p>Total Cost - ${(this.props.card.price * this.props.card.wishListCount).toFixed(2)}</p>
+          </div>
+        </div>
+        )}
       </article>
     );
   }

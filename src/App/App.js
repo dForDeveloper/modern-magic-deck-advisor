@@ -212,13 +212,15 @@ class App extends Component {
           saveArray={this.saveArray}/>
         <CardArea
           userCardsData={this.state.userCardsData}
+          faveDecks={this.state.faveDecks}
           setAsideView={this.setAsideView}
           cardAreaView={this.state.cardAreaView}
           setCardAreaView={this.setCardAreaView}
           userDecks={this.state.userDecks}
           getExpandedDeckInfo={this.getExpandedDeckInfo}
           addToWishlist={this.addToWishlist}
-          addToFaveDecks={this.addToFaveDecks}/>
+          addToFaveDecks={this.addToFaveDecks}
+          wishList={this.state.wishList}/>
       </div>
     )
   }
