@@ -1,0 +1,29 @@
+@mixin list-item() {
+  font-family: $secondary;
+  font-size: 15px;
+  font-weight: 700;
+  list-style: none;
+  margin-top: 8px;
+}
+
+@mixin symbols($padding) {
+  font-size: .75rem;
+  padding: $padding;
+}
+
+@mixin heading($fontsize, $fontweight, $textalign) {
+  font-family: $primary;
+  font-size: $fontsize;
+  font-weight: $fontweight;
+  text-align: $textalign;
+}
+
+@mixin button($display, $height, $margin, $width) {
+  border-radius: 5px;
+  display: $display;
+  font-family: $secondary;
+  font-weight: 700;
+  height: $height;
+  margin: $margin;
+  width: $width;
+}

@@ -7,8 +7,8 @@ function CardList(props) {
   cardNames.sort();
   return (
     <div>
-      <h1>My Cards:</h1>
-      <ul className="cardlist--ul">
+      <h1 className="list--h1">My Cards:</h1>
+      <ul className="list--ul">
         {
           cardNames.map((cardName, index) => {
             return (
@@ -23,7 +23,7 @@ function CardList(props) {
           }, this)
         }
       </ul>
-      <button onClick={props.compareBuilds}>Compare Builds</button>
+      <button className="compare-builds--button" onClick={props.compareBuilds}>Compare Builds</button>
     </div>
   )
 }

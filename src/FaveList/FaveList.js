@@ -5,8 +5,8 @@ import '../styles/main.scss';
 function FaveList(props) {
   return(
     <div>
-      <h1>My Favorite Decks:</h1>
-      <ul>
+      <h1 className="list--h1">My Favorite Decks:</h1>
+      <ul className="list--ul">
         {
           props.faveDecks.map((deck, index) => {
             return (

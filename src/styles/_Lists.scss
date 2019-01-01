@@ -1,0 +1,28 @@
+.list--h1 {
+  @include heading(35px, 700, center);
+}
+
+.list--ul {
+  padding-left: 10px;
+  .list--li {
+    @include list-item();
+  }
+}
+
+.far {
+  @include symbols(0px 5px);
+}
+
+.fas {
+  @include symbols(0px 0px 0px 5px);
+}
+
+.listprice--span {
+  display: block;
+  font-weight: 500;
+  padding-left: 20px;
+}
+
+.compare-builds--button {
+  @include button(block, 30px, 30px auto, 150px);
+}
