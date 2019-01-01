@@ -3,6 +3,7 @@ import Header from './Header';
 import { shallow } from 'enzyme';
 
 const setAsideViewMock = jest.fn();
+const setCardAreaViewMock = jest.fn();
 
 describe('Header', () => {
   let wrapper;
@@ -10,7 +11,8 @@ describe('Header', () => {
   beforeEach(() => {
     wrapper = shallow(
       <Header
-        setAsideView={setAsideViewMock}/>
+        setAsideView={setAsideViewMock}
+        setCardAreaView={setCardAreaViewMock}/>
     )
   });
 
@@ -18,5 +20,19 @@ describe('Header', () => {
     expect(wrapper).toMatchSnapshot();
   }); 
 
-  it('should call setAsideView and return to Cards when My Cards is clicked')
+  it('should call setAsideView and setCardAreaView when My Cards is clicked', () => {
+    wrapper.find('.my-cards').simulate('click');
+    expect(setAsideViewMock).toBeCalled();
+    expect(setCardAreaViewMock).toBeCalled();
+  });
+
+  it('should call setAsideView when My Favorites is clicked', () => {
+    wrapper.find('.fave-decks').simulate('click');
+    expect(setAsideViewMock).toBeCalled();
+  });
+
+  it('should call setAsideView when My Wish List is clicked', () => {
+    wrapper.find('.my-wish-list').simulate('click');
+    expect(setAsideViewMock).toBeCalled();
+  })
 }) 

@@ -4,11 +4,6 @@ exports[`Header should match the snapshot 1`] = `
 <header
   className="header"
 >
-  <img
-    alt="Magic The Gathering"
-    className="magic-logo"
-    src="./magic_logo.png"
-  />
   <ul
     className="header--ul"
   >
