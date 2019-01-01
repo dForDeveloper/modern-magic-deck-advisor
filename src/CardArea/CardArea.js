@@ -35,7 +35,8 @@ class CardArea extends Component {
           key={userDeck.deckName}
           expandDeck={this.expandDeck}
           setCardAreaView={this.props.setCardAreaView}
-          addToFaveDecks={this.props.addToFaveDecks}/>
+          addToFaveDecks={this.props.addToFaveDecks}
+          cardAreaView={this.props.cardAreaView}/>
       );
     });
   }
