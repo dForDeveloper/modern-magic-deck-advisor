@@ -1,9 +1,13 @@
+@mixin flex {
+  display: flex
+}
+
 .card-area {
   background-color: lightgray;
 }
 
 .card-area--section {
-  display: flex;
+  @include flex;
   flex-wrap: wrap;
 }
 
@@ -12,37 +16,59 @@
 }
 
 .popup--div {
+  @include flex;
+  background-color: #A7B8BA;
+  border-radius: 12px;
+  height: 400px;
   padding: 20px;
   position: absolute;
   width: 700px;
-  height: 500px;
-  background-color: #A7B8BA;
   z-index: 2;
-  display: flex;
-  border-radius: 12px;
+
+  h1, h2 {
+    color: $dark-grey;
+    font-family: $primary;
+    margin: 0 auto;
+    padding-left: 20px;
+    text-transform: uppercase;
+  }
+
+  p {
+    color: $dark-grey;
+    font-family: $secondary;
+    font-size: 1.5rem;
+    padding-left: 20px;
+  }
 
   .popup--list {
+    color: $dark-grey;
+    font-family: $secondary;
     font-size: 1.5rem;
-    list-style-image: url('/public/check-circle-regular.svg');
-    line-height: 2.5rem;
+    list-style: none;
+    line-height: 2.4rem;
+    text-transform: uppercase;
   }
   
   .popup--card-image {
-    width: 300px;
-    height: 450px;
+    width: 250px;
+    height: 350px;
     border-radius: 14px;
   }
 
   .popup--info {
-    display: flex;
+    @include flex;
     justify-content: space-between;
-    align-items: flex-start;
     width: 400px;
   }
 
   .fa-times-circle {
-    font-size: 2.5rem;
-    // margin: 20px;
+    color: $light-grey;
+    height: 20px;
+    font-size: 2rem;
+  }
+
+  .fa-times-circle:hover {
+    color: $dark-grey;
+    cursor: pointer;
   }
 }
-
