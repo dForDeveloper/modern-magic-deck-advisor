@@ -26,13 +26,15 @@ describe('Header', () => {
     expect(setCardAreaViewMock).toBeCalled();
   });
 
-  it('should call setAsideView when My Favorites is clicked', () => {
+  it('should call setAsideView and setCardAreaView when My Favorites is clicked', () => {
     wrapper.find('.fave-decks').simulate('click');
     expect(setAsideViewMock).toBeCalled();
+    expect(setCardAreaViewMock).toBeCalled();
   });
 
-  it('should call setAsideView when My Wish List is clicked', () => {
+  it('should call setAsideView and setCardAreaView when My Wish List is clicked', () => {
     wrapper.find('.my-wish-list').simulate('click');
     expect(setAsideViewMock).toBeCalled();
+    expect(setCardAreaViewMock).toBeCalled();
   })
 }) 
