@@ -3,7 +3,6 @@ import '../styles/main.scss';
 
 class Card extends Component {
   setPopUpData = () => {
-    console.log(this.props.cardAreaView)
     this.props.displayPopUp(this.props.card);
   }
 

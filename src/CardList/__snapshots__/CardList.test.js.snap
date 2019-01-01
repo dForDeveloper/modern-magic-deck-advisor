@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardList should match the snapshot 1`] = `
+<div>
+  <h1>
+    My Cards:
+  </h1>
+  <ul
+    className="cardlist--ul"
+  >
+    <CardListItem
+      cardCount={2}
+      cardIndex={0}
+      cardName="Blood Moon"
+      key="Blood Moon"
+      userCardsData={
+        Array [
+          Object {
+            "cardCount": 2,
+            "cardName": "Blood Moon",
+          },
+        ]
+      }
+    />
+  </ul>
+  <button>
+    Compare Builds
+  </button>
+</div>
+`;
