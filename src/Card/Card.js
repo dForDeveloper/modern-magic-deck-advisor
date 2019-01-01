@@ -3,7 +3,6 @@ import '../styles/main.scss';
 
 class Card extends Component {
   setPopUpData = () => {
-    console.log(this.props.cardAreaView)
     this.props.displayPopUp(this.props.card);
   }
 
@@ -39,6 +38,12 @@ class Card extends Component {
             />
             <div className="counter--container">
               <p>{this.props.card.price}</p>
+              <p>
+                {
+                  `You have ${this.props.card.userCount}
+                   of ${this.props.card.requiredCount}`
+                }
+              </p>
               <button onClick={this.addToWishlist}>
                 Add to Wishlist
               </button>
