@@ -8,7 +8,7 @@ class Header extends Component {
 
   setAsideViewMyCards = () => {
     this.props.setAsideView("myCardList");
-    this.returnToCards()
+    this.props.setCardAreaView("myCardList");
   }
 
   setAsideViewFaveDecks = () => {
@@ -16,11 +16,7 @@ class Header extends Component {
   }
 
   setAsideViewWishList = () => {
-    this.props.setAsideView("wishList")
-  }
-
-  returnToCards = () => {
-    window.location.reload()
+    this.props.setAsideView("wishList");
   }
 
   render(props) {

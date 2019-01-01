@@ -115,7 +115,8 @@ class CardArea extends Component {
           </div>
         )}
         <Header 
-          setAsideView={this.props.setAsideView}/>
+          setAsideView={this.props.setAsideView}
+          setCardAreaView={this.props.setCardAreaView}/>
         <section className="card-area--section">
           {cardAreaView}
         </section>
