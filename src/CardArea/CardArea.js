@@ -14,16 +14,7 @@ class CardArea extends Component {
     };
   }
 
-  sortCardsByName(card1, card2) {
-    if (card1.cardName < card2.cardName) {
-      return -1;
-    } else {
-      return 1;
-    }
-  }
-
   sortCards() {
-    this.props.userCardsData.sort(this.sortCardsByName);
     return this.props.userCardsData.map(userCard => {
       return (
         <Card
