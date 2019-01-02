@@ -29,10 +29,10 @@ class Controls extends Component {
   }
 
   chooseSuggestion = (event) => {
-    this.textInput.current.value = event.target.key;
+    this.textInput.current.value = event.target.id;
     this.textInput.current.focus();
     this.setState({
-      cardName: event.target.key,
+      cardName: event.target.id,
       suggestions: [] 
     });
   }
@@ -106,7 +106,7 @@ class Controls extends Component {
               <span
                 className="controls--suggestion"
                 key={cardName}
-                id={cardName.replace(/\s/g, '-')}
+                id={cardName}
                 onClick={this.chooseSuggestion}>
               {cardName.slice(0,24)}
               </span>
