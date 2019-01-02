@@ -25,7 +25,7 @@ class Deck extends Component {
         </button>
         <div className="price--container">
           <h3 className="price--value">${this.props.userDeck.price}</h3>
-          <button onClick={this.addToFaveDecks}>
+          <button className="deck--button"> onClick={this.addToFaveDecks}>
             Add to Favorite Decks
           </button>
         </div>
