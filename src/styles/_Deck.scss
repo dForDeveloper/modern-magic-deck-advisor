@@ -13,9 +13,16 @@
     word-wrap: break-word;
   }
 
-  .deck--image {
+  .deck--signature {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     height: 300px;
-    border-radius: 12px;
+  }
+
+  .deck--image {
+    height: 150px;
+    border-radius: 6px;
   }
 
   .deck--button {

@@ -71,6 +71,7 @@ class Controls extends Component {
           type="text"
           className="controls--input"
           onChange={this.updateCardName}
+          placeholder="Enter cards you own"
           ref={this.textInput}>
         </input>
         <button
@@ -78,7 +79,7 @@ class Controls extends Component {
           onClick={this.submitCard}>
             Add Card
         </button>
-        <p>{errorMessage}</p>
+        <p className="controls--error">{errorMessage}</p>
       </form>
     )
   }

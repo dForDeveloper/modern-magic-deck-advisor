@@ -26,8 +26,8 @@ class Header extends Component {
       <header className="header">
         <ul className="header--ul">
           <li onClick={this.setAsideViewMyCards} className="my-cards">My Cards</li>
-          <li onClick={this.setAsideViewFaveDecks} className="fave-decks">My Favorites</li>
-          <li onClick={this.setAsideViewWishList} className="my-wish-list">My Wish List</li>
+          <li onClick={this.setAsideViewFaveDecks} className="fave-decks">Saved Decks</li>
+          <li onClick={this.setAsideViewWishList} className="my-wish-list">Wish List</li>
         </ul>
       </header>
     )

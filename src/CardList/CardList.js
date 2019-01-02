@@ -23,7 +23,7 @@ function CardList(props) {
           }, this)
         }
       </ul>
-      <button className="compare-builds--button" onClick={props.compareBuilds}>Compare Builds</button>
+      <button className="compare-builds--button" onClick={props.compareBuilds}>Compare Deck Prices</button>
     </div>
   )
 }
