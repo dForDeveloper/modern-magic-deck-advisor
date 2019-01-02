@@ -93,12 +93,8 @@ class App extends Component {
     const timeOfCache = JSON.parse(localStorage.getItem('timeOfCache'))
     const twentyFourHours = 24 * 60 * 60 * 1000;
     if (!timeOfCache || Date.now() - timeOfCache > twentyFourHours) {
-      const root = 'https://api.scryfall.com/cards/search?q=f%3Am+unique%3Acards+%28';
       const url = this.getURLArray(cards);
-      Promise.all([
-        this.getPricePromise(root + url.slice(0,40).join('+or+') + '%29'),
-        this.getPricePromise(root + url.slice(40).join('+or+') + '%29')
-      ])
+      Promise.all(this.getPricePromises(url))
         .then(priceData => {
           this.storePriceData(priceData);
           this.setCurrentPrices(cards);
@@ -115,15 +111,21 @@ class App extends Component {
     });
   }
 
-  getPricePromise = (url) => {
-    return fetch(url)
+  getPricePromises = (url) => {
+    const promises = [];
+    const root = 'https://api.scryfall.com/cards/search?q=f%3Am+unique%3Acards+%28';
+    for (let i = 0; i < Math.ceil(url.length / 40); i++) {
+      const index = 40 * i;
+      promises.push(fetch(root + url.slice(index, index + 40).join('+or+') + '%29')
       .then(response => response.json())
       .then(response => response.data)
-      .catch(err => console.log('price promise error', err));
+      .catch(err => console.log('price promise error', err)));
+    }
+    return promises;
   }
 
   storePriceData = (priceData) => {
-    const totalPriceData = priceData[0].concat(priceData[1]);
+    const totalPriceData = [].concat(...priceData);
     const cardPrices = totalPriceData.map(card => {
       return { cardName: card.name, price: card.usd };
     });
@@ -133,10 +135,11 @@ class App extends Component {
 
   setCurrentPrices = (cards) => {
     const newCards = cards.map(card => {
-      const currentPrice = JSON.parse(localStorage.getItem('cardPrices'))
+      const apiCard = JSON.parse(localStorage.getItem('cardPrices'))
         .find(pricedCard => pricedCard.cardName.includes(card.cardName))
-        .price;
-      card.price = parseFloat(currentPrice);
+      if (apiCard.price) {
+        card.price = parseFloat(apiCard.price);
+      }
       return card;
     });
     this.setState({ cards: newCards });
