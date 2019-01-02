@@ -30,15 +30,4 @@ describe('CardArea', () => {
   it('should match the snapshot', () => {
     expect(wrapper).toMatchSnapshot();
   });
-
-  it('should sort card objects when sortCardsByName is called', () => {
-    const userCardsData = [
-      { cardName: 'Blood Moon' }, 
-      { cardName: 'Breeding Pool' },
-      { cardName: 'Arid Mesa' }
-    ];
-    expect(userCardsData[0].cardName).toEqual('Blood Moon');
-    userCardsData.sort(wrapper.instance().sortCardsByName);
-    expect(userCardsData[0].cardName).toEqual('Arid Mesa');
-  });
 });

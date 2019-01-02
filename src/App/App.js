@@ -148,7 +148,16 @@ class App extends Component {
     });
     newCard.cardCount = 1;
     const newUserCardsData = this.state.userCardsData.concat([newCard]);
+    newUserCardsData.sort(this.sortCardsByName);
     this.saveArray('userCardsData', newUserCardsData);
+  }
+
+  sortCardsByName = (card1, card2) => {
+    if (card1.cardName < card2.cardName) {
+      return -1;
+    } else {
+      return 1;
+    }
   }
 
   saveArray = (arrayName, arrayToSave) => {
@@ -165,14 +174,28 @@ class App extends Component {
   }
 
   addToWishlist = (card) => {
-    card.wishListCount = 1;
-    const newWishList = this.state.wishList.concat([card]);
-    this.saveArray('wishList', newWishList);
+    const duplicate = this.state.wishList.find(wishlistCard => {
+      return wishlistCard.cardName === card.cardName;
+    });
+    if (!duplicate) {
+      card.wishListCount = 1;
+      const newWishList = this.state.wishList.concat([card]);
+      newWishList.sort(this.sortCardsByName);
+      this.saveArray('wishList', newWishList);
+    }
   }
 
   addToFaveDecks = (deck) => {
-    const newFaveDecks = this.state.faveDecks.concat([deck]);
-    this.saveArray('faveDecks', newFaveDecks);
+    const duplicate = this.state.faveDecks.find(faveDeck => {
+      return faveDeck.deckName === deck.deckName;
+    });
+    if (!duplicate) {
+      const newFaveDecks = this.state.faveDecks.concat([deck]);
+      newFaveDecks.sort((a, b) => {
+        return a.deckName < b.deckName ? -1 : 1;
+      });
+      this.saveArray('faveDecks', newFaveDecks);
+    }
   }
 
   render() {
@@ -189,13 +212,15 @@ class App extends Component {
           saveArray={this.saveArray}/>
         <CardArea
           userCardsData={this.state.userCardsData}
+          faveDecks={this.state.faveDecks}
           setAsideView={this.setAsideView}
           cardAreaView={this.state.cardAreaView}
           setCardAreaView={this.setCardAreaView}
           userDecks={this.state.userDecks}
           getExpandedDeckInfo={this.getExpandedDeckInfo}
           addToWishlist={this.addToWishlist}
-          addToFaveDecks={this.addToFaveDecks}/>
+          addToFaveDecks={this.addToFaveDecks}
+          wishList={this.state.wishList}/>
       </div>
     )
   }

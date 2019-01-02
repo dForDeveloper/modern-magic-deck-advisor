@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card should match the snapshot when cardAreaView is expandedDeck 1`] = `
+<article
+  className="card--container"
+>
+  <div>
+    <img
+      alt="Black Lotus"
+      className="card--image"
+      onClick={[Function]}
+    />
+    <div
+      className="counter--container"
+    >
+      <p />
+      <p>
+        You have undefined
+                   of undefined
+      </p>
+      <button
+        onClick={[Function]}
+      >
+        Add to Wishlist
+      </button>
+    </div>
+  </div>
+</article>
+`;
+
+exports[`Card should match the snapshot when cardAreaView is myCardList 1`] = `
+<article
+  className="card--container"
+>
+  <div>
+    <img
+      alt="Black Lotus"
+      className="card--image"
+      onClick={[Function]}
+    />
+    <div
+      className="card--counter-container"
+    >
+      <h1
+        className="card--counter"
+      >
+        X
+      </h1>
+    </div>
+  </div>
+</article>
+`;
+
+exports[`Card should match the snapshot when cardAreaView is wishList 1`] = `
+<article
+  className="card--container"
+>
+  <div>
+    <img
+      alt="Black Lotus"
+      className="card--image"
+      onClick={[Function]}
+    />
+    <div>
+      <p>
+        Total Cost - $
+        NaN
+      </p>
+    </div>
+  </div>
+</article>
+`;

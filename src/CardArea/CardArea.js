@@ -10,21 +10,12 @@ class CardArea extends Component {
     this.state = {
       popUpCard: {},
       showPopUp: false,
-      selectedDeck: []
+      cardsInDeck: []
     };
   }
 
-  sortCardsByName(card1, card2) {
-    if (card1.cardName < card2.cardName) {
-      return -1;
-    } else {
-      return 1;
-    }
-  }
-
-  sortCards() {
-    this.props.userCardsData.sort(this.sortCardsByName);
-    return this.props.userCardsData.map(userCard => {
+  sortCards(cards) {
+    return cards.map(userCard => {
       return (
         <Card
           card={userCard} 
@@ -35,16 +26,17 @@ class CardArea extends Component {
     });
   }
 
-  sortDecks() {
-    this.props.userDecks.sort((a, b) => a.price - b.price);
-    return this.props.userDecks.map(userDeck => {
+  sortDecks(decks) {
+    decks.sort((a, b) => a.price - b.price);
+    return decks.map(userDeck => {
       return (
         <Deck 
           userDeck={userDeck} 
           key={userDeck.deckName}
           expandDeck={this.expandDeck}
           setCardAreaView={this.props.setCardAreaView}
-          addToFaveDecks={this.props.addToFaveDecks}/>
+          addToFaveDecks={this.props.addToFaveDecks}
+          cardAreaView={this.props.cardAreaView}/>
       );
     });
   }
@@ -61,12 +53,21 @@ class CardArea extends Component {
   }
   
   expandDeck = (deckObj) => {
-    const selectedDeck = this.props.getExpandedDeckInfo(deckObj)
-    this.setState({ selectedDeck });
+    const cardsInDeck = this.props.getExpandedDeckInfo(deckObj);
+    cardsInDeck.map(cardInDeck => {
+      const matchedCard = this.props.userCardsData.find(userCard => {
+        return userCard.cardName === cardInDeck.cardName;
+      });
+      cardInDeck.requiredCount = deckObj.cardCounts[cardInDeck.cardName];
+      cardInDeck.userCount = matchedCard ? 
+        Math.min(cardInDeck.requiredCount, matchedCard.cardCount) : 0;
+      return cardInDeck;
+    });
+    this.setState({ cardsInDeck });
   }
 
   displayDeck = () => {
-    return this.state.selectedDeck.map(card => {
+    return this.state.cardsInDeck.map(card => {
       return (
         <Card
           card={card} 
@@ -80,12 +81,22 @@ class CardArea extends Component {
 
   render() {
     let cardAreaView = [];
-    if (this.props.cardAreaView === 'myCardList') {
-      cardAreaView = this.sortCards();
-    } else if (this.props.cardAreaView === 'compareDecks') {
-      cardAreaView = this.sortDecks();
-    } else if (this.props.cardAreaView === 'expandedDeck') {
-      cardAreaView = this.displayDeck();
+    switch (this.props.cardAreaView) {
+      case 'myCardList':
+        cardAreaView = this.sortCards(this.props.userCardsData);
+        break;
+      case 'compareDecks':
+        cardAreaView = this.sortDecks(this.props.userDecks);
+        break;
+      case 'expandedDeck':
+        cardAreaView = this.displayDeck();
+        break;
+      case 'faveDecks':
+        cardAreaView = this.sortDecks(this.props.faveDecks);
+        break;
+      case 'wishList':
+        cardAreaView = this.sortCards(this.props.wishList);
+        break;
     }
 
     return (
@@ -116,7 +127,8 @@ class CardArea extends Component {
           </div>
         )}
         <Header 
-          setAsideView={this.props.setAsideView}/>
+          setAsideView={this.props.setAsideView}
+          setCardAreaView={this.props.setCardAreaView}/>
         <section className="card-area--section">
           {cardAreaView}
         </section>

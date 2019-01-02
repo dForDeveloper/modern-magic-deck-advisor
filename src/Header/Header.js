@@ -8,19 +8,17 @@ class Header extends Component {
 
   setAsideViewMyCards = () => {
     this.props.setAsideView("myCardList");
-    this.returnToCards()
+    this.props.setCardAreaView("myCardList");
   }
 
   setAsideViewFaveDecks = () => {
     this.props.setAsideView("faveDecks");
+    this.props.setCardAreaView("faveDecks");
   }
 
   setAsideViewWishList = () => {
-    this.props.setAsideView("wishList")
-  }
-
-  returnToCards = () => {
-    window.location.reload()
+    this.props.setAsideView("wishList");
+    this.props.setCardAreaView("wishList");
   }
 
   render(props) {
