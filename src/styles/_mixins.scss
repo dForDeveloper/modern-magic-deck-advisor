@@ -27,3 +27,10 @@
   margin: $margin;
   width: $width;
 }
+
+@mixin font($fontfamily, $fontsize, $fontweight, $textalign) {
+  font-family: $fontfamily;
+  font-size: $fontsize;
+  font-weight: $fontweight;
+  text-align: $textalign;
+}

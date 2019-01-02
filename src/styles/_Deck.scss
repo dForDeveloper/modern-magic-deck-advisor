@@ -1,19 +1,51 @@
 .deck--container {
-  width: 216px;
-  margin: 10px;
-}
+  width: 215px;
+  margin: 25px;
 
-.deck--image {
-  height: 300px;
-  border-radius: 12px;
-}
+  div {
+    display: flex;
+    flex-direction: column;
+  }
 
-.price--container {
-  display: flex;
-  justify-content: flex-end;
+  .deck--name {
+    @include heading(1.5rem, 700, center);
+    margin-bottom: 0;
+    word-wrap: break-word;
+  }
+
+  .deck--image {
+    height: 300px;
+    border-radius: 12px;
+  }
+
+  .deck--button {
+    @include button(inline-block, 25px, 10px auto, 150px);
+    background-color: $light-grey;
+    color: $dark-grey;
+    cursor: pointer;
+    font-family: $secondary;
+    font-size: 0.7rem;
+    transition-duration: 0.5s;
+
+    &:hover {
+      background-color: $mid-blue;
+    }
+  }
+
+  .deck--card-button {
+    @include button(block, 35px, 10px auto, 150px);
+    background-color: $light-grey;
+    color: $dark-grey;
+    cursor: pointer;
+    transition-duration: 0.5s;
+
+    &:hover {
+      background-color: $light-green;
+    }
+  }
 }
 
 .price--value {
+  @include font($secondary, 1.2rem, 400, center);
   margin: 5px 0;
-  font-size: 1.5rem;
 }
