@@ -1,6 +1,6 @@
 @mixin list-item() {
   font-family: $secondary;
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 700;
   list-style: none;
   margin-top: 8px;
@@ -11,20 +11,17 @@
   padding: $padding;
 }
 
-@mixin heading($fontsize, $fontweight, $textalign) {
-  font-family: $primary;
-  font-size: $fontsize;
-  font-weight: $fontweight;
-  text-align: $textalign;
-}
-
 @mixin button($display, $height, $margin, $width) {
+  border: transparent;
   border-radius: 5px;
+  color: $dark-grey;
+  cursor: pointer;
   display: $display;
   font-family: $secondary;
   font-weight: 700;
   height: $height;
   margin: $margin;
+  transition-duration: .5s;
   width: $width;
 }
 

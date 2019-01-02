@@ -8,7 +8,7 @@
   }
 
   .deck--name {
-    @include heading(1.5rem, 700, center);
+    @include font($primary, 1.5rem, 700, center);
     margin-bottom: 0;
     word-wrap: break-word;
   }

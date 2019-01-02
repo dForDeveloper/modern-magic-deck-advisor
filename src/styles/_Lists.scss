@@ -1,20 +1,36 @@
 .list--h1 {
-  @include heading(35px, 700, center);
+  @include font($primary, 35px, 700, center);
+  color: $light-grey;
 }
 
 .list--ul {
   padding-left: 10px;
   .list--li {
     @include list-item();
+    color: $light-grey;
   }
 }
 
 .far {
-  @include symbols(0px 5px);
+  @include symbols(8px 5px 0 5px);
+  transition-duration: 0.5s;
+
+  &:hover {
+    color: tomato;  
+    cursor: pointer;
+    transform: scale(1.5);
+  }
 }
 
 .fas {
-  @include symbols(0px 0px 0px 5px);
+  @include symbols(8px 5px 0 6px);
+  transition-duration: 0.5s;
+
+  &:hover {
+    color: $mid-blue;
+    cursor: pointer;
+    transform: scale(1.3);
+  }
 }
 
 .listprice--span {
@@ -24,5 +40,12 @@
 }
 
 .compare-builds--button {
-  @include button(block, 30px, 30px auto, 150px);
+  @include button(block, 30px, 30px auto, 220px);
+  border: transparent;
+  cursor: pointer;
+  transition-duration: 0.5s;
+
+  &:hover {
+    background-color: $mid-blue;
+  }
 }
