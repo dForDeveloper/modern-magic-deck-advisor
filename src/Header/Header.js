@@ -13,10 +13,12 @@ class Header extends Component {
 
   setAsideViewFaveDecks = () => {
     this.props.setAsideView("faveDecks");
+    this.props.setCardAreaView("faveDecks");
   }
 
   setAsideViewWishList = () => {
     this.props.setAsideView("wishList");
+    this.props.setCardAreaView("wishList");
   }
 
   render(props) {

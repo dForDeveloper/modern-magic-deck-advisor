@@ -30,6 +30,17 @@ describe('Card', () => {
     );
     expect(wrapper).toMatchSnapshot();
   });
+
+  it('should match the snapshot when cardAreaView is wishList', () => {
+    let wrapper = shallow(
+      <Card
+        card={card}
+        key={card.cardName}
+        cardAreaView={'wishList'}
+        displayPopUp={displayPopUpMock}/>
+    );
+    expect(wrapper).toMatchSnapshot();
+  })
   
   it('should match the snapshot when cardAreaView is expandedDeck', () => {
     expect(wrapper).toMatchSnapshot();

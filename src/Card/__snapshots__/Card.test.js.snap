@@ -50,3 +50,23 @@ exports[`Card should match the snapshot when cardAreaView is myCardList 1`] = `
   </div>
 </article>
 `;
+
+exports[`Card should match the snapshot when cardAreaView is wishList 1`] = `
+<article
+  className="card--container"
+>
+  <div>
+    <img
+      alt="Black Lotus"
+      className="card--image"
+      onClick={[Function]}
+    />
+    <div>
+      <p>
+        Total Cost - $
+        NaN
+      </p>
+    </div>
+  </div>
+</article>
+`;
