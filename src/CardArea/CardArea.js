@@ -110,8 +110,9 @@ class CardArea extends Component {
             />
             <div className="popup--info">
             <div>
-              <h2>{this.state.popUpCard.price}</h2>
-              <h3>This card is played in:</h3>
+              <h1>{this.state.popUpCard.cardName}</h1>
+              <h2>${this.state.popUpCard.price}</h2>
+              <p>This card is played in:</p>
               <ul className="popup--list">
                 {
                   this.state.popUpCard.decks.map(deck => {
