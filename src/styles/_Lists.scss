@@ -8,6 +8,7 @@
   .list--li {
     @include list-item();
     color: $light-grey;
+    line-height: 1.2rem;
   }
 }
 
@@ -20,6 +21,11 @@
     cursor: pointer;
     transform: scale(1.5);
   }
+}
+
+.fave--trash {
+  font-size: 1rem;
+  margin-right: 6px;
 }
 
 .fas {
