@@ -110,8 +110,9 @@ class CardArea extends Component {
             />
             <div className="popup--info">
             <div>
-              <h2>{this.state.popUpCard.price}</h2>
-              <h3>{this.state.popUpCard.cardName} is in main deck of:</h3>
+              <h1>{this.state.popUpCard.cardName}</h1>
+              <h2>${this.state.popUpCard.price}</h2>
+              <p>Played in main deck of:</p>
               <ul className="popup--list">
                 {
                   this.state.popUpCard.decks.map(deck => {
@@ -119,7 +120,7 @@ class CardArea extends Component {
                   })
                 }
               </ul>
-              <h3>{this.state.popUpCard.cardName} is in the sideboard of:</h3>
+              <p>Played in sideboard of:</p>
               <ul className="popup--list">
                 {
                   this.state.popUpCard.sideboards.map(deck => {
