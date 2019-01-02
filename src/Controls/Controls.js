@@ -8,12 +8,33 @@ class Controls extends Component {
     this.state = {
       cardName: '',
       isInvalidCardName: false,
-      hasDuplicates: false
+      hasDuplicates: false,
+      suggestions: []
     };
   }
 
   updateCardName = (event) => {
-    this.setState({ cardName: event.target.value })
+    let newSuggestions = [];
+    if (event.target.value.length !== 0) {
+      newSuggestions = this.props.cards.filter(card => {
+        const cardName = card.cardName.toLowerCase();
+        return cardName.startsWith(event.target.value.toLowerCase());
+      })
+        .map(card => card.cardName);
+    }
+    this.setState({ 
+      cardName: event.target.value,
+      suggestions: newSuggestions
+     })
+  }
+
+  chooseSuggestion = (event) => {
+    this.textInput.current.value = event.target.key;
+    this.textInput.current.focus();
+    this.setState({
+      cardName: event.target.key,
+      suggestions: [] 
+    });
   }
 
   submitCard = (event) => {
@@ -79,6 +100,19 @@ class Controls extends Component {
           onClick={this.submitCard}>
             Add Card
         </button>
+        <div className="controls--suggestion-area">
+          {this.state.suggestions.map(cardName => {
+            return (
+              <span
+                className="controls--suggestion"
+                key={cardName}
+                id={cardName.replace(/\s/g, '-')}
+                onClick={this.chooseSuggestion}>
+              {cardName.slice(0,24)}
+              </span>
+            );
+          })}
+        </div>
         <p className="controls--error">{errorMessage}</p>
       </form>
     )

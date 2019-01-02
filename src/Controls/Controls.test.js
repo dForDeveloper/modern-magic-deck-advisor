@@ -26,10 +26,12 @@ describe('Controls', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should should set the state of cardName on change of the input', () => {
+  it(`should should set the state of cardName and suggestions
+    on change of the input`, () => {
     wrapper.find('.controls--input').simulate('change',
       { target: { value: 'B' } });
     expect(wrapper.state('cardName')).toEqual('B');
+    expect(wrapper.state('suggestions')[0]).toEqual('Breeding Pool')
   });
   
   it(`should call addCardToList when the button is clicked

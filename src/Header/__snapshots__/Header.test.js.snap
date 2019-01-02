@@ -17,13 +17,13 @@ exports[`Header should match the snapshot 1`] = `
       className="fave-decks"
       onClick={[Function]}
     >
-      My Favorites
+      Saved Decks
     </li>
     <li
       className="my-wish-list"
       onClick={[Function]}
     >
-      My Wish List
+      Wish List
     </li>
   </ul>
 </header>

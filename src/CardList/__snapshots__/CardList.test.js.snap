@@ -2,11 +2,13 @@
 
 exports[`CardList should match the snapshot 1`] = `
 <div>
-  <h1>
+  <h1
+    className="list--h1"
+  >
     My Cards:
   </h1>
   <ul
-    className="cardlist--ul"
+    className="list--ul"
   >
     <CardListItem
       cardCount={2}
@@ -23,8 +25,10 @@ exports[`CardList should match the snapshot 1`] = `
       }
     />
   </ul>
-  <button>
-    Compare Builds
+  <button
+    className="compare-builds--button"
+  >
+    Compare Deck Prices
   </button>
 </div>
 `;
