@@ -30,7 +30,6 @@ class Controls extends Component {
   };
 
   chooseSuggestion = event => {
-    this.textInput.current.value = event.target.id;
     this.textInput.current.focus();
     this.setState({
       cardName: event.target.id,
@@ -76,8 +75,11 @@ class Controls extends Component {
   };
 
   clearInput = () => {
-    this.textInput.current.value = '';
     this.textInput.current.focus();
+    this.setState({
+      cardName: '',
+      suggestions: []
+   });
   };
 
   render() {
@@ -96,6 +98,7 @@ class Controls extends Component {
               className="controls--input"
               onChange={this.updateCardName}
               placeholder="Enter cards you own"
+              value={this.state.cardName}
               ref={this.textInput}
             />
             <button className="controls--button" onClick={this.submitCard}>

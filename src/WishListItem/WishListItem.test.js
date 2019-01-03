@@ -27,7 +27,7 @@ describe("WishListItem", () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should call removeWishListItem when the trash-can is clicked', () => {
+  it('should call props.saveArray when the trash-can is clicked', () => {
     wrapper.find('.fa-trash-alt').simulate('click');
     expect(saveArrayMock).toBeCalled();
   });

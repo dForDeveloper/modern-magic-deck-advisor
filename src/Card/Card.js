@@ -48,7 +48,7 @@ class Card extends Component {
                 {`You have ${this.props.card.userCount}
                    of ${this.props.card.requiredCount}`}
               </p>
-              <button onClick={this.addToWishlist}>Add to Wishlist</button>
+              <button onClick={this.addToWishlist}>Add to Wish List</button>
             </div>
           </div>
         )}
