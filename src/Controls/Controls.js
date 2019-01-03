@@ -82,37 +82,40 @@ class Controls extends Component {
   render() {
     let errorMessage;
     if (this.state.isInvalidCardName) {
-      errorMessage = "The card name you entered is not in the database"
+      errorMessage = "The card name you entered is not in the database."
     } else if (this.state.hasDuplicates) {
-      errorMessage = "This card is already in your list"
+      errorMessage = "This card is already in your list."
     }
     return(
       <form>
-        <input
-          type="text"
-          className="controls--input"
-          onChange={this.updateCardName}
-          placeholder="Enter cards you own"
-          ref={this.textInput}>
-        </input>
-        <button
-          className="controls--button"
-          onClick={this.submitCard}>
-            Add Card
-        </button>
-        <div className="controls--suggestion-area">
-          {this.state.suggestions.map(cardName => {
-            return (
-              <span
-                className="controls--suggestion"
-                key={cardName}
-                id={cardName}
-                onClick={this.chooseSuggestion}>
-              {cardName.slice(0,24)}
-              </span>
-            );
-          })}
-        </div>
+        <div className="controls--div">
+          <input
+            type="text"
+            className="controls--input"
+            onChange={this.updateCardName}
+            placeholder="Enter cards you own"
+            ref={this.textInput}>
+          </input>
+          <button
+            className="controls--button"
+            onClick={this.submitCard}>
+              Add Card
+          </button>
+         <div className="controls--suggestion-area">
+            {this.state.suggestions.map(cardName => {
+              return (
+                <span
+                  className="controls--suggestion"
+                  key={cardName}
+                  id={cardName}
+                  onClick={this.chooseSuggestion}>
+                {cardName.slice(0,24)}
+                </span>
+              );
+            })}
+          </div>
+        </div> 
+
         <p className="controls--error">{errorMessage}</p>
       </form>
     )

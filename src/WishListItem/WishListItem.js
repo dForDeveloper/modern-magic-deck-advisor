@@ -31,16 +31,15 @@ class WishListItem extends Component {
   }
 
   render() {
-    return(
-      <li id={this.props.cardIndex} className="list--li">
-        {this.props.cardName} 
-        <i className="fas fa-minus" onClick={this.decreaseWishListCount}/> 
-        <span> {this.props.wishListCount} </span>
-        <i className="fas fa-plus" onClick={this.increaseWishListCount}/> 
-        <i className="far fa-trash-alt" onClick={this.removeWishListItem}/> 
-        <span className="listprice--span"> Total Cost - ${(this.props.price * this.props.wishListCount).toFixed(2)}</span>
-      </li>
-    )
+    return <li id={this.props.cardIndex} className="list--li">
+        {this.props.cardName}
+        <span className="listprice--span">
+          <i className="fas fa-minus" onClick={this.decreaseWishListCount} />
+          <span> {this.props.wishListCount} </span>
+          <i className="fas fa-plus" onClick={this.increaseWishListCount} />
+          <i className="far fa-trash-alt" onClick={this.removeWishListItem} />
+        </span>
+      </li>;
   }
 }
 

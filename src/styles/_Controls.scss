@@ -1,12 +1,31 @@
+.controls--div {
+  display: flex;
+}
+
 .controls--input{
-  border-radius: 5px;
+  border: transparent;
+  border-radius: 5px 0 0 5px;
   height: 30px;
   margin-left: 10px;
   width: 200px;
 }
 
 .controls--button {
-  @include button(inline, 30px, 3px, 100px)
+  @include button(inline, 30px, 3px, 100px);
+  background-color: $mid-grey;
+  border-radius: 0 5px 5px 0;
+  margin: 0;
+
+  &:hover {
+    background-color: $mid-blue;
+  }
+}
+
+.controls--error {
+  @include font($secondary, 18px, 500, center);
+  color: tomato;
+  margin: 20px auto;
+  width: 200px;
 }
 
 .controls--suggestion-area {
