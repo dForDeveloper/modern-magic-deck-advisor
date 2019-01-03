@@ -1,44 +1,37 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Modern Magic Deck Advisor
 
-## Available Scripts
+Magic the Gathering is an enjoyable and competitive game that can be prohibitivly expensive for the average player. 
+This app allows Modern Magic the Gathering players to track the cards they own and compare the prices of decks they
+can start to fit any budget.  A user can save decks to review later and add cards to their wish list for future 
+purchase. With prices updating daily, this app provides a seamless user experience for choosing what decks to build 
+next. Find the working app HERE.
 
-In the project directory, you can run:
+## How to use the app:
+  ### As a User:
+  - Navigate to THIS LINK to start using Modern Magic Deck Advisor.
+  - From there, simply start entering cards you already own and click the 'Compare Deck Prices' to see decks you can
+    start building today
+  - Click 'Show All Cards' under a deck you are interested in or 'Save Deck' to save it for later review
+  - See a card you want? Click 'Add to Wish List' for later purchase
+  - Navigate from 'My Cards' to 'Saved Decks' or 'Wish List' right from the header
+  
+  ### As a Contributor: 
+  - This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  1. fork the repo
+  2. Open Terminal
+  3. Change the current working directory to the location where you want the cloned directory to be made
+  4. git clone https://github.com/dForDeveloper/magic-whateverly.git
+  5. Press Enter - Your local clone will be created
+  6. Run npm install
 
-### `npm start`
+<img width="1436" alt="mmda" src="https://user-images.githubusercontent.com/37079656/50623609-dae7f100-0ed4-11e9-8a51-39db1a97e5e4.png">
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<img width="1434" alt="mmda_decks" src="https://user-images.githubusercontent.com/37079656/50623623-04088180-0ed5-11e9-8b1e-67f0412267c5.png">
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+- See GitHub issues for future development plans
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Contributors:
+- David Cisneros @LittleD1808 
+- Jeo D @dForDeveloper
+- Dylan Hofmann @dylhof
+- Hillary Stewart @hillstew
