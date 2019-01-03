@@ -38,15 +38,15 @@
     font-family: $secondary;
     font-size: 1.5rem;
     padding-left: 20px;
+    font-weight: 500;
   }
 
   .popup--list {
     color: $dark-grey;
     font-family: $secondary;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     list-style: none;
-    line-height: 2.4rem;
-    text-transform: uppercase;
+    line-height: 2rem;
   }
 
   .popup--card-image {
@@ -59,6 +59,12 @@
     display: flex;
     justify-content: space-between;
     width: 400px;
+
+    .popup--div-scroll {
+      height: 287px;
+      width: 320px;
+      overflow: scroll;
+    }
   }
 
   .fa-times-circle {
@@ -71,4 +77,5 @@
     color: $magic-red;
     cursor: pointer;
   }
+
 }
