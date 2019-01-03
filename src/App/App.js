@@ -176,7 +176,6 @@ class App extends Component {
     this.setState( {cardAreaView: view})
   }
 
-
   addToWishlist = (card) => {
     const duplicate = this.state.wishList.find(wishlistCard => {
       return wishlistCard.cardName === card.cardName;

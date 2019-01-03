@@ -32,7 +32,8 @@ class Deck extends Component {
                 <img
                   className="deck--image"
                   src={image}
-                  alt={this.props.userDeck.deckName}/>
+                  alt={this.props.userDeck.deckName}
+                  key={image}/>
               )
             })}
           </div>

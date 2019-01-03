@@ -2,7 +2,7 @@
 
 exports[`WishListItem should match the snapshot 1`] = `
 <li
-  className="wishlist--item"
+  className="list--li"
   id={0}
 >
   Blood Moon
@@ -11,7 +11,9 @@ exports[`WishListItem should match the snapshot 1`] = `
     onClick={[Function]}
   />
   <span>
+     
     2
+     
   </span>
   <i
     className="fas fa-plus"
@@ -21,5 +23,11 @@ exports[`WishListItem should match the snapshot 1`] = `
     className="far fa-trash-alt"
     onClick={[Function]}
   />
+  <span
+    className="listprice--span"
+  >
+     Total Cost - $
+    NaN
+  </span>
 </li>
 `;
