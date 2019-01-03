@@ -9,7 +9,6 @@ class CardArea extends Component {
     super(props);
     this.state = {
       popUpCard: {},
-      showPopUp: false,
       cardsInDeck: []
     };
   }
@@ -45,14 +44,12 @@ class CardArea extends Component {
   }
 
   displayPopUp = card => {
-    this.setState({
-      popUpCard: card,
-      showPopUp: true
-    });
+    this.setState({ popUpCard: card },
+      this.props.setPopUpView(true));
   };
 
   returnToScreen = () => {
-    this.setState({ showPopUp: false });
+    this.props.setPopUpView(false);
   };
 
   expandDeck = deckObj => {
@@ -106,7 +103,7 @@ class CardArea extends Component {
 
     return (
       <div className="card-area">
-        {this.state.showPopUp && (
+        {this.props.popUpView && (
           <div className="popup--div">
             <img
               className="popup--card-image"

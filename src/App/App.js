@@ -21,6 +21,7 @@ class App extends Component {
     this.state = {
       asideView: 'myCardList',
       cardAreaView: 'myCardList',
+      popUpView: false,
       cards: [],
       decks: [],
       userDecks: [],
@@ -68,7 +69,8 @@ class App extends Component {
     });
     this.setState({
       userDecks: newUserDecks,
-      cardAreaView: 'compareDecks'
+      cardAreaView: 'compareDecks',
+      popUpView: false
     });
   }
 
@@ -169,11 +171,21 @@ class App extends Component {
   }
 
   setAsideView = (view) => {
-    this.setState({ asideView: view })
+    this.setState({
+      asideView: view,
+      popUpView: false
+    })
   }
 
   setCardAreaView = (view) => {
-    this.setState( {cardAreaView: view})
+    this.setState({
+      cardAreaView: view,
+      popUpView: false
+    });
+  }
+
+  setPopUpView = (view) => {
+    this.setState({ popUpView: view })
   }
 
   addToWishlist = (card) => {
@@ -224,7 +236,9 @@ class App extends Component {
           addToWishlist={this.addToWishlist}
           addToFaveDecks={this.addToFaveDecks}
           wishList={this.state.wishList}
-          cards={this.state.cards}/>
+          cards={this.state.cards}
+          popUpView={this.state.popUpView}
+          setPopUpView={this.setPopUpView}/>
       </div>
     )
   }
