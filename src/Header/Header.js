@@ -2,10 +2,6 @@ import React, { Component } from 'react';
 import '../styles/main.scss';
 
 class Header extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   setAsideViewMyCards = () => {
     this.props.setAsideView("myCardList");
     this.props.setCardAreaView("myCardList");
