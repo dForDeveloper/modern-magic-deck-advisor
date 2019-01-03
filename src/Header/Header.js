@@ -17,7 +17,7 @@ class Header extends Component {
     this.props.setCardAreaView("wishList");
   }
 
-  render(props) {
+  render() {
     return(
       <header className="header">
         <h1>Modern Magic Deck Advisor</h1>
@@ -31,6 +31,5 @@ class Header extends Component {
   }
 
 }
-
 
 export default Header;

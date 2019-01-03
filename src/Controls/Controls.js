@@ -30,7 +30,6 @@ class Controls extends Component {
   };
 
   chooseSuggestion = event => {
-    this.textInput.current.value = event.target.id;
     this.textInput.current.focus();
     this.setState({
       cardName: event.target.id,
@@ -76,8 +75,11 @@ class Controls extends Component {
   };
 
   clearInput = () => {
-    this.textInput.current.value = '';
     this.textInput.current.focus();
+    this.setState({
+      cardName: '',
+      suggestions: []
+   });
   };
 
   render() {
@@ -90,17 +92,28 @@ class Controls extends Component {
     return <form>
         <div className="controls">
           <div className="controls--div">
-            <input type="text" className="controls--input" onChange={this.updateCardName} placeholder="Enter cards you own" ref={this.textInput} />
+            <input
+              type="text"
+              className="controls--input"
+              onChange={this.updateCardName}
+              placeholder="Enter cards you own"
+              value={this.state.cardName}
+              ref={this.textInput} />
             <button className="controls--button" onClick={this.submitCard}>
               Add Card
             </button>
           </div>
           <div className="controls--suggestion-area">
             {this.state.suggestions.map(cardName => {
-              return <span className="controls--suggestion" key={cardName} id={cardName} onClick={this.chooseSuggestion}>
+              return (
+                <span 
+                  className="controls--suggestion"
+                  key={cardName}
+                  id={cardName}
+                  onClick={this.chooseSuggestion}>
                   {cardName.slice(0, 24)}
-                </span>;
-            })}
+                </span>
+            )})}
           </div>
         </div>
 
