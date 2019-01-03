@@ -25,7 +25,9 @@ class Card extends Component {
               onClick={this.setPopUpData}
             />
             <div className="card--counter-container">
-              <p className="card--counter">{this.props.card.cardCount} in My Cards</p>
+              <p className="card--counter">
+                {this.props.card.cardCount} in My Cards
+              </p>
             </div>
           </div>
         )}
@@ -62,8 +64,8 @@ class Card extends Component {
               onClick={this.setPopUpData}
             />
             <div>
-              <p>
-                Total Cost - $
+              <p className="card--wishlist-price">
+                Total Cost of {this.props.card.wishListCount} - $
                 {(
                   this.props.card.price * this.props.card.wishListCount
                 ).toFixed(2)}
