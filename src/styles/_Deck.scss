@@ -1,16 +1,26 @@
 .deck--container {
+  display: flex;
+  flex-direction: column;
   width: 215px;
   margin: 25px;
+
+ 
 
   div {
     display: flex;
     flex-direction: column;
   }
+  
+  .deck--header-div {
+    display: flex;
+    justify-content: center;
+    height: 65px;
+  }
 
   .deck--name {
     @include font($primary, 1.5rem, 700, center);
     margin-bottom: 0;
-    word-wrap: break-word;
+    // word-wrap: break-word;
   }
 
   .deck--signature {
