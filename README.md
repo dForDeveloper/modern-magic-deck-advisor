@@ -1,4 +1,4 @@
-# Modern Magic Deck Advisor
+# [Modern Magic Deck Advisor](https://dfordeveloper.github.io/magic-whateverly/)
 
 Magic the Gathering is an enjoyable and competitive game that can be prohibitivly expensive for the average player. 
 This app allows Modern Magic the Gathering players to track the cards they own and compare the prices of decks they
@@ -8,7 +8,7 @@ next. Find the working app HERE.
 
 ## How to use the app:
   ### As a User:
-  - Navigate to THIS LINK to start using Modern Magic Deck Advisor.
+  - Navigate to [this link](https://dfordeveloper.github.io/magic-whateverly/) to start using Modern Magic Deck Advisor.
   - From there, simply start entering cards you already own and click the 'Compare Deck Prices' to see decks you can
     start building today
   - Click 'Show All Cards' under a deck you are interested in or 'Save Deck' to save it for later review
@@ -17,12 +17,11 @@ next. Find the working app HERE.
   
   ### As a Contributor: 
   - This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-  1. fork the repo
-  2. Open Terminal
-  3. Change the current working directory to the location where you want the cloned directory to be made
-  4. git clone https://github.com/dForDeveloper/magic-whateverly.git
-  5. Press Enter - Your local clone will be created
-  6. Run npm install
+  1. Open Terminal
+  2. Change the current working directory to the location where you want the cloned directory to be made
+  3. Run `git clone https://github.com/dForDeveloper/magic-whateverly.git` - Your local clone will be created
+  4. Run `cd magic-whateverly`
+  5. Run `npm install`
 
 <img width="1436" alt="mmda" src="https://user-images.githubusercontent.com/37079656/50623609-dae7f100-0ed4-11e9-8a51-39db1a97e5e4.png">
 
@@ -31,7 +30,7 @@ next. Find the working app HERE.
 - See GitHub issues for future development plans
 
 ## Contributors:
-- David Cisneros @LittleD1808 
-- Jeo D @dForDeveloper
-- Dylan Hofmann @dylhof
-- Hillary Stewart @hillstew
+- David Cisneros [@LittleD1808](https://github.com/littled1808)
+- Jeo D [@dForDeveloper](https://github.com/dForDeveloper)
+- Dylan Hofmann [@dylhof](https://github.com/dylhof)
+- Hillary Stewart [@hillstew](https://github.com/hillstew)
