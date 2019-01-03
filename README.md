@@ -2,9 +2,9 @@
 
 Magic the Gathering is an enjoyable and competitive game that can be prohibitivly expensive for the average player. 
 This app allows Modern Magic the Gathering players to track the cards they own and compare the prices of decks they
- can start to fit any budget.  A user can save decks to review later and add cards to their wish list for future 
- purchase. With prices updating daily, this app provides a seamless user experience for choosing what decks to build 
- next. Find the working app HERE.
+can start to fit any budget.  A user can save decks to review later and add cards to their wish list for future 
+purchase. With prices updating daily, this app provides a seamless user experience for choosing what decks to build 
+next. Find the working app HERE.
 
 ## How to use the app:
   ### As a User:
@@ -16,4 +16,22 @@ This app allows Modern Magic the Gathering players to track the cards they own a
   - Navigate from 'My Cards' to 'Saved Decks' or 'Wish List' right from the header
   
   ### As a Contributor: 
+  - This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  1. fork the repo
+  2. Open Terminal
+  3. Change the current working directory to the location where you want the cloned directory to be made
+  4. git clone https://github.com/dForDeveloper/magic-whateverly.git
+  5. Press Enter - Your local clone will be created
+  6. Run npm install
 
+<img width="1436" alt="mmda" src="https://user-images.githubusercontent.com/37079656/50623609-dae7f100-0ed4-11e9-8a51-39db1a97e5e4.png">
+
+<img width="1434" alt="mmda_decks" src="https://user-images.githubusercontent.com/37079656/50623623-04088180-0ed5-11e9-8b1e-67f0412267c5.png">
+
+- See GitHub issues for future development plans
+
+## Contributors:
+- David Cisneros @LittleD1808 
+- Jeo D @dForDeveloper
+- Dylan Hofmann @dylhof
+- Hillary Stewart @hillstew
