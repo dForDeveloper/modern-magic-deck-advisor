@@ -9,15 +9,17 @@ function Aside(props) {
   return (
     <aside className="aside">
       <img alt="Magic The Gathering" src="./magic_logo.png" className="aside--magic-logo"></img>
-      <Controls
-        addUserCard={props.addUserCard}
-        cards={props.cards}
-        userCardsData={props.userCardsData}/>
-      {props.asideView === "myCardList" &&
-        <CardList 
-          userCardsData={props.userCardsData} 
-          compareBuilds={props.compareBuilds}
-          saveArray={props.saveArray}/>}
+      {props.asideView === "myCardList" && 
+        <div>
+          <Controls
+            addUserCard={props.addUserCard}
+            cards={props.cards}
+            userCardsData={props.userCardsData}/>
+          <CardList 
+            userCardsData={props.userCardsData} 
+            compareBuilds={props.compareBuilds}
+            saveArray={props.saveArray}/>
+          </div>}
       {props.asideView === "faveDecks" &&
         <FaveList 
           faveDecks={props.faveDecks}
