@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/dForDeveloper/magic-whateverly.git/precache-manifest.266ae2bcf09abdd9b8bb81d3334bb6e4.js"
+  "/magic-whateverly/precache-manifest.2775d0a65393cd70ec850b8cb10270b2.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/dForDeveloper/magic-whateverly.git/index.html", {
+workbox.routing.registerNavigationRoute("/magic-whateverly/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });

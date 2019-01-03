@@ -1,13 +1,13 @@
 {
-  "main.css": "/dForDeveloper/magic-whateverly.git/static/css/main.eff5bc9e.chunk.css",
-  "main.js": "/dForDeveloper/magic-whateverly.git/static/js/main.68fe562e.chunk.js",
-  "main.js.map": "/dForDeveloper/magic-whateverly.git/static/js/main.68fe562e.chunk.js.map",
-  "static/js/1.03241a8d.chunk.js": "/dForDeveloper/magic-whateverly.git/static/js/1.03241a8d.chunk.js",
-  "static/js/1.03241a8d.chunk.js.map": "/dForDeveloper/magic-whateverly.git/static/js/1.03241a8d.chunk.js.map",
-  "runtime~main.js": "/dForDeveloper/magic-whateverly.git/static/js/runtime~main.547f1a24.js",
-  "runtime~main.js.map": "/dForDeveloper/magic-whateverly.git/static/js/runtime~main.547f1a24.js.map",
-  "static/css/main.eff5bc9e.chunk.css.map": "/dForDeveloper/magic-whateverly.git/static/css/main.eff5bc9e.chunk.css.map",
-  "index.html": "/dForDeveloper/magic-whateverly.git/index.html",
-  "precache-manifest.266ae2bcf09abdd9b8bb81d3334bb6e4.js": "/dForDeveloper/magic-whateverly.git/precache-manifest.266ae2bcf09abdd9b8bb81d3334bb6e4.js",
-  "service-worker.js": "/dForDeveloper/magic-whateverly.git/service-worker.js"
+  "main.css": "/magic-whateverly/static/css/main.cd1f6014.chunk.css",
+  "main.js": "/magic-whateverly/static/js/main.cc49986a.chunk.js",
+  "main.js.map": "/magic-whateverly/static/js/main.cc49986a.chunk.js.map",
+  "static/js/1.03241a8d.chunk.js": "/magic-whateverly/static/js/1.03241a8d.chunk.js",
+  "static/js/1.03241a8d.chunk.js.map": "/magic-whateverly/static/js/1.03241a8d.chunk.js.map",
+  "runtime~main.js": "/magic-whateverly/static/js/runtime~main.25eab6c4.js",
+  "runtime~main.js.map": "/magic-whateverly/static/js/runtime~main.25eab6c4.js.map",
+  "static/css/main.cd1f6014.chunk.css.map": "/magic-whateverly/static/css/main.cd1f6014.chunk.css.map",
+  "index.html": "/magic-whateverly/index.html",
+  "precache-manifest.2775d0a65393cd70ec850b8cb10270b2.js": "/magic-whateverly/precache-manifest.2775d0a65393cd70ec850b8cb10270b2.js",
+  "service-worker.js": "/magic-whateverly/service-worker.js"
 }
