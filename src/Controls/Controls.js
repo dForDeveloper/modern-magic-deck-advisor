@@ -89,7 +89,8 @@ class Controls extends Component {
     } else if (this.state.hasDuplicates) {
       errorMessage = 'This card is already in your list.';
     }
-    return <form>
+    return (
+      <form>
         <div className="controls">
           <div className="controls--div">
             <input
@@ -98,7 +99,8 @@ class Controls extends Component {
               onChange={this.updateCardName}
               placeholder="Enter cards you own"
               value={this.state.cardName}
-              ref={this.textInput} />
+              ref={this.textInput}
+            />
             <button className="controls--button" onClick={this.submitCard}>
               Add Card
             </button>
@@ -106,19 +108,22 @@ class Controls extends Component {
           <div className="controls--suggestion-area">
             {this.state.suggestions.map(cardName => {
               return (
-                <span 
+                <span
                   className="controls--suggestion"
                   key={cardName}
                   id={cardName}
-                  onClick={this.chooseSuggestion}>
+                  onClick={this.chooseSuggestion}
+                >
                   {cardName.slice(0, 24)}
                 </span>
-            )})}
+              );
+            })}
           </div>
         </div>
 
         <p className="controls--error">{errorMessage}</p>
-      </form>;
+      </form>
+    );
   }
 }
 
