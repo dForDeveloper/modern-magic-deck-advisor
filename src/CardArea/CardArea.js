@@ -115,13 +115,15 @@ class CardArea extends Component {
                 <h1>{this.state.popUpCard.cardName}</h1>
                 <h2>${this.state.popUpCard.price}</h2>
                 <div className="popup--div-scroll">
-                  <p>Played in main deck of:</p>
+                  {this.state.popUpCard.decks.length > 0 && 
+                    <p>Played in main deck of:</p>}
                   <ul className="popup--list">
                     {this.state.popUpCard.decks.map(deck => {
                       return <li key={deck}>{deck}</li>;
                     })}
                   </ul>
-                  <p>Played in sideboard of:</p>
+                  {this.state.popUpCard.sideboards.length > 0 && 
+                    <p>Played in sideboard of:</p>}
                   <ul className="popup--list">
                     {this.state.popUpCard.sideboards.map(deck => {
                       return <li key={deck}>{deck}</li>;
