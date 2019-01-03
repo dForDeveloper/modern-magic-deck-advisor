@@ -1,14 +1,14 @@
 .header {
   border-bottom: 1px solid darkgray;
-  display: flex;
   font-family: $primary;
   font-weight: 700;
   font-size: 1rem;
-  justify-content: space-evenly;  
   height: 100px;
   width: 100%;
   color: $light-grey;
   background-color: $dark-grey;
+  display: grid;
+  grid-template-rows: 58px 42px;
   
 
   h1 {
@@ -21,13 +21,16 @@
 .header--ul {
   list-style: none;
   display: flex;
-  margin: 54px 10px 5px 0px;
+  justify-self: end;
+  margin-right: 20px;
 
   li {
     border-bottom: 4px solid transparent;
     height: 25px;
-    margin: 20px 20px 5px 20px;
-    text-transform: uppercase;
+    margin: 0px 20px 5px 20px;
+    font-family: $secondary;
+    font-weight: 500;
+    transition-duration: .5s;
   }
 
   li:hover {
@@ -35,3 +38,5 @@
     cursor: pointer;
   }
 }
+
+

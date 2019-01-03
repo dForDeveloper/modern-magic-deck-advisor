@@ -13,11 +13,14 @@
 
 .popup--div {
   display: flex;
-  background-color: #a7b8ba;
+  background-color: $light-grey;
+  box-shadow: 7px 6px 16px 0px $dark-grey;
   border-radius: 12px;
   height: 400px;
   padding: 20px;
   position: absolute;
+  top: 150px;
+  left: 30%;
   width: 700px;
   z-index: 2;
 
@@ -59,13 +62,13 @@
   }
 
   .fa-times-circle {
-    color: $light-grey;
+    color: $dark-grey;
     height: 20px;
     font-size: 2rem;
   }
 
   .fa-times-circle:hover {
-    color: $dark-grey;
+    color: $magic-red;
     cursor: pointer;
   }
 }

@@ -117,13 +117,13 @@ class CardArea extends Component {
                 <p>Played in main deck of:</p>
                 <ul className="popup--list">
                   {this.state.popUpCard.decks.map(deck => {
-                    return <li>{deck}</li>;
+                    return <li key={deck.deckName}>{deck}</li>;
                   })}
                 </ul>
                 <p>Played in sideboard of:</p>
                 <ul className="popup--list">
                   {this.state.popUpCard.sideboards.map(deck => {
-                    return <li>{deck}</li>;
+                    return <li key={deck.deckName}>{deck}</li>;
                   })}
                 </ul>
               </div>

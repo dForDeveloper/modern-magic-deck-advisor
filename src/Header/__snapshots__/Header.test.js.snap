@@ -4,6 +4,9 @@ exports[`Header should match the snapshot 1`] = `
 <header
   className="header"
 >
+  <h1>
+    Modern Magic Deck Advisor
+  </h1>
   <ul
     className="header--ul"
   >
