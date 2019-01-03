@@ -36,14 +36,14 @@ class Card extends Component {
             <div className="card--header-div">
               <h2>{this.props.card.cardName}</h2>
             </div>
+            <p>${(this.props.card.price).toFixed(2)}</p>
             <img
               className="card--image"
               src={this.props.card.imageSource}
               alt={this.props.card.cardName}
               onClick={this.setPopUpData}
             />
-            <div className="counter--container">
-              <p>{this.props.card.price}</p>
+            <div className="card--counter-container">
               <p>
                 {`You have ${this.props.card.userCount}
                    of ${this.props.card.requiredCount}`}
