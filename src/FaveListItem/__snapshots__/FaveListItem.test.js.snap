@@ -5,10 +5,10 @@ exports[`FaveListItem should match the snapshot 1`] = `
   className="list--li"
   id={0}
 >
-  Bant Spirits
   <i
-    className="far fa-trash-alt"
+    className="far fa-trash-alt fave--trash"
     onClick={[Function]}
   />
+  Bant Spirits
 </li>
 `;

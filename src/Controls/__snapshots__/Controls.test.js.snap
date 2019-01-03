@@ -2,21 +2,29 @@
 
 exports[`Controls should match the snapshot 1`] = `
 <form>
-  <input
-    className="controls--input"
-    onChange={[Function]}
-    placeholder="Enter cards you own"
-    type="text"
-  />
-  <button
-    className="controls--button"
-    onClick={[Function]}
-  >
-    Add Card
-  </button>
   <div
-    className="controls--suggestion-area"
-  />
+    className="controls"
+  >
+    <div
+      className="controls--div"
+    >
+      <input
+        className="controls--input"
+        onChange={[Function]}
+        placeholder="Enter cards you own"
+        type="text"
+      />
+      <button
+        className="controls--button"
+        onClick={[Function]}
+      >
+        Add Card
+      </button>
+    </div>
+    <div
+      className="controls--suggestion-area"
+    />
+  </div>
   <p
     className="controls--error"
   />

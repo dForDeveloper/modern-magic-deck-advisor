@@ -3,23 +3,30 @@
   display: flex;
   font-family: $primary;
   font-weight: 700;
-  font-size: 1.5rem;
-  justify-content: flex-end;  
+  font-size: 1rem;
+  justify-content: space-evenly;  
   height: 100px;
   width: 100%;
   color: $light-grey;
   background-color: $dark-grey;
+  
+
+  h1 {
+    font-size: 2rem;
+    font-weight: 400;
+    margin: auto;
+  }
 }
 
 .header--ul {
   list-style: none;
   display: flex;
-  margin-right: 40px;
+  margin: 54px 10px 5px 0px;
 
   li {
     border-bottom: 4px solid transparent;
-    height: 30px;
-    margin: 20px;
+    height: 25px;
+    margin: 20px 20px 5px 20px;
     text-transform: uppercase;
   }
 
