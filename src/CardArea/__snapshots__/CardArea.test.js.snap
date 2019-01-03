@@ -6,6 +6,7 @@ exports[`CardArea should match the snapshot 1`] = `
 >
   <Header
     setAsideView={[MockFunction]}
+    setCardAreaView={[MockFunction]}
   />
   <section
     className="card-area--section"
@@ -13,6 +14,7 @@ exports[`CardArea should match the snapshot 1`] = `
     <Card
       card={
         Object {
+          "cardCount": 2,
           "cardName": "Blood Moon",
         }
       }
@@ -23,6 +25,7 @@ exports[`CardArea should match the snapshot 1`] = `
     <Card
       card={
         Object {
+          "cardCount": 2,
           "cardName": "Breeding Pool",
         }
       }
@@ -33,6 +36,7 @@ exports[`CardArea should match the snapshot 1`] = `
     <Card
       card={
         Object {
+          "cardCount": 2,
           "cardName": "Arid Mesa",
         }
       }
