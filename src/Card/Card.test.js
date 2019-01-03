@@ -5,6 +5,7 @@ import { shallow } from 'enzyme';
 const displayPopUpMock = jest.fn();
 const addToWishlistMock = jest.fn();
 const card = { cardName: 'Black Lotus' };
+const getPriceStringMock = jest.fn()
 
 describe('Card', () => {
   let wrapper;
@@ -16,7 +17,8 @@ describe('Card', () => {
       key={card.cardName}
       cardAreaView={'expandedDeck'}
       displayPopUp={displayPopUpMock}
-      addToWishlist={addToWishlistMock}/>
+      addToWishlist={addToWishlistMock}
+      getPriceString={getPriceStringMock}/>
     );
   });
 
@@ -26,7 +28,8 @@ describe('Card', () => {
         card={card} 
         key={card.cardName}
         cardAreaView={'myCardList'}
-        displayPopUp={displayPopUpMock}/>
+        displayPopUp={displayPopUpMock}
+        getPriceString={getPriceStringMock}/>
     );
     expect(wrapper).toMatchSnapshot();
   });
@@ -37,7 +40,8 @@ describe('Card', () => {
         card={card}
         key={card.cardName}
         cardAreaView={'wishList'}
-        displayPopUp={displayPopUpMock}/>
+        displayPopUp={displayPopUpMock}
+        getPriceString={getPriceStringMock}/>
     );
     expect(wrapper).toMatchSnapshot();
   })

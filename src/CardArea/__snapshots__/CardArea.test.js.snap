@@ -20,6 +20,7 @@ exports[`CardArea should match the snapshot 1`] = `
       }
       cardAreaView="myCardList"
       displayPopUp={[Function]}
+      getPriceString={[Function]}
       key="Blood Moon"
     />
     <Card
@@ -31,6 +32,7 @@ exports[`CardArea should match the snapshot 1`] = `
       }
       cardAreaView="myCardList"
       displayPopUp={[Function]}
+      getPriceString={[Function]}
       key="Breeding Pool"
     />
     <Card
@@ -42,6 +44,7 @@ exports[`CardArea should match the snapshot 1`] = `
       }
       cardAreaView="myCardList"
       displayPopUp={[Function]}
+      getPriceString={[Function]}
       key="Arid Mesa"
     />
   </section>

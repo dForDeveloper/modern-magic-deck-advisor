@@ -13,6 +13,7 @@ exports[`Controls should match the snapshot 1`] = `
         onChange={[Function]}
         placeholder="Enter cards you own"
         type="text"
+        value=""
       />
       <button
         className="controls--button"

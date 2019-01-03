@@ -1,38 +1,99 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Deck should match the snapshot 1`] = `undefined`;
+exports[`Deck should match the snapshot 1`] = `
+<article
+  className="deck--container"
+>
+  <div>
+    <div
+      className="deck--header-div"
+    >
+      <h2
+        className="deck--name"
+      >
+        Jund
+      </h2>
+    </div>
+    <h3
+      className="price--value"
+    >
+      $
+      2000
+    </h3>
+    <div
+      className="deck--signature"
+    >
+      <img
+        alt="Jund"
+        className="deck--image"
+        key="https://img.scryfall.com/cards/large/en/a25/122.jpg"
+        src="https://img.scryfall.com/cards/large/en/a25/122.jpg"
+      />
+      <img
+        alt="Jund"
+        className="deck--image"
+        key="https://img.scryfall.com/cards/large/en/gtc/240.jpg"
+        src="https://img.scryfall.com/cards/large/en/gtc/240.jpg"
+      />
+    </div>
+    <button
+      className="deck--button"
+      onClick={[Function]}
+    >
+      Save Deck
+    </button>
+    <button
+      className="deck--card-button"
+      onClick={[Function]}
+    >
+      Show all cards
+    </button>
+  </div>
+</article>
+`;
 
 exports[`Deck should match the snapshot when cardAreaView is faveDecks 1`] = `
 <article
   className="deck--container"
 >
   <div>
-    <h2
-      className="deck--name"
+    <div
+      className="deck--header-div"
     >
-      Jund
-    </h2>
-    <img
-      alt="Jund"
-      className="deck--image"
-      src="https://musingsofalifelongnerd.files.wordpress.com/2015/01/mtg-card-back.jpg"
-    />
+      <h2
+        className="deck--name"
+      >
+        Jund
+      </h2>
+    </div>
+    <h3
+      className="price--value"
+    >
+      $
+      2000
+    </h3>
+    <div
+      className="deck--signature"
+    >
+      <img
+        alt="Jund"
+        className="deck--image"
+        key="https://img.scryfall.com/cards/large/en/a25/122.jpg"
+        src="https://img.scryfall.com/cards/large/en/a25/122.jpg"
+      />
+      <img
+        alt="Jund"
+        className="deck--image"
+        key="https://img.scryfall.com/cards/large/en/gtc/240.jpg"
+        src="https://img.scryfall.com/cards/large/en/gtc/240.jpg"
+      />
+    </div>
     <button
+      className="deck--card-button"
       onClick={[Function]}
     >
-      2
-       cards
+      Show all cards
     </button>
-    <div
-      className="price--container"
-    >
-      <h3
-        className="price--value"
-      >
-        $
-        2000
-      </h3>
-    </div>
   </div>
 </article>
 `;

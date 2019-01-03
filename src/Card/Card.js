@@ -36,7 +36,7 @@ class Card extends Component {
             <div className="card--header-div">
               <h2>{this.props.card.cardName}</h2>
             </div>
-            <p>${(this.props.card.price).toFixed(2)}</p>
+            <p>${this.props.getPriceString(this.props.card.price)}</p>
             <img
               className="card--image"
               src={this.props.card.imageSource}
@@ -66,9 +66,7 @@ class Card extends Component {
             <div>
               <p className="card--wishlist-price">
                 Total Cost of {this.props.card.wishListCount} - $
-                {(
-                  this.props.card.price * this.props.card.wishListCount
-                ).toFixed(2)}
+                {this.props.getPriceString(this.props.card.price * this.props.card.wishListCount)}
               </p>
             </div>
           </div>

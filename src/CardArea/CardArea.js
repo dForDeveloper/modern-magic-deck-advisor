@@ -13,6 +13,10 @@ class CardArea extends Component {
     };
   }
 
+  getPriceString = (num) => {
+    return num.toFixed(2);
+  }
+
   sortCards(cards) {
     return cards.map(userCard => {
       return (
@@ -21,6 +25,7 @@ class CardArea extends Component {
           key={userCard.cardName}
           cardAreaView={this.props.cardAreaView}
           displayPopUp={this.displayPopUp}
+          getPriceString={this.getPriceString}
         />
       );
     });
@@ -76,6 +81,7 @@ class CardArea extends Component {
           cardAreaView={this.props.cardAreaView}
           displayPopUp={this.displayPopUp}
           addToWishlist={this.props.addToWishlist}
+          getPriceString={this.getPriceString}
         />
       );
     });
