@@ -5,7 +5,7 @@ import '../styles/main.scss';
 function WishList(props) {
   return(
     <div>
-      <h1 className="list--h1">Wish List:</h1>
+      <h1 className="list--h1">Wish List</h1>
       <ul className="list--ul">
         {
           props.wishList.map((card, index) => {

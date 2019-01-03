@@ -17,7 +17,7 @@
   transition-duration: 0.5s;
 
   &:hover {
-    color: tomato;  
+    color: $magic-red;  
     cursor: pointer;
     transform: scale(1.5);
   }
