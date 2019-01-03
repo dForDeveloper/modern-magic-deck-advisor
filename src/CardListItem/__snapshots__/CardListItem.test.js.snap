@@ -6,21 +6,25 @@ exports[`CardListItem should match the snapshot 1`] = `
   id={0}
 >
   Blood Moon
-  <i
-    className="fas fa-minus"
-    onClick={[Function]}
-  />
-  <span>
-     
-    2
+  <span
+    className="listprice--span"
+  >
+    <i
+      className="fas fa-minus"
+      onClick={[Function]}
+    />
+    <span>
+       
+      2
+    </span>
+    <i
+      className="fas fa-plus"
+      onClick={[Function]}
+    />
+    <i
+      className="far fa-trash-alt"
+      onClick={[Function]}
+    />
   </span>
-  <i
-    className="fas fa-plus"
-    onClick={[Function]}
-  />
-  <i
-    className="far fa-trash-alt"
-    onClick={[Function]}
-  />
 </li>
 `;

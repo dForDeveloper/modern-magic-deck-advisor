@@ -20,6 +20,7 @@ class Header extends Component {
   render(props) {
     return(
       <header className="header">
+        <h1>Modern Magic Deck Advisor</h1>
         <ul className="header--ul">
           <li onClick={this.setAsideViewMyCards} className="my-cards">My Cards</li>
           <li onClick={this.setAsideViewFaveDecks} className="fave-decks">Saved Decks</li>

@@ -5,7 +5,7 @@ exports[`FaveList should match the snapshot 1`] = `
   <h1
     className="list--h1"
   >
-    Saved Decks:
+    Saved Decks
   </h1>
   <ul
     className="list--ul"

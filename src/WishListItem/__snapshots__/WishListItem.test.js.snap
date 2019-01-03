@@ -6,28 +6,26 @@ exports[`WishListItem should match the snapshot 1`] = `
   id={0}
 >
   Blood Moon
-  <i
-    className="fas fa-minus"
-    onClick={[Function]}
-  />
-  <span>
-     
-    2
-     
-  </span>
-  <i
-    className="fas fa-plus"
-    onClick={[Function]}
-  />
-  <i
-    className="far fa-trash-alt"
-    onClick={[Function]}
-  />
   <span
     className="listprice--span"
   >
-     Total Cost - $
-    NaN
+    <i
+      className="fas fa-minus"
+      onClick={[Function]}
+    />
+    <span>
+       
+      2
+       
+    </span>
+    <i
+      className="fas fa-plus"
+      onClick={[Function]}
+    />
+    <i
+      className="far fa-trash-alt"
+      onClick={[Function]}
+    />
   </span>
 </li>
 `;

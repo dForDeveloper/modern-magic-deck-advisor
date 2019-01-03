@@ -7,7 +7,7 @@ function CardList(props) {
   cardNames.sort();
   return (
     <div>
-      <h1 className="list--h1">My Cards:</h1>
+      <h1 className="list--h1">My Cards</h1>
       <ul className="list--ul">
         {
           cardNames.map((cardName, index) => {

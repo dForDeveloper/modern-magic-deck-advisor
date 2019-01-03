@@ -23,7 +23,7 @@
 
 .controls--error {
   @include font($secondary, 18px, 500, center);
-  color: tomato;
+  color: $magic-red;
   margin: 20px auto;
   width: 200px;
 }
