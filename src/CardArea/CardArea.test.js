@@ -84,4 +84,9 @@ describe('CardArea', () => {
     });
     expect(wrapper.state('cardsInDeck').length).toEqual(2);
   });
+
+  it(`should return a string of a number with two decimal places
+    when getPriceString is called`, () => {
+      expect(wrapper.instance().getPriceString(12.345)).toEqual('12.35');
+    });
 });
