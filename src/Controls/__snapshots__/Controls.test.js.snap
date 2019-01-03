@@ -5,6 +5,7 @@ exports[`Controls should match the snapshot 1`] = `
   <input
     className="controls--input"
     onChange={[Function]}
+    placeholder="Enter cards you own"
     type="text"
   />
   <button
@@ -13,6 +14,11 @@ exports[`Controls should match the snapshot 1`] = `
   >
     Add Card
   </button>
-  <p />
+  <div
+    className="controls--suggestion-area"
+  />
+  <p
+    className="controls--error"
+  />
 </form>
 `;

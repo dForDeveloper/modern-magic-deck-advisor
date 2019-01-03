@@ -1,44 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Deck should match the snapshot 1`] = `
-<article
-  className="deck--container"
->
-  <div>
-    <h2
-      className="deck--name"
-    >
-      Jund
-    </h2>
-    <img
-      alt="Jund"
-      className="deck--image"
-      src="https://musingsofalifelongnerd.files.wordpress.com/2015/01/mtg-card-back.jpg"
-    />
-    <button
-      onClick={[Function]}
-    >
-      2
-       cards
-    </button>
-    <div
-      className="price--container"
-    >
-      <h3
-        className="price--value"
-      >
-        $
-        2000
-      </h3>
-      <button
-        onClick={[Function]}
-      >
-        Add to Favorite Decks
-      </button>
-    </div>
-  </div>
-</article>
-`;
+exports[`Deck should match the snapshot 1`] = `undefined`;
 
 exports[`Deck should match the snapshot when cardAreaView is faveDecks 1`] = `
 <article

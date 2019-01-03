@@ -27,3 +27,21 @@
   margin: 20px auto;
   width: 200px;
 }
+
+.controls--suggestion-area {
+  width: 200px;
+  margin-left: 10px;
+  margin-top: -5px;
+  max-height: 100px;
+  background-color: #ffffff;
+  overflow: scroll;
+}
+
+.controls--suggestion {
+  display: block;
+  height: 20px;
+  
+  &:hover {
+    background-color: lightblue;
+  }
+}
