@@ -14,32 +14,45 @@ class Deck extends Component {
   getDeckImage = () => {
     const images = [];
     this.props.userDeck.signatureCards.forEach(sigCard => {
-      images.push(this.props.cards.find(card => card.cardName === sigCard).imageSource)
+      images.push(
+        this.props.cards.find(card => card.cardName === sigCard).imageSource
+      );
     });
     return images;
-  }
+  };
 
   render() {
     const images = this.getDeckImage();
-    return <article className="deck--container">
+    return (
+      <article className="deck--container">
         <div>
           <div className="deck--header-div">
             <h2 className="deck--name">{this.props.userDeck.deckName}</h2>
           </div>
-            <h3 className="price--value">${this.props.userDeck.price}</h3>
+          <h3 className="price--value">${this.props.userDeck.price}</h3>
           <div className="deck--signature">
             {images.map(image => {
-              return <img className="deck--image" src={image} alt={this.props.userDeck.deckName} key={image} />;
+              return (
+                <img
+                  className="deck--image"
+                  src={image}
+                  alt={this.props.userDeck.deckName}
+                  key={image}
+                />
+              );
             })}
           </div>
-          {this.props.cardAreaView === 'compareDecks' && <button className="deck--button" onClick={this.addToFaveDecks}>
+          {this.props.cardAreaView === 'compareDecks' && (
+            <button className="deck--button" onClick={this.addToFaveDecks}>
               Save Deck
-            </button>}
+            </button>
+          )}
           <button className="deck--card-button" onClick={this.handleClick}>
             Show all cards
           </button>
         </div>
-      </article>;
+      </article>
+    );
   }
 }
 
