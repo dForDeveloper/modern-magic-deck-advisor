@@ -83,11 +83,22 @@ class App extends Component {
   componentDidMount() {
     fetch('https://whateverly-datasets.herokuapp.com/api/v1/cards')
       .then(cards => cards.json())
-      .then(parsedCards => this.getCurrentPrices(parsedCards.cards))
+      .then(parsedCards => {
+        const legalCards = parsedCards.cards.filter(card => {
+          return card.cardName !== 'Krark-Clan Ironworks';
+        });
+        console.log(legalCards)
+        this.getCurrentPrices(legalCards);
+      })
       .catch(err => console.log('cards error', err))
     fetch('https://whateverly-datasets.herokuapp.com/api/v1/decks')
       .then(decks => decks.json())
-      .then(parsedDecks => this.setState({ decks: parsedDecks.decks }))
+      .then(parsedDecks => {
+        const legalDecks = parsedDecks.decks.filter(deck => {
+          return deck.deckName !== 'KCI';
+        });
+        this.setState({ decks: legalDecks }
+      )})
       .catch(err => console.log('decks error', err))
   }
 
