@@ -4,7 +4,7 @@ Magic the Gathering is an enjoyable and competitive game that can be prohibitivl
 This app allows Modern Magic the Gathering players to track the cards they own and compare the prices of decks they
 can start to fit any budget.  A user can save decks to review later and add cards to their wish list for future 
 purchase. With prices updating daily, this app provides a seamless user experience for choosing what decks to build 
-next. Find the working app HERE.
+next. Find the working app [HERE](https://dfordeveloper.github.io/magic-whateverly/).
 
 ## How to use the app:
   ### As a User:
@@ -16,18 +16,22 @@ next. Find the working app HERE.
   - Navigate from 'My Cards' to 'Saved Decks' or 'Wish List' right from the header
   
   ### As a Contributor: 
-  - This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-  1. Open Terminal
-  2. Change the current working directory to the location where you want the cloned directory to be made
-  3. Run `git clone https://github.com/dForDeveloper/magic-whateverly.git` - Your local clone will be created
-  4. Run `cd magic-whateverly`
-  5. Run `npm install`
+  - Fork the repo
+  - Open your terminal
+  - `cd` to where you want the repo directory to be created
+  - Clone your fork down to your machine either
+    - with SSH: `git clone git@github.com:`*yourusername*`/magic-whateverly.git`
+    - or with HTTPS: `git clone https://github.com/`*yourusername*`/magic-whateverly.git`
+  - `cd magic-whateverly`
+  - `npm install`
+  - `git push` any changes up to your fork
+  - Make pull requests from your fork to the original repo
 
 <img width="1436" alt="mmda" src="https://user-images.githubusercontent.com/37079656/50623609-dae7f100-0ed4-11e9-8a51-39db1a97e5e4.png">
 
 <img width="1434" alt="mmda_decks" src="https://user-images.githubusercontent.com/37079656/50623623-04088180-0ed5-11e9-8b1e-67f0412267c5.png">
 
-- See GitHub issues for future development plans
+- See [GitHub issues](https://github.com/dForDeveloper/magic-whateverly/issues) for future development plans
 
 ## Contributors:
 - David Cisneros [@LittleD1808](https://github.com/littled1808)
