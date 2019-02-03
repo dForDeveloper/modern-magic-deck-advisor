@@ -1,13 +1,13 @@
 {
-  "main.css": "/magic-whateverly/static/css/main.cd1f6014.chunk.css",
-  "main.js": "/magic-whateverly/static/js/main.66d0113d.chunk.js",
-  "main.js.map": "/magic-whateverly/static/js/main.66d0113d.chunk.js.map",
-  "static/js/1.03241a8d.chunk.js": "/magic-whateverly/static/js/1.03241a8d.chunk.js",
-  "static/js/1.03241a8d.chunk.js.map": "/magic-whateverly/static/js/1.03241a8d.chunk.js.map",
-  "runtime~main.js": "/magic-whateverly/static/js/runtime~main.25eab6c4.js",
-  "runtime~main.js.map": "/magic-whateverly/static/js/runtime~main.25eab6c4.js.map",
-  "static/css/main.cd1f6014.chunk.css.map": "/magic-whateverly/static/css/main.cd1f6014.chunk.css.map",
-  "index.html": "/magic-whateverly/index.html",
-  "precache-manifest.c8da688c508acf00e9af5f6118fb2efe.js": "/magic-whateverly/precache-manifest.c8da688c508acf00e9af5f6118fb2efe.js",
-  "service-worker.js": "/magic-whateverly/service-worker.js"
+  "main.css": "/modern-magic-deck-advisor/static/css/main.cd1f6014.chunk.css",
+  "main.js": "/modern-magic-deck-advisor/static/js/main.ba9a23a4.chunk.js",
+  "main.js.map": "/modern-magic-deck-advisor/static/js/main.ba9a23a4.chunk.js.map",
+  "static/js/1.03241a8d.chunk.js": "/modern-magic-deck-advisor/static/js/1.03241a8d.chunk.js",
+  "static/js/1.03241a8d.chunk.js.map": "/modern-magic-deck-advisor/static/js/1.03241a8d.chunk.js.map",
+  "runtime~main.js": "/modern-magic-deck-advisor/static/js/runtime~main.936d7248.js",
+  "runtime~main.js.map": "/modern-magic-deck-advisor/static/js/runtime~main.936d7248.js.map",
+  "static/css/main.cd1f6014.chunk.css.map": "/modern-magic-deck-advisor/static/css/main.cd1f6014.chunk.css.map",
+  "index.html": "/modern-magic-deck-advisor/index.html",
+  "precache-manifest.804610d5ffd0970b9dab6414db7a8b5f.js": "/modern-magic-deck-advisor/precache-manifest.804610d5ffd0970b9dab6414db7a8b5f.js",
+  "service-worker.js": "/modern-magic-deck-advisor/service-worker.js"
 }

@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/magic-whateverly/precache-manifest.c8da688c508acf00e9af5f6118fb2efe.js"
+  "/modern-magic-deck-advisor/precache-manifest.804610d5ffd0970b9dab6414db7a8b5f.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/magic-whateverly/index.html", {
+workbox.routing.registerNavigationRoute("/modern-magic-deck-advisor/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
