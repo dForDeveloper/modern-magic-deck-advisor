@@ -20,7 +20,7 @@ next. Find the working app [HERE](https://dfordeveloper.github.io/modern-magic-d
   - Open your terminal
   - `cd` to where you want the repo directory to be created
   - Clone your fork down to your machine either
-    - with SSH: `git clone git@github.com:`*yourusername*`/magic-whateverly.git`
+    - with SSH: `git clone git@github.com:`*yourusername*`/modern-magic-deck-advisor.git`
     - or with HTTPS: `git clone https://github.com/`*yourusername*`/modern-magic-deck-advisor.git`
   - `cd modern-magic-deck-advisor`
   - `npm install`
