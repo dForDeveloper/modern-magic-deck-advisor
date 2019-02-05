@@ -1,6 +1,6 @@
 # [Modern Magic Deck Advisor](https://dfordeveloper.github.io/modern-magic-deck-advisor/)
 
-Magic the Gathering is an enjoyable and competitive game that can be prohibitivly expensive for the average player. 
+Magic the Gathering is an enjoyable and competitive game that can be prohibitively expensive for the average player. 
 This app allows Modern Magic the Gathering players to track the cards they own and compare the prices of decks they
 can start to fit any budget.  A user can save decks to review later and add cards to their wish list for future 
 purchase. With prices updating daily, this app provides a seamless user experience for choosing what decks to build 
